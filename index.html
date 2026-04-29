@@ -98,9 +98,15 @@
          الأزرار تعمل على التنقل السلس بين أقسام الموقع
     ============================================================ -->
     <nav class="navbar" id="navbar">
+      <!-- حاوية عناصر الشريط العلوي: شعار الموقع والروابط وزر القائمة للهواتف -->
       <div class="nav-container">
         <!-- Logo / الشعار -->
         <a href="#hero" class="nav-logo">
+          <img
+            src="img/my-photo.svg"
+            alt="Ahmed AlGamal"
+            class="nav-logo-img"
+          />
           <span class="logo-bracket"></span>
           <span class="logo-name">Ahmed AlGamal</span>
           <span class="logo-accent"></span>
@@ -110,14 +116,17 @@
                  [NAVIGATION LINKS - روابط القائمة]
                  🔴 هذه الروابط داخل الموقع، لا تحتاج تغيير
             ============================================================ -->
+        <!-- قائمة روابط التنقل الرئيسية التي توجه المستخدم إلى أقسام الصفحة -->
         <ul class="nav-links" id="navLinks">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#results" class="nav-link">Results</a></li>
+          <li><a href="#" class="nav-link">Blogger</a></li>
+          <!-- 🔴 استبدل هذا الرابط بالرابط الحقيقي لمدونة بلوجر -->
           <li><a href="#contact" class="nav-link nav-cta">Let's Talk</a></li>
         </ul>
-        <!-- زر القائمة للهواتف -->
+        <!-- زر القائمة للهواتف: يفتح ويغلق القائمة على الشاشات الصغيرة -->
         <button class="hamburger" id="hamburger">
           <span></span><span></span><span></span>
         </button>
@@ -134,11 +143,15 @@
          - الصورة الشخصية والأشكال الهندسية المتحركة
     ============================================================ -->
     <section class="hero" id="hero">
+      <!-- خلفية الهيرو الشبكية المتحركة -->
       <div class="hero-grid"></div>
+      <!-- عنصر تأثير الجسيمات المتحركة فوق الهيرو -->
       <div class="particles" id="particles"></div>
+      <!-- الحاوية الرئيسية لمحتوى الهيرو: نص وصورة داخل صف واحد -->
       <div class="hero-container">
         <!-- الجزء الأيمن: المحتوى النصي -->
         <div class="hero-content">
+          <!-- شارة الحالة أو العرض القصير فوق العنوان -->
           <div class="hero-badge">
             <span class="badge-dot"></span>
             Available for new projects
@@ -154,14 +167,14 @@
             >
           </p>
 
-          <!-- علامات الخدمات -->
+          <!-- مجموعة العلامات السريعة التي توضح الخدمات الرئيسية -->
           <div class="hero-tags">
             <span class="tag"><i class="fa-brands fa-meta"></i> Meta Ads</span>
             <span class="tag"><i class="fa-solid fa-code"></i> Web Dev</span>
             <span class="tag"><i class="fa-solid fa-robot"></i> n8n</span>
           </div>
 
-          <!-- أزرار الحث على الإجراء -->
+          <!-- أزرار الحث على الإجراء للوصول إلى نموذج التواصل أو المشاريع -->
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary"
               >Get More Clients <i class="fa-solid fa-arrow-right"></i
@@ -171,15 +184,7 @@
             ></a>
           </div>
 
-          <!-- ============================================================
-                     [SOCIAL MEDIA LINKS - روابط السوشيال ميديا]
-                     🔴 هام: غير الروابط الحالية (#) بروابطك الحقيقية:
-                     
-                     LinkedIn:   https://linkedin.com/in/username
-                     Instagram:  https://instagram.com/username
-                     WhatsApp:   https://wa.me/1234567890 (استبدل 1234567890 برقم هاتفك)
-                     GitHub:     https://github.com/username
-                ============================================================ -->
+          <!-- روابط وسائل التواصل الاجتماعي السريعة التي تقع أسفل محتوى الهيرو -->
           <div class="hero-socials">
             <a href="#" class="social-link" target="_blank"
               ><i class="fa-brands fa-linkedin-in"></i
@@ -205,30 +210,11 @@
 
           <!-- الصورة الشخصية (استبدل SVG بصورة حقيقية) -->
           <div class="profile-img-container">
-            <div class="profile-placeholder">
-              <svg viewBox="0 0 200 220" fill="none">
-                <circle cx="100" cy="80" r="45" fill="#FF2D2D" opacity="0.15" />
-                <circle cx="100" cy="78" r="38" fill="#FF2D2D" opacity="0.25" />
-                <ellipse
-                  cx="100"
-                  cy="78"
-                  rx="26"
-                  ry="28"
-                  fill="#FF2D2D"
-                  opacity="0.6"
-                />
-                <text
-                  x="100"
-                  y="85"
-                  text-anchor="middle"
-                  fill="white"
-                  font-size="42"
-                  font-family="Orbitron"
-                >
-                  AG
-                </text>
-              </svg>
-            </div>
+            <img
+              src="img/my-photo.svg"
+              alt="Ahmed AlGamal"
+              class="profile-image"
+            />
             <div class="profile-glow"></div>
           </div>
 
@@ -256,15 +242,20 @@
          هذا القسم يقدم نبذة عن الشخص والخدمات التي يقدمها
     ============================================================ -->
     <section class="about section-pad" id="about">
+      <!-- حاوية القسم لتحديد العرض المركزي والهوامش الداخلية -->
       <div class="container">
+        <!-- رأس القسم: العنوان الرئيسي والوصف الموجود في الأعلى -->
         <div class="section-header" data-reveal>
           <span class="section-label">About Me</span>
           <h2 class="section-title">
             Who Is <span class="text-gradient">Ahmed Algamal?</span>
           </h2>
         </div>
+        <!-- شبكة البطاقات التي تعرض نقاط القوة أو الأقسام الفرعية عن الشخص -->
         <div class="about-grid">
+          <!-- بطاقة معلومات عنك كخبير أو شخص -->
           <div class="about-card glass-card" data-reveal>
+            <!-- أيقونة تعريفية داخل البطاقة -->
             <div class="about-card-icon">
               <i class="fa-solid fa-user-astronaut"></i>
             </div>
@@ -274,6 +265,8 @@
               online — without wasting money or time.
             </p>
           </div>
+          <!-- بطاقة توضح ما هي الخدمات أو التخصصات التي تقدمها -->
+          <!-- البطاقة الثانية: ماذا يفعل هذا الشخص أو ما هي خدماته -->
           <div class="about-card glass-card" data-reveal>
             <div class="about-card-icon"><i class="fa-solid fa-fire"></i></div>
             <h3>What I Do</h3>
@@ -282,6 +275,8 @@
               client-getting machine for your business.
             </p>
           </div>
+          <!-- بطاقة تبين سبب الثقة أو المصداقية في خدماتك -->
+          <!-- البطاقة الثالثة: سبب الثقة والاعتمادية -->
           <div class="about-card glass-card" data-reveal>
             <div class="about-card-icon">
               <i class="fa-solid fa-shield-halved"></i>
@@ -290,6 +285,8 @@
             <p>Real leads, real sales, real growth. No guesswork. No fluff.</p>
           </div>
         </div>
+        <!-- بطاقة السيرة أو القصة التي تشرح الخلفية والأسلوب الشخصي -->
+        <!-- بطاقة القصة أو السيرة تعطي تفسيراً شخصياً وخلفية عن العمل -->
         <div
           class="about-story glass-card"
           data-reveal
@@ -338,7 +335,9 @@
          - الأتمتة (Automation / n8n)
     ============================================================ -->
     <section class="services section-pad" id="services">
+      <!-- حاوية القسم لضبط عرض خدماتك داخل صفحة الهبوط -->
       <div class="container">
+        <!-- رأس القسم مع العنوان الفرعي والباراجراف التعريفي -->
         <div class="section-header" data-reveal>
           <span class="section-label">What I Offer</span>
           <h2 class="section-title">
@@ -347,9 +346,12 @@
             >
           </h2>
         </div>
+        <!-- شبكة خدمات تعرض ثلاثة عروض أساسية بشكل بطاقات -->
+        <!-- شبكة بطاقات الخدمات الثلاثة التي تعرض كل عرض بشكل منفصل -->
         <div class="services-grid">
           <!-- الخدمة الأولى: إعلانات ميتا -->
           <div class="service-card glass-card" data-reveal>
+            <!-- أيقونة وتمهيد للخدمة الأولى -->
             <div class="service-icon"><i class="fa-brands fa-meta"></i></div>
             <h3 class="service-title">Meta Ads &amp; Lead Gen</h3>
             <p class="service-desc">
@@ -367,8 +369,10 @@
           </div>
 
           <!-- الخدمة الثانية: تطوير الويب (مميزة) -->
+          <!-- البطاقة المميزة لخدمة تطوير الويب الأكثر شيوعاً -->
           <div class="service-card glass-card featured-card" data-reveal>
             <div class="featured-badge">Most Popular</div>
+            <!-- أيقونة الخدمة المميزة في البطاقة الثانية -->
             <div class="service-icon">
               <i class="fa-solid fa-laptop-code"></i>
             </div>
@@ -388,6 +392,8 @@
           </div>
 
           <!-- الخدمة الثالثة: الأتمتة -->
+          <!-- البطاقة الثالثة: خدمة الأتمتة باستخدام n8n -->
+          <!-- البطاقة الثالثة: خدمة الأتمتة باستخدام n8n -->
           <div class="service-card glass-card" data-reveal>
             <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
             <h3 class="service-title">Automation (n8n)</h3>
@@ -418,13 +424,16 @@
          أو https://your-domain.com/project-name
     ============================================================ -->
     <section class="projects section-pad" id="projects">
+      <!-- حاوية القسم التي تحدد المساحة المخصصة لمعرض المشاريع -->
       <div class="container">
+        <!-- رأس القسم لعرض عنوان المشاريع -->
         <div class="section-header" data-reveal>
           <span class="section-label">My Work</span>
           <h2 class="section-title">
             Projects That <span class="text-gradient">Actually Worked.</span>
           </h2>
         </div>
+        <!-- شبكة بطاقات المشاريع في العرض -->
         <div class="projects-grid">
           <!-- المشروع الأول: حاسبة ذكية -->
           <div class="project-card glass-card" data-reveal>
@@ -435,6 +444,7 @@
               ></i>
             </div>
             <div class="project-info">
+              <!-- معلومات المشروع: الوسوم والعنوان والوصف -->
               <div class="project-tags">
                 <span>Web App</span><span>JavaScript</span>
               </div>
@@ -510,25 +520,90 @@
             Numbers Don't <span class="text-gradient">Lie.</span>
           </h2>
         </div>
-        <div class="stats-row" data-reveal>
-          <div class="stat-item">
-            <div class="stat-number" data-target="50" data-suffix="+">0</div>
-            <div class="stat-label">Happy Clients</div>
+        <!-- صف الأرقام المتحرك والإحصائيات الأساسية -->
+        <div class="stats-row-container" data-reveal>
+          <!-- الصف الأول من الأرقام الذي يظهر ويتحرك تلقائياً -->
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-number" data-target="50" data-suffix="+">0</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="300" data-suffix="%">0</div>
+              <div class="stat-label">Avg. ROI on Ads</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="10000" data-suffix="+">
+                0
+              </div>
+              <div class="stat-label">Leads Generated</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="48" data-suffix="h">0</div>
+              <div class="stat-label">Avg. Delivery Time</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="50" data-suffix="+">0</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="300" data-suffix="%">0</div>
+              <div class="stat-label">Avg. ROI on Ads</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="10000" data-suffix="+">
+                0
+              </div>
+              <div class="stat-label">Leads Generated</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="48" data-suffix="h">0</div>
+              <div class="stat-label">Avg. Delivery Time</div>
+            </div>
           </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="300" data-suffix="%">0</div>
-            <div class="stat-label">Avg. ROI on Ads</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="10000" data-suffix="+">0</div>
-            <div class="stat-label">Leads Generated</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="48" data-suffix="h">0</div>
-            <div class="stat-label">Avg. Delivery Time</div>
+          <!-- صف مكرر لإظهار الحركة بشكل متصل مع التمرير -->
+          <div class="stats-row" aria-hidden="true">
+            <div class="stat-item">
+              <div class="stat-number" data-target="50" data-suffix="+">0</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="300" data-suffix="%">0</div>
+              <div class="stat-label">Avg. ROI on Ads</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="10000" data-suffix="+">
+                0
+              </div>
+              <div class="stat-label">Leads Generated</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="48" data-suffix="h">0</div>
+              <div class="stat-label">Avg. Delivery Time</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="50" data-suffix="+">0</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="300" data-suffix="%">0</div>
+              <div class="stat-label">Avg. ROI on Ads</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="10000" data-suffix="+">
+                0
+              </div>
+              <div class="stat-label">Leads Generated</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="48" data-suffix="h">0</div>
+              <div class="stat-label">Avg. Delivery Time</div>
+            </div>
           </div>
         </div>
+        <!-- شبكة المزايا الإضافية التي توضّح فوائد النتائج -->
         <div class="benefits-grid">
+          <!-- بطاقة فائدة: المزيد من العملاء المحتملين -->
           <div class="benefit-card glass-card" data-reveal>
             <div class="benefit-icon">
               <i class="fa-solid fa-magnifying-glass-chart"></i>
@@ -562,22 +637,25 @@
          🔴 هام: غير روابط واتساب والإيميل بروابطك الحقيقية
     ============================================================ -->
     <section class="contact section-pad" id="contact">
+      <!-- حاوية القسم لتثبيت العرض الداخلي وتوسيط المحتوى -->
       <div class="container">
+        <!-- رأس القسم مع عنوان داعٍ للعمل -->
         <div class="section-header" data-reveal>
           <span class="section-label">Let's Work Together</span>
           <h2 class="section-title">
             Ready to <span class="text-gradient">Grow Your Business?</span>
           </h2>
         </div>
+        <!-- تقسيم القناة: معلومات التواصل على اليسار والنموذج على اليمين -->
         <div class="contact-wrap">
-          <!-- معلومات التواصل -->
+          <!-- بطاقة معلومات التواصل وروابط الاتصال السريعة -->
           <div class="contact-info">
             <!-- ============================================================
                          🔴 WhatsApp Link: غير الرابط أدناه برابط واتساب الحقيقي
                          https://wa.me/1234567890 (استبدل 1234567890 برقم هاتفك)
                     ============================================================ -->
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/+971507761628"
               target="_blank"
               class="glass-card"
               style="
@@ -598,7 +676,7 @@
                          🔴 Email: غير البريد الإلكتروني إلى بريدك الحقيقي
                     ============================================================ -->
             <a
-              href="mailto:hello@ahmedalgamal.com"
+              href="mailto:ahmed.talaat11.6.2000@gmail.com"
               class="glass-card"
               style="
                 padding: 20px;
@@ -612,9 +690,10 @@
                 class="fa-solid fa-envelope"
                 style="color: var(--primary); font-size: 1.5rem"
               ></i>
-              <div><strong>Email</strong><br />hello@ahmedalgamal.com</div>
+              <div><strong>Email</strong><br />info@ahmedalgamal.com</div>
             </a>
             <div class="glass-card" style="padding: 28px">
+              <!-- صندوق يوضح خطوات العمل التالية بعد التواصل -->
               <h3 style="color: var(--primary)">What Happens Next?</h3>
               <ol style="margin-top: 16px; list-style: none">
                 <li style="margin-bottom: 12px">📝 You send your details</li>
@@ -625,14 +704,17 @@
             </div>
           </div>
 
-          <!-- نموذج التواصل -->
+          <!-- نموذج التواصل بالحقول لإرسال رسالة مباشرة -->
           <form class="contact-form glass-card" id="contactForm">
+            <!-- حقل ادخال اسم المرسل -->
             <div class="form-group">
               <input type="text" placeholder="Your Name" required />
             </div>
+            <!-- حقل ادخال البريد الالكتروني للمتابع -->
             <div class="form-group">
               <input type="email" placeholder="Email Address" required />
             </div>
+            <!-- حقل اختيار الخدمة المطلوبة -->
             <div class="form-group">
               <select>
                 <option value="">Choose a service...</option>
@@ -642,6 +724,7 @@
                 <option>Full Package (All Three)</option>
               </select>
             </div>
+            <!-- حقل نصي لوصف المشروع أو الفكرة -->
             <div class="form-group">
               <textarea
                 rows="4"
@@ -674,11 +757,18 @@
          - معلومات إضافية
     ============================================================ -->
     <footer class="footer">
+      <!-- حاوية الفوتر لتحديد عرض المحتوى وتوسيطه -->
       <div class="container">
+        <!-- شبكة محتوى الفوتر التي تقسم الأقسام المختلفة -->
         <div class="footer-content">
           <!-- الجزء الأول: معلومات الموقع -->
           <div class="footer-section">
             <div class="footer-logo">
+              <img
+                src="img/my-photo.svg"
+                alt="Ahmed AlGamal"
+                class="footer-logo-img"
+              />
               <span class="logo-bracket">[</span>
               <span class="logo-name">Ahmed AlGamal</span>
               <span class="logo-bracket">]</span>
@@ -688,6 +778,37 @@
               Expert in Meta Ads, Web Development, and n8n Automation.
               <br />Let's grow your business together.
             </p>
+            <!-- الجزء الخامس: السوشيال ميديا -->
+            <div class="footer-section">
+              <h3 class="footer-title">Follow Me</h3>
+              <div class="footer-socials">
+                <a
+                  href="#"
+                  class="social-icon"
+                  target="_blank"
+                  title="LinkedIn"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="#"
+                  class="social-icon"
+                  target="_blank"
+                  title="Instagram"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="Twitter">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" class="social-icon" target="_blank" title="YouTube">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
           </div>
 
           <!-- الجزء الثاني: روابط الأقسام -->
@@ -718,6 +839,7 @@
           <!-- الجزء الرابع: معلومات التواصل -->
           <div class="footer-section">
             <h3 class="footer-title">Get In Touch</h3>
+            <!-- روابط التواصل السريعة داخل الفوتر -->
             <div class="footer-contact">
               <a
                 href="https://wa.me/1234567890"
@@ -736,50 +858,18 @@
                 <span>Contact Form</span>
               </a>
             </div>
-            <div class="footer-hours">
-              <p><strong>Response Time:</strong> Within 24 hours</p>
-              <p><strong>Timezone:</strong> GMT+2</p>
-            </div>
-          </div>
-
-          <!-- الجزء الخامس: السوشيال ميديا -->
-          <div class="footer-section">
-            <h3 class="footer-title">Follow Me</h3>
-            <div class="footer-socials">
-              <a href="#" class="social-icon" target="_blank" title="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-              <a href="#" class="social-icon" target="_blank" title="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a href="#" class="social-icon" target="_blank" title="Twitter">
-                <i class="fa-brands fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon" target="_blank" title="GitHub">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="#" class="social-icon" target="_blank" title="YouTube">
-                <i class="fa-brands fa-youtube"></i>
-              </a>
-            </div>
           </div>
         </div>
 
-        <!-- الفاصل -->
+        <!-- الفاصل البصري الذي يفصل بين محتوى الفوتر وأسفل الفوتر -->
         <div class="footer-divider"></div>
 
         <!-- التوقيع والحقوق -->
         <div class="footer-bottom">
+          <!-- نص حقوق الملكية والملاحظات الصغيرة في أسفل الفوتر -->
           <div class="footer-credits">
             <p>© 2025 Ahmed Algamal. All rights reserved.</p>
             <p>Built with <span class="heart">❤️</span> and powered by code.</p>
-          </div>
-          <div class="footer-info">
-            <a href="#">Privacy Policy</a>
-            <span class="separator">•</span>
-            <a href="#">Terms of Service</a>
-            <span class="separator">•</span>
-            <a href="#">Cookie Policy</a>
           </div>
         </div>
       </div>
