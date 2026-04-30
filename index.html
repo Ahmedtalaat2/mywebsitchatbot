@@ -81,8 +81,53 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
   </head>
+
+<script type="module">
+import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+createChat({
+  webhookUrl: 'https://n8n.srv1623551.hstgr.cloud/webhook/3a19b992-b7b9-40f1-b443-9841f0caac2d/chat',
+
+  theme: {
+    primaryColor: '#ff2d2d',
+    backgroundColor: '#0b0f1a',
+    textColor: '#ffffff',
+    borderRadius: '20px',
+
+    chatWindow: {
+      backgroundColor: '#0b0f1a'
+    },
+
+    header: {
+      backgroundColor: '#111827',
+      textColor: '#ffffff'
+    },
+
+    botMessage: {
+      backgroundColor: 'rgba(255,255,255,0.08)',
+      textColor: '#ffffff'
+    },
+
+    userMessage: {
+      backgroundColor: '#ff2d2d',
+      textColor: '#ffffff'
+    },
+
+    input: {
+      backgroundColor: 'rgba(255,255,255,0.05)',
+      textColor: '#ffffff',
+      placeholderColor: 'rgba(255,255,255,0.5)'
+    }
+  },
+
+  initialMessages: [
+    "👋 أهلاً بيك\nأنا أحمد، أقدر أساعدك تجيب عملاء حقيقيين 🔥"
+  ]
+});
+</script>
 
   <body>
     <!-- ============================================================
@@ -154,17 +199,16 @@
           <!-- شارة الحالة أو العرض القصير فوق العنوان -->
           <div class="hero-badge">
             <span class="badge-dot"></span>
-            Available for new projects
+            Building real systems for real business growth
           </div>
           <h1 class="hero-headline">
             I Build Systems<br />
-            That <span class="text-gradient">Bring You</span><br />
-            <span class="text-outline">Clients.</span>
+            That <span class="text-gradient">Actually Work</span><br />
+            In Real Business.
           </h1>
           <p class="hero-sub">
-            Ads + Websites + Automation.<br /><strong
-              >Simple. Fast. Results.</strong
-            >
+            Web Development + Automation + Ads.<br />
+            <strong>Simple systems. Clear logic. Real results.</strong>
           </p>
 
           <!-- مجموعة العلامات السريعة التي توضح الخدمات الرئيسية -->
@@ -177,10 +221,10 @@
           <!-- أزرار الحث على الإجراء للوصول إلى نموذج التواصل أو المشاريع -->
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary"
-              >Get More Clients <i class="fa-solid fa-arrow-right"></i
+              >Explore My Work <i class="fa-solid fa-arrow-right"></i
             ></a>
             <a href="#projects" class="btn btn-ghost"
-              >See My Work <i class="fa-solid fa-eye"></i
+              >See How I Thinkk <i class="fa-solid fa-eye"></i
             ></a>
           </div>
 
@@ -261,8 +305,9 @@
             </div>
             <h3>The Person</h3>
             <p>
-              Digital growth specialist who helps businesses get more clients
-              online — without wasting money or time.
+              I’m Ahmed, a developer who focuses on building simple and
+              practical systems that actually work in real business
+              environments.
             </p>
           </div>
           <!-- بطاقة توضح ما هي الخدمات أو التخصصات التي تقدمها -->
@@ -271,8 +316,8 @@
             <div class="about-card-icon"><i class="fa-solid fa-fire"></i></div>
             <h3>What I Do</h3>
             <p>
-              I combine Ads, Web Design, and Automation — to build a full
-              client-getting machine for your business.
+              I connect websites, ads, and automation into one clear system
+              instead of using random disconnected tools.
             </p>
           </div>
           <!-- بطاقة تبين سبب الثقة أو المصداقية في خدماتك -->
@@ -282,7 +327,10 @@
               <i class="fa-solid fa-shield-halved"></i>
             </div>
             <h3>Why Trust Me</h3>
-            <p>Real leads, real sales, real growth. No guesswork. No fluff.</p>
+            <p>
+              I focus on clarity, speed, and results — not just design or
+              theory. Everything I build is meant to be used, not just seen.
+            </p>
           </div>
         </div>
         <!-- بطاقة السيرة أو القصة التي تشرح الخلفية والأسلوب الشخصي -->
@@ -305,14 +353,12 @@
           <p
             style="max-width: 700px; margin: 0 auto; color: var(--white-muted)"
           >
-            I started as a curious builder — someone who loved making things
-            work on the internet. Over time, I discovered that most businesses
-            struggle with the same three problems:
-            <em style="color: white"
-              >they can't find clients, their website doesn't convert, and they
-              waste hours on manual tasks.</em
-            >
-            So I built a system that fixes all three — at once.
+            I started as someone who simply enjoyed building things on the
+            internet. Over time, I realized most businesses struggle with the
+            same problems: unclear systems, weak conversion, and too much manual
+            work. So instead of offering separate services, I focused on
+            building connected systems that solve all of that together. Simple.
+            Practical. Effective.
           </p>
           <div
             style="
@@ -355,7 +401,8 @@
             <div class="service-icon"><i class="fa-brands fa-meta"></i></div>
             <h3 class="service-title">Meta Ads &amp; Lead Gen</h3>
             <p class="service-desc">
-              I run ads that bring real customers — not just clicks.
+              I design ad systems that attract the right audience and guide them
+              into a clear and structured flow.
             </p>
             <ul class="service-features">
               <li>
@@ -364,7 +411,7 @@
               <li><i class="fa-solid fa-check"></i> Lead Generation Funnels</li>
             </ul>
             <a href="#contact" class="service-cta"
-              >Start Getting Leads <i class="fa-solid fa-arrow-right"></i
+              >Learn More <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
 
@@ -378,7 +425,8 @@
             </div>
             <h3 class="service-title">Web Development</h3>
             <p class="service-desc">
-              Fast, modern websites that turn visitors into buyers.
+              I build clean and fast websites focused on user experience and
+              clear communication.
             </p>
             <ul class="service-features">
               <li>
@@ -387,7 +435,7 @@
               <li><i class="fa-solid fa-check"></i> Fast &amp; Mobile Ready</li>
             </ul>
             <a href="#contact" class="service-cta"
-              >Build My Website <i class="fa-solid fa-arrow-right"></i
+              >Learn More <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
 
@@ -398,8 +446,8 @@
             <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
             <h3 class="service-title">Automation (n8n)</h3>
             <p class="service-desc">
-              Save time using smart systems. Let automation handle it
-              automatically.
+              I create automation workflows that reduce manual work and keep
+              everything running consistently.
             </p>
             <ul class="service-features">
               <li><i class="fa-solid fa-check"></i> n8n Workflows</li>
@@ -408,7 +456,7 @@
               </li>
             </ul>
             <a href="#contact" class="service-cta"
-              >Automate My Work <i class="fa-solid fa-arrow-right"></i
+              >Learn More <i class="fa-solid fa-arrow-right"></i
             ></a>
           </div>
         </div>
@@ -449,7 +497,10 @@
                 <span>Web App</span><span>JavaScript</span>
               </div>
               <h3>Smart Calculator App</h3>
-              <p>A sleek, functional calculator with a premium dark UI.</p>
+              <p>
+                Built a clean and responsive tool focused on usability and
+                performance rather than complexity.
+              </p>
               <!-- 🔴 غير الرابط # برابط المشروع الحقيقي -->
               <a href="#" class="btn-project" target="_blank"
                 >View Project
@@ -471,7 +522,10 @@
                 <span>Landing Page</span><span>Conversion</span>
               </div>
               <h3>High-Converting Landing Page</h3>
-              <p>18% conversion rate — 3x the industry average.</p>
+              <p>
+                Improved structure and clarity which led to a noticeable
+                increase in conversion rate.
+              </p>
               <!-- 🔴 غير الرابط # برابط المشروع الحقيقي -->
               <a href="#" class="btn-project" target="_blank"
                 >View Project
@@ -494,7 +548,8 @@
               </div>
               <h3>Lead Capture Automation</h3>
               <p>
-                n8n workflow that captures leads and sends to WhatsApp + CRM.
+                Created a workflow that connects lead capture with WhatsApp and
+                CRM to reduce response time and manual work.
               </p>
               <!-- 🔴 غير الرابط # برابط المشروع الحقيقي -->
               <a href="#" class="btn-project" target="_blank"
@@ -513,94 +568,86 @@
          الأرقام تتحرك تلقائياً عند التمرير عليها
     ============================================================ -->
     <section class="results section-pad" id="results">
+      <div class="section-header" data-reveal>
+        <span class="section-label">Real Results</span>
+        <h2 class="section-title">
+          Numbers Don't <span class="text-gradient">Lie.</span>
+        </h2>
+      </div>
+      <!-- صف الأرقام المتحرك والإحصائيات الأساسية -->
+      <div class="stats-row-container" data-reveal>
+        <!-- الصف الأول من الأرقام الذي يظهر ويتحرك تلقائياً -->
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-number" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="300" data-suffix="%">0</div>
+            <div class="stat-label">Systems Built & Improved</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Leads Processed Through Systems</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="48" data-suffix="h">0</div>
+            <div class="stat-label">Average Delivery Speed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="300" data-suffix="%">0</div>
+            <div class="stat-label">Systems Built & Improved</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Leads Processed Through Systems</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="48" data-suffix="h">0</div>
+            <div class="stat-label">Average Delivery Speed</div>
+          </div>
+        </div>
+        <!-- صف مكرر لإظهار الحركة بشكل متصل مع التمرير -->
+        <div class="stats-row" aria-hidden="true">
+          <div class="stat-item">
+            <div class="stat-number" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="300" data-suffix="%">0</div>
+            <div class="stat-label">Systems Built & Improved</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Leads Processed Through Systems</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="48" data-suffix="h">0</div>
+            <div class="stat-label">Average Delivery Speed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="300" data-suffix="%">0</div>
+            <div class="stat-label">Systems Built & Improved</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Leads Processed Through Systems</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="48" data-suffix="h">0</div>
+            <div class="stat-label">Average Delivery Speed</div>
+          </div>
+        </div>
+      </div>
       <div class="container">
-        <div class="section-header" data-reveal>
-          <span class="section-label">Real Results</span>
-          <h2 class="section-title">
-            Numbers Don't <span class="text-gradient">Lie.</span>
-          </h2>
-        </div>
-        <!-- صف الأرقام المتحرك والإحصائيات الأساسية -->
-        <div class="stats-row-container" data-reveal>
-          <!-- الصف الأول من الأرقام الذي يظهر ويتحرك تلقائياً -->
-          <div class="stats-row">
-            <div class="stat-item">
-              <div class="stat-number" data-target="50" data-suffix="+">0</div>
-              <div class="stat-label">Happy Clients</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="300" data-suffix="%">0</div>
-              <div class="stat-label">Avg. ROI on Ads</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="10000" data-suffix="+">
-                0
-              </div>
-              <div class="stat-label">Leads Generated</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="48" data-suffix="h">0</div>
-              <div class="stat-label">Avg. Delivery Time</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="50" data-suffix="+">0</div>
-              <div class="stat-label">Happy Clients</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="300" data-suffix="%">0</div>
-              <div class="stat-label">Avg. ROI on Ads</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="10000" data-suffix="+">
-                0
-              </div>
-              <div class="stat-label">Leads Generated</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="48" data-suffix="h">0</div>
-              <div class="stat-label">Avg. Delivery Time</div>
-            </div>
-          </div>
-          <!-- صف مكرر لإظهار الحركة بشكل متصل مع التمرير -->
-          <div class="stats-row" aria-hidden="true">
-            <div class="stat-item">
-              <div class="stat-number" data-target="50" data-suffix="+">0</div>
-              <div class="stat-label">Happy Clients</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="300" data-suffix="%">0</div>
-              <div class="stat-label">Avg. ROI on Ads</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="10000" data-suffix="+">
-                0
-              </div>
-              <div class="stat-label">Leads Generated</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="48" data-suffix="h">0</div>
-              <div class="stat-label">Avg. Delivery Time</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="50" data-suffix="+">0</div>
-              <div class="stat-label">Happy Clients</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="300" data-suffix="%">0</div>
-              <div class="stat-label">Avg. ROI on Ads</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="10000" data-suffix="+">
-                0
-              </div>
-              <div class="stat-label">Leads Generated</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="48" data-suffix="h">0</div>
-              <div class="stat-label">Avg. Delivery Time</div>
-            </div>
-          </div>
-        </div>
         <!-- شبكة المزايا الإضافية التي توضّح فوائد النتائج -->
         <div class="benefits-grid">
           <!-- بطاقة فائدة: المزيد من العملاء المحتملين -->
@@ -609,21 +656,27 @@
               <i class="fa-solid fa-magnifying-glass-chart"></i>
             </div>
             <h3>More Leads</h3>
-            <p>Systems that bring leads to your door every single day.</p>
+            <p>
+              Better systems create better flow — which leads to better results
+              over time.
+            </p>
           </div>
           <div class="benefit-card glass-card" data-reveal>
             <div class="benefit-icon">
               <i class="fa-solid fa-gauge-high"></i>
             </div>
             <h3>Faster Work</h3>
-            <p>Automation saves you hours every week.</p>
+            <p>Automation removes repetitive tasks and saves valuable time.</p>
           </div>
           <div class="benefit-card glass-card" data-reveal>
             <div class="benefit-icon">
               <i class="fa-solid fa-hand-holding-dollar"></i>
             </div>
             <h3>Less Manual Effort</h3>
-            <p>No more copy-pasting or repetitive tasks.</p>
+            <p>
+              Everything is connected, so less effort is needed to keep things
+              running.
+            </p>
           </div>
         </div>
       </div>
@@ -696,10 +749,10 @@
               <!-- صندوق يوضح خطوات العمل التالية بعد التواصل -->
               <h3 style="color: var(--primary)">What Happens Next?</h3>
               <ol style="margin-top: 16px; list-style: none">
-                <li style="margin-bottom: 12px">📝 You send your details</li>
-                <li style="margin-bottom: 12px">📞 We hop on a free call</li>
-                <li style="margin-bottom: 12px">⚙️ I build your system</li>
-                <li>🚀 You get more clients</li>
+                <li style="margin-bottom: 12px">📝 You share your idea</li>
+                <li style="margin-bottom: 12px">📞 We simplify it together</li>
+                <li style="margin-bottom: 12px">⚙️ I build the system</li>
+                <li>🚀 You start seeing results</li>
               </ol>
             </div>
           </div>
@@ -737,7 +790,7 @@
               class="btn btn-primary"
               style="width: 100%; justify-content: center"
             >
-              Let's Grow Your Business <i class="fa-solid fa-paper-plane"></i>
+              Send Message <i class="fa-solid fa-paper-plane"></i>
             </button>
             <div class="form-success" id="formSuccess">
               ✓ Message sent! I'll reply within 24 hours.
@@ -769,46 +822,15 @@
                 alt="Ahmed AlGamal"
                 class="footer-logo-img"
               />
-              <span class="logo-bracket">[</span>
               <span class="logo-name">Ahmed AlGamal</span>
-              <span class="logo-bracket">]</span>
             </div>
-            <p class="footer-tagline">I Build Systems That Bring You Clients</p>
-            <p class="footer-desc">
-              Expert in Meta Ads, Web Development, and n8n Automation.
-              <br />Let's grow your business together.
+            <p class="footer-tagline">
+              Building simple systems that make work easier.
             </p>
-            <!-- الجزء الخامس: السوشيال ميديا -->
-            <div class="footer-section">
-              <h3 class="footer-title">Follow Me</h3>
-              <div class="footer-socials">
-                <a
-                  href="#"
-                  class="social-icon"
-                  target="_blank"
-                  title="LinkedIn"
-                >
-                  <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a
-                  href="#"
-                  class="social-icon"
-                  target="_blank"
-                  title="Instagram"
-                >
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="#" class="social-icon" target="_blank" title="Twitter">
-                  <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="#" class="social-icon" target="_blank" title="GitHub">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="#" class="social-icon" target="_blank" title="YouTube">
-                  <i class="fa-brands fa-youtube"></i>
-                </a>
-              </div>
-            </div>
+            <p class="footer-desc">
+              Focused on web development, automation, and building systems that
+              actually work.
+            </p>
           </div>
 
           <!-- الجزء الثاني: روابط الأقسام -->
@@ -836,26 +858,48 @@
             </ul>
           </div>
 
-          <!-- الجزء الرابع: معلومات التواصل -->
+          <!-- الجزء الرابع: معلومات التواصل والسوشيال -->
           <div class="footer-section">
             <h3 class="footer-title">Get In Touch</h3>
             <!-- روابط التواصل السريعة داخل الفوتر -->
             <div class="footer-contact">
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/+971507761628"
                 class="contact-btn"
                 target="_blank"
               >
                 <i class="fa-brands fa-whatsapp"></i>
                 <span>WhatsApp</span>
               </a>
-              <a href="mailto:hello@ahmedalgamal.com" class="contact-btn">
+              <a
+                href="mailto:ahmed.talaat11.6.2000@gmail.com"
+                class="contact-btn"
+              >
                 <i class="fa-solid fa-envelope"></i>
                 <span>Email</span>
               </a>
               <a href="#contact" class="contact-btn">
                 <i class="fa-solid fa-paper-plane"></i>
                 <span>Contact Form</span>
+              </a>
+            </div>
+
+            <h3 class="footer-title" style="margin-top: 24px">Follow Me</h3>
+            <div class="footer-socials">
+              <a href="#" class="social-icon" target="_blank" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-icon" target="_blank" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="social-icon" target="_blank" title="Twitter">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon" target="_blank" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="#" class="social-icon" target="_blank" title="YouTube">
+                <i class="fa-brands fa-youtube"></i>
               </a>
             </div>
           </div>
@@ -868,8 +912,10 @@
         <div class="footer-bottom">
           <!-- نص حقوق الملكية والملاحظات الصغيرة في أسفل الفوتر -->
           <div class="footer-credits">
-            <p>© 2025 Ahmed Algamal. All rights reserved.</p>
-            <p>Built with <span class="heart">❤️</span> and powered by code.</p>
+            <p>
+              © 2025 Ahmed Algamal. All rights reserved - Built with
+              <span class="heart">❤️</span> and powered by code.
+            </p>
           </div>
         </div>
       </div>
@@ -924,36 +970,7 @@
          - كلمة "price" → رد عن الأسعار
          - أي كلمة أخرى → رد عام
     ============================================================ -->
-    <button class="chatbot-toggle" id="chatbotToggle">
-      <i class="fa-solid fa-comment-dots"></i>
-    </button>
-
-    <div class="chatbot-window glass-card" id="chatbotWindow">
-      <div class="chatbot-header">
-        <i
-          class="fa-solid fa-robot"
-          style="color: var(--primary); font-size: 1.5rem"
-        ></i>
-        <strong>Ahmed's AI Assistant</strong>
-        <button
-          class="chatbot-close-btn"
-          id="chatbotCloseBtn"
-          style="
-            margin-left: auto;
-            background: none;
-            border: none;
-            color: white;
-          "
-        >
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-      <div class="chatbot-messages" id="chatbotMessages">
-        <div class="message bot-message">
-          <div class="message-bubble">
-            👋 Hey! I'm Ahmed's AI assistant. Ask me about Ads, Web Dev, or
-            Automation!
-          </div>
+    
         </div>
       </div>
       <div class="quick-replies" id="quickReplies">
@@ -1154,115 +1171,88 @@
         // --------------------------------------------------------
         // [8. CHATBOT - الشات بوت (يعمل محلياً بدون سيرفر)]
         // --------------------------------------------------------
-        const chatbotToggle = document.getElementById("chatbotToggle");
-        const chatbotWindow = document.getElementById("chatbotWindow");
-        const chatbotCloseBtn = document.getElementById("chatbotCloseBtn");
-        const chatbotMessages = document.getElementById("chatbotMessages");
-        const chatInput = document.getElementById("chatInput");
-        const chatSendBtn = document.getElementById("chatSendBtn");
+     //   const chatbotToggle = document.getElementById("chatbotToggle");
+      //  const chatbotWindow = document.getElementById("chatbotWindow");
+     //   const chatbotCloseBtn = document.getElementById("chatbotCloseBtn");
+      //  const chatbotMessages = document.getElementById("chatbotMessages");
+     //   const chatInput = document.getElementById("chatInput");
+    //    const chatSendBtn = document.getElementById("chatSendBtn");
+//
+      //  let chatOpen = false;
 
-        let chatOpen = false;
+      //  function toggleChatbot() {
+     //     chatOpen = !chatOpen;
+     //     chatbotWindow.classList.toggle("open", chatOpen);
+     //   }
 
-        function toggleChatbot() {
-          chatOpen = !chatOpen;
-          chatbotWindow.classList.toggle("open", chatOpen);
-        }
+       // if (chatbotToggle)
+      //    chatbotToggle.addEventListener("click", toggleChatbot);
+      //  if (chatbotCloseBtn)
+       //   chatbotCloseBtn.addEventListener("click", toggleChatbot);
 
-        if (chatbotToggle)
-          chatbotToggle.addEventListener("click", toggleChatbot);
-        if (chatbotCloseBtn)
-          chatbotCloseBtn.addEventListener("click", toggleChatbot);
+     //   function addMessage(text, sender) {
+      //    const messageDiv = document.createElement("div");
+       //   messageDiv.className = `message ${sender}-message`;
+       //   messageDiv.innerHTML = `<div class="message-bubble">${text}</div>`;
+       //   chatbotMessages.appendChild(messageDiv);
+      //    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    //    }
 
-        function addMessage(text, sender) {
-          const messageDiv = document.createElement("div");
-          messageDiv.className = `message ${sender}-message`;
-          messageDiv.innerHTML = `<div class="message-bubble">${text}</div>`;
-          chatbotMessages.appendChild(messageDiv);
-          chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-        }
-
-        function showTypingIndicator() {
-          const typingDiv = document.createElement("div");
-          typingDiv.className = "message bot-message typing-indicator";
-          typingDiv.id = "typingIndicator";
-          typingDiv.innerHTML = `<div class="message-bubble"><span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></div>`;
-          chatbotMessages.appendChild(typingDiv);
-          chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-          return typingDiv;
-        }
+      //  function showTypingIndicator() {
+      // //   const typingDiv = document.createElement("div");
+       //   typingDiv.className = "message bot-message typing-indicator";
+        //  typingDiv.id = "typingIndicator";
+        //  typingDiv.innerHTML = `<div class="message-bubble"><span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></div>`;
+       //   chatbotMessages.appendChild(typingDiv);
+     //     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+      //    return typingDiv;
+     /  // }
 
         // ==========================================
         // الربط المباشر مع n8n الذكي
         // ==========================================
 
         // 🔴 ضع الرابط اللي نسخته من n8n هنا بين علامتي التنصيص 🔴
-        const N8N_WEBHOOK_URL =
-          "https://n8n.srv1623551.hstgr.cloud/webhook/e1f85740-44bb-4e2c-8d7e-aef5ed7021df";
+        //const N8N_WEBHOOK_URL =
+        //  "https://n8n.srv1623551.hstgr.cloud/webhook/e1f85740-44bb-4e2c-8d7e-aef5ed7021df";
 
         // 1. إنشاء رقم جلسة فريد عشان الذاكرة تفرق بين العملاء
-        function getSessionId() {
-          let sessionId = localStorage.getItem("chat_session");
-          if (!sessionId) {
-            sessionId = "session_" + Math.random().toString(36).substr(2, 9);
-            localStorage.setItem("chat_session", sessionId);
-          }
-          return sessionId;
-        }
+      //  function getSessionId() {
+        //  let sessionId = localStorage.getItem("chat_session");
+        //  if (!sessionId) {
+        //    sessionId = "session_" + Math.random().toString(36).substr(2, 9);
+        //    localStorage.setItem("chat_session", sessionId);
+       //   }
+//return sessionId;
+       // }
 
         // 2. إرسال الرسالة إلى n8n واستقبال الرد
-        async function sendMessageToN8N(userText) {
-          const typing = showTypingIndicator(); // إظهار أن البوت يكتب
-
-          try {
-            const response = await fetch(N8N_WEBHOOK_URL, {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                message: userText,
-                sessionId: getSessionId(), // إرسال رقم الجلسة للذاكرة
-              }),
-            });
-
-            const data = await response.json();
-            typing.remove(); // إخفاء علامة الكتابة
-
-            // استخراج الرد (افترضنا أن n8n يرسله في متغير اسمه output)
-            // إذا كنت سميت المتغير باسم آخر في عقدة Webhook Response، قم بتغيير كلمة output
-            const botReply =
-              data.output || data.text || "عذراً، حدث خطأ في استلام الرد.";
-            addMessage(botReply, "bot");
-          } catch (error) {
-            console.error("n8n Error:", error);
-            typing.remove();
-            addMessage("عذراً، الخادم لا يستجيب حالياً. جرب مرة أخرى.", "bot");
-          }
-        }
-
+       
         // 3. التحكم في زر الإرسال
-        function handleSend() {
-          const msg = chatInput.value.trim();
-          if (!msg) return;
+       // function handleSend() {
+   //       const msg = chatInput.value.trim();
+//          if (!msg) return;
 
-          addMessage(msg, "user"); // عرض رسالة العميل على الشاشة
-          chatInput.value = ""; // تفريغ مربع النص
+      //    addMessage(msg, "user"); // عرض رسالة العميل على الشاشة
+      //    chatInput.value = ""; // تفريغ مربع النص
 
-          sendMessageToN8N(msg); // إرسالها لـ n8n
-        }
+      //    sendMessageToN8N(msg); // إرسالها لـ n8n
+     //   }
 
-        if (chatSendBtn) chatSendBtn.addEventListener("click", handleSend);
-        if (chatInput)
-          chatInput.addEventListener("keypress", (e) => {
-            if (e.key === "Enter") handleSend();
-          });
+       // if (chatSendBtn) chatSendBtn.addEventListener("click", handleSend);
+      //  if (chatInput)
+        //  chatInput.addEventListener("keypress", (e) => {
+        //    if (e.key === "Enter") handleSend();
+       ///   });
 
-        // 4. تشغيل أزرار الردود السريعة (Quick Replies) مع الذكاء الاصطناعي
-        document.querySelectorAll(".quick-btn").forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const msg = btn.getAttribute("data-msg");
-            addMessage(msg, "user");
-            sendMessageToN8N(msg);
-          });
-        });
+       // // 4. تشغيل أزرار الردود السريعة (Quick Replies) مع الذكاء الاصطناعي
+      //  document.querySelectorAll(".quick-btn").forEach((btn) => {
+       //   btn.addEventListener("click", () => {
+         //   const msg = btn.getAttribute("data-msg");
+        //    addMessage(msg, "user");
+       //     sendMessageToN8N(msg);
+        //  });
+      //  });
 
         // --------------------------------------------------------
         // [9. CONTACT FORM - نموذج التواصل]
