@@ -16,21 +16,92 @@
     />
 
     <!-- ============================================================
-         [GOOGLE ANALYTICS & META PIXEL - رموز التتبع والإحصائيات]
-         -----------------------------------------------------------------
-         🔴 هام جداً: هذه الأكواد خاصة بتحليلات جوجل وبيكسل ميتا
-         
-         📍 مكان إضافة Google Analytics (GA4):
-         -------------------------------------------------
-         - سجل دخولك على https://analytics.google.com
-         - أنشئ حساب وخصائص جديدة
-         - خذ كود القياس (Measurement ID) الذي يبدأ بـ G-
-         - ضع الكود التالي في هذا المكان (بعد سطر "Icons" مباشرة):-->
+         [SEO - محسنات محركات البحث]
+    ============================================================ -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Ahmed Algamal" />
+    <meta
+      name="keywords"
+      content="Ahmed Algamal, Web Development, Meta Ads, n8n Automation, Lead Generation, Dubai, مطور ويب, إعلانات ميتا"
+    />
+    <link rel="canonical" href="https://ahmedalgamal.com/" />
 
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ahmedalgamal.com/" />
+    <meta
+      property="og:title"
+      content="Ahmed Algamal — I Build Systems That Bring You Clients"
+    />
+    <meta
+      property="og:description"
+      content="Ahmed Algamal — Ads, Web Development & Automation. Simple. Fast. Results."
+    />
+    <meta
+      property="og:image"
+      content="https://ahmedalgamal.com/img/og-image.jpg"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Ahmed Algamal" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Ahmed Algamal — I Build Systems That Bring You Clients"
+    />
+    <meta
+      name="twitter:description"
+      content="Ads, Web Development & Automation. Simple. Fast. Results."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ahmedalgamal.com/img/og-image.jpg"
+    />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ahmed Algamal",
+        "url": "https://ahmedalgamal.com",
+        "image": "https://ahmedalgamal.com/img/my-photo.svg",
+        "jobTitle": "Web Developer & Digital Marketing Specialist",
+        "description": "Building systems that combine Web Development, Meta Ads, and n8n Automation to help businesses grow.",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Ahmed Algamal"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dubai",
+          "addressCountry": "AE"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+971507761628",
+          "contactType": "customer support",
+          "email": "info@ahmedalgamal.com",
+          "availableLanguage": ["English", "Arabic"]
+        },
+        "knowsAbout": [
+          "Web Development",
+          "Meta Ads",
+          "Lead Generation",
+          "n8n Automation",
+          "CRM Automation"
+        ]
+      }
+    </script>
+
+    <!-- ============================================================
+         [GOOGLE ANALYTICS - رموز التتبع والإحصائيات]
+    ============================================================ -->
     <!-- Google tag (gtag.js) -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
+      src="https://www.googletagmanager.com/gtag/js?id=G-LE5YGN61P1"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -38,16 +109,14 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-XXXXXXX");
+      gtag("config", "G-LE5YGN61P1");
     </script>
-    <!--
-    📍 مكان إضافة Meta Pixel (Facebook Pixel):
-    -----------------------------------------
-    - سجل دخولك على https://business.facebook.com
-    - اذهب إلى Events Manager → Pixels
-    - أنشئ بكسل جديد وخذ الـ Pixel ID (رقم مثل: 123456789012345)
-    - ضع الكود التالي مع استبدال 'PIXEL_ID' بالرقم الخاص بك:
 
+    <!-- ============================================================
+         [META PIXEL - Facebook Pixel]
+         🔴 استبدل PIXEL_ID برقمك الحقيقي لتفعيل البكسل
+         ============================================================ -->
+    <!--
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
@@ -65,13 +134,13 @@
     </script>
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=PIXEL_ID&ev=PageView&noscript=1" /></noscript>
-    ============================================================ -->
+    -->
 
-    <!-- Google Fonts - خطوط الموقع (Orbitron للعناوين, Syne للنصوص) -->
+    <!-- Google Fonts - تم إضافة Plus Jakarta Sans (الخط المستخدم في الكود) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -81,55 +150,63 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
-<script type="module">
-import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
-createChat({
-  webhookUrl: 'https://n8n.srv1623551.hstgr.cloud/webhook/3a19b992-b7b9-40f1-b443-9841f0caac2d/chat',
-
-  theme: {
-    primaryColor: '#ff2d2d',
-    backgroundColor: '#0b0f1a',
-    textColor: '#ffffff',
-    borderRadius: '20px',
-
-    chatWindow: {
-      backgroundColor: '#0b0f1a'
-    },
-
-    header: {
-      backgroundColor: '#111827',
-      textColor: '#ffffff'
-    },
-
-    botMessage: {
-      backgroundColor: 'rgba(255,255,255,0.08)',
-      textColor: '#ffffff'
-    },
-
-    userMessage: {
-      backgroundColor: '#ff2d2d',
-      textColor: '#ffffff'
-    },
-
-    input: {
-      backgroundColor: 'rgba(255,255,255,0.05)',
-      textColor: '#ffffff',
-      placeholderColor: 'rgba(255,255,255,0.5)'
-    }
-  },
-
-  initialMessages: [
-    "👋 أهلاً بيك\nأنا أحمد، أقدر أساعدك تجيب عملاء حقيقيين 🔥"
-  ]
-});
-</script>
-
   <body>
+    <!-- ============================================================
+         [n8n CHAT WIDGET - تم نقله داخل body لصحة HTML]
+         كان موضوعاً بين </head> و<body> وده خطأ
+    ============================================================ -->
+    <script type="module">
+      import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+      createChat({
+        webhookUrl:
+          "https://n8n.srv1623551.hstgr.cloud/webhook/3a19b992-b7b9-40f1-b443-9841f0caac2d/chat",
+
+        theme: {
+          primaryColor: "#ff2d2d",
+          backgroundColor: "#0b0f1a",
+          textColor: "#ffffff",
+          borderRadius: "20px",
+
+          chatWindow: {
+            backgroundColor: "#0b0f1a",
+          },
+
+          header: {
+            backgroundColor: "#111827",
+            textColor: "#ffffff",
+          },
+
+          botMessage: {
+            backgroundColor: "rgba(255,255,255,0.08)",
+            textColor: "#ffffff",
+          },
+
+          userMessage: {
+            backgroundColor: "#ff2d2d",
+            textColor: "#ffffff",
+          },
+
+          input: {
+            backgroundColor: "rgba(255,255,255,0.05)",
+            textColor: "#ffffff",
+            placeholderColor: "rgba(255,255,255,0.5)",
+          },
+        },
+
+        initialMessages: [
+          "👋 أهلاً بيك\nأنا أحمد، أقدر أساعدك تجيب عملاء حقيقيين 🔥",
+        ],
+      });
+    </script>
+
     <!-- ============================================================
          [CURSOR ELEMENTS - عناصر المؤشر المخصص]
          هذه العناصر تتحكم في شكل المؤشر وتأثير الفقاعات خلفه
@@ -142,15 +219,22 @@ createChat({
          هذا القسم يحتوي على قائمة الروابط الرئيسية للموقع والشعار
          الأزرار تعمل على التنقل السلس بين أقسام الموقع
     ============================================================ -->
-    <nav class="navbar" id="navbar">
+    <nav
+      class="navbar"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <!-- حاوية عناصر الشريط العلوي: شعار الموقع والروابط وزر القائمة للهواتف -->
       <div class="nav-container">
         <!-- Logo / الشعار -->
-        <a href="#hero" class="nav-logo">
+        <a href="#hero" class="nav-logo" aria-label="Ahmed AlGamal - Home">
           <img
             src="img/my-photo.svg"
             alt="Ahmed AlGamal"
             class="nav-logo-img"
+            width="40"
+            height="40"
           />
           <span class="logo-bracket"></span>
           <span class="logo-name">Ahmed AlGamal</span>
@@ -167,12 +251,21 @@ createChat({
           <li><a href="#services" class="nav-link">Services</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#results" class="nav-link">Results</a></li>
-          <li><a href="#" class="nav-link">Blogger</a></li>
-          <!-- 🔴 استبدل هذا الرابط بالرابط الحقيقي لمدونة بلوجر -->
+          <li>
+            <a href="#" class="nav-link" aria-label="Blog - Coming Soon"
+              >Blogger</a
+            >
+            <!-- 🔴 استبدل هذا الرابط بالرابط الحقيقي لمدونة بلوجر -->
+          </li>
           <li><a href="#contact" class="nav-link nav-cta">Let's Talk</a></li>
         </ul>
         <!-- زر القائمة للهواتف: يفتح ويغلق القائمة على الشاشات الصغيرة -->
-        <button class="hamburger" id="hamburger">
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -187,18 +280,18 @@ createChat({
          - أيقونات السوشيال ميديا
          - الصورة الشخصية والأشكال الهندسية المتحركة
     ============================================================ -->
-    <section class="hero" id="hero">
+    <section class="hero" id="hero" aria-label="Hero Section">
       <!-- خلفية الهيرو الشبكية المتحركة -->
-      <div class="hero-grid"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
       <!-- عنصر تأثير الجسيمات المتحركة فوق الهيرو -->
-      <div class="particles" id="particles"></div>
+      <div class="particles" id="particles" aria-hidden="true"></div>
       <!-- الحاوية الرئيسية لمحتوى الهيرو: نص وصورة داخل صف واحد -->
       <div class="hero-container">
         <!-- الجزء الأيمن: المحتوى النصي -->
         <div class="hero-content">
           <!-- شارة الحالة أو العرض القصير فوق العنوان -->
           <div class="hero-badge">
-            <span class="badge-dot"></span>
+            <span class="badge-dot" aria-hidden="true"></span>
             Building real systems for real business growth
           </div>
           <h1 class="hero-headline">
@@ -213,40 +306,68 @@ createChat({
 
           <!-- مجموعة العلامات السريعة التي توضح الخدمات الرئيسية -->
           <div class="hero-tags">
-            <span class="tag"><i class="fa-brands fa-meta"></i> Meta Ads</span>
-            <span class="tag"><i class="fa-solid fa-code"></i> Web Dev</span>
-            <span class="tag"><i class="fa-solid fa-robot"></i> n8n</span>
+            <span class="tag"
+              ><i class="fa-brands fa-meta" aria-hidden="true"></i> Meta
+              Ads</span
+            >
+            <span class="tag"
+              ><i class="fa-solid fa-code" aria-hidden="true"></i> Web Dev</span
+            >
+            <span class="tag"
+              ><i class="fa-solid fa-robot" aria-hidden="true"></i> n8n</span
+            >
           </div>
 
           <!-- أزرار الحث على الإجراء للوصول إلى نموذج التواصل أو المشاريع -->
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary"
-              >Explore My Work <i class="fa-solid fa-arrow-right"></i
+              >Explore My Work
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
             ></a>
             <a href="#projects" class="btn btn-ghost"
-              >See How I Thinkk <i class="fa-solid fa-eye"></i
+              >See How I Think <i class="fa-solid fa-eye" aria-hidden="true"></i
             ></a>
           </div>
 
           <!-- روابط وسائل التواصل الاجتماعي السريعة التي تقع أسفل محتوى الهيرو -->
           <div class="hero-socials">
-            <a href="#" class="social-link" target="_blank"
-              ><i class="fa-brands fa-linkedin-in"></i
+            <a
+              href="https://www.linkedin.com/in/ahmed-al-gamal-6906ab204?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
             ></a>
-            <a href="#" class="social-link" target="_blank"
-              ><i class="fa-brands fa-instagram"></i
+            <a
+              href="https://www.instagram.com/ahmeedalgamal?igsh=MTF3cnJmbjQ1cWVrNg=="
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram" aria-hidden="true"></i
             ></a>
-            <a href="#" class="social-link" target="_blank"
-              ><i class="fa-brands fa-whatsapp"></i
+            <a
+              href="https://wa.me/+971507761628"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp" aria-hidden="true"></i
             ></a>
-            <a href="#" class="social-link" target="_blank"
-              ><i class="fa-brands fa-github"></i
+            <a
+              href="https://github.com/Ahmedtalaat2"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              ><i class="fa-brands fa-github" aria-hidden="true"></i
             ></a>
           </div>
         </div>
 
         <!-- الجزء الأيسر: الصورة والأشكال الهندسية -->
-        <div class="hero-visual">
+        <div class="hero-visual" aria-hidden="true">
           <div class="geo-diamond"></div>
           <div class="geo-ring geo-ring-1"></div>
           <div class="geo-ring geo-ring-2"></div>
@@ -256,36 +377,39 @@ createChat({
           <div class="profile-img-container">
             <img
               src="img/my-photo.svg"
-              alt="Ahmed AlGamal"
+              alt="Ahmed AlGamal - Web Developer & Digital Marketing Specialist"
               class="profile-image"
+              width="220"
+              height="220"
             />
             <div class="profile-glow"></div>
           </div>
 
-          <!-- بطاقات إحصائية عائمة -->
+          <!-- بطاقات إحصائية عائمة -
           <div class="stat-card stat-card-1">
-            <i class="fa-solid fa-chart-line"></i>
+            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
             <div><strong>300%</strong><span>ROI Avg.</span></div>
           </div>
           <div class="stat-card stat-card-2">
-            <i class="fa-solid fa-bolt"></i>
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
             <div><strong>48h</strong><span>Delivery</span></div>
           </div>
         </div>
-      </div>
+      </div>-->
 
       <!-- مؤشر التمرير لأسفل -->
-      <div class="scroll-indicator">
-        <div class="scroll-line"></div>
-        <span>Scroll</span>
-      </div>
+   
     </section>
 
     <!-- ============================================================
          [ABOUT SECTION - قسم من أنا]
          هذا القسم يقدم نبذة عن الشخص والخدمات التي يقدمها
     ============================================================ -->
-    <section class="about section-pad" id="about">
+    <section
+      class="about section-pad"
+      id="about"
+      aria-label="About Ahmed Algamal"
+    >
       <!-- حاوية القسم لتحديد العرض المركزي والهوامش الداخلية -->
       <div class="container">
         <!-- رأس القسم: العنوان الرئيسي والوصف الموجود في الأعلى -->
@@ -301,30 +425,30 @@ createChat({
           <div class="about-card glass-card" data-reveal>
             <!-- أيقونة تعريفية داخل البطاقة -->
             <div class="about-card-icon">
-              <i class="fa-solid fa-user-astronaut"></i>
+              <i class="fa-solid fa-user-astronaut" aria-hidden="true"></i>
             </div>
             <h3>The Person</h3>
             <p>
-              I’m Ahmed, a developer who focuses on building simple and
+              I'm Ahmed, a developer who focuses on building simple and
               practical systems that actually work in real business
               environments.
             </p>
           </div>
           <!-- بطاقة توضح ما هي الخدمات أو التخصصات التي تقدمها -->
-          <!-- البطاقة الثانية: ماذا يفعل هذا الشخص أو ما هي خدماته -->
           <div class="about-card glass-card" data-reveal>
-            <div class="about-card-icon"><i class="fa-solid fa-fire"></i></div>
+            <div class="about-card-icon">
+              <i class="fa-solid fa-fire" aria-hidden="true"></i>
+            </div>
             <h3>What I Do</h3>
             <p>
               I connect websites, ads, and automation into one clear system
               instead of using random disconnected tools.
             </p>
           </div>
-          <!-- بطاقة تبين سبب الثقة أو المصداقية في خدماتك -->
           <!-- البطاقة الثالثة: سبب الثقة والاعتمادية -->
           <div class="about-card glass-card" data-reveal>
             <div class="about-card-icon">
-              <i class="fa-solid fa-shield-halved"></i>
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
             </div>
             <h3>Why Trust Me</h3>
             <p>
@@ -334,7 +458,6 @@ createChat({
           </div>
         </div>
         <!-- بطاقة السيرة أو القصة التي تشرح الخلفية والأسلوب الشخصي -->
-        <!-- بطاقة القصة أو السيرة تعطي تفسيراً شخصياً وخلفية عن العمل -->
         <div
           class="about-story glass-card"
           data-reveal
@@ -342,6 +465,7 @@ createChat({
         >
           <i
             class="fa-solid fa-quote-left"
+            aria-hidden="true"
             style="
               font-size: 2rem;
               color: var(--primary);
@@ -380,7 +504,7 @@ createChat({
          - تطوير الويب (Web Development)
          - الأتمتة (Automation / n8n)
     ============================================================ -->
-    <section class="services section-pad" id="services">
+    <section class="services section-pad" id="services" aria-label="Services">
       <!-- حاوية القسم لضبط عرض خدماتك داخل صفحة الهبوط -->
       <div class="container">
         <!-- رأس القسم مع العنوان الفرعي والباراجراف التعريفي -->
@@ -392,13 +516,14 @@ createChat({
             >
           </h2>
         </div>
-        <!-- شبكة خدمات تعرض ثلاثة عروض أساسية بشكل بطاقات -->
         <!-- شبكة بطاقات الخدمات الثلاثة التي تعرض كل عرض بشكل منفصل -->
         <div class="services-grid">
           <!-- الخدمة الأولى: إعلانات ميتا -->
           <div class="service-card glass-card" data-reveal>
             <!-- أيقونة وتمهيد للخدمة الأولى -->
-            <div class="service-icon"><i class="fa-brands fa-meta"></i></div>
+            <div class="service-icon">
+              <i class="fa-brands fa-meta" aria-hidden="true"></i>
+            </div>
             <h3 class="service-title">Meta Ads &amp; Lead Gen</h3>
             <p class="service-desc">
               I design ad systems that attract the right audience and guide them
@@ -406,22 +531,26 @@ createChat({
             </p>
             <ul class="service-features">
               <li>
-                <i class="fa-solid fa-check"></i> Facebook &amp; Instagram Ads
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Facebook
+                &amp; Instagram Ads
               </li>
-              <li><i class="fa-solid fa-check"></i> Lead Generation Funnels</li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Lead
+                Generation Funnels
+              </li>
             </ul>
             <a href="#contact" class="service-cta"
-              >Learn More <i class="fa-solid fa-arrow-right"></i
+              >Learn More
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
             ></a>
           </div>
 
           <!-- الخدمة الثانية: تطوير الويب (مميزة) -->
-          <!-- البطاقة المميزة لخدمة تطوير الويب الأكثر شيوعاً -->
           <div class="service-card glass-card featured-card" data-reveal>
             <div class="featured-badge">Most Popular</div>
             <!-- أيقونة الخدمة المميزة في البطاقة الثانية -->
             <div class="service-icon">
-              <i class="fa-solid fa-laptop-code"></i>
+              <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
             </div>
             <h3 class="service-title">Web Development</h3>
             <p class="service-desc">
@@ -430,33 +559,43 @@ createChat({
             </p>
             <ul class="service-features">
               <li>
-                <i class="fa-solid fa-check"></i> Landing Pages that Convert
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Landing
+                Pages that Convert
               </li>
-              <li><i class="fa-solid fa-check"></i> Fast &amp; Mobile Ready</li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i> Fast &amp;
+                Mobile Ready
+              </li>
             </ul>
             <a href="#contact" class="service-cta"
-              >Learn More <i class="fa-solid fa-arrow-right"></i
+              >Learn More
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
             ></a>
           </div>
 
-          <!-- الخدمة الثالثة: الأتمتة -->
-          <!-- البطاقة الثالثة: خدمة الأتمتة باستخدام n8n -->
-          <!-- البطاقة الثالثة: خدمة الأتمتة باستخدام n8n -->
+          <!-- الخدمة الثالثة: الأتمتة باستخدام n8n -->
           <div class="service-card glass-card" data-reveal>
-            <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="service-icon">
+              <i class="fa-solid fa-robot" aria-hidden="true"></i>
+            </div>
             <h3 class="service-title">Automation (n8n)</h3>
             <p class="service-desc">
               I create automation workflows that reduce manual work and keep
               everything running consistently.
             </p>
             <ul class="service-features">
-              <li><i class="fa-solid fa-check"></i> n8n Workflows</li>
               <li>
-                <i class="fa-solid fa-check"></i> CRM &amp; Email Automation
+                <i class="fa-solid fa-check" aria-hidden="true"></i> n8n
+                Workflows
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i> CRM &amp;
+                Email Automation
               </li>
             </ul>
             <a href="#contact" class="service-cta"
-              >Learn More <i class="fa-solid fa-arrow-right"></i
+              >Learn More
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
             ></a>
           </div>
         </div>
@@ -468,10 +607,8 @@ createChat({
          هذا القسم يعرض بعض المشاريع السابقة
          
          🔴 هام: غير الروابط (#) بروابط مشاريعك الحقيقية
-         مثال: https://github.com/username/project-name
-         أو https://your-domain.com/project-name
     ============================================================ -->
-    <section class="projects section-pad" id="projects">
+    <section class="projects section-pad" id="projects" aria-label="Projects">
       <!-- حاوية القسم التي تحدد المساحة المخصصة لمعرض المشاريع -->
       <div class="container">
         <!-- رأس القسم لعرض عنوان المشاريع -->
@@ -486,10 +623,7 @@ createChat({
           <!-- المشروع الأول: حاسبة ذكية -->
           <div class="project-card glass-card" data-reveal>
             <div class="project-preview">
-              <i
-                class="fa-solid fa-calculator"
-                style="font-size: 3rem; color: var(--primary)"
-              ></i>
+             <img src="img/dash.png" alt="">
             </div>
             <div class="project-info">
               <!-- معلومات المشروع: الوسوم والعنوان والوصف -->
@@ -502,9 +636,16 @@ createChat({
                 performance rather than complexity.
               </p>
               <!-- 🔴 غير الرابط # برابط المشروع الحقيقي -->
-              <a href="#" class="btn-project" target="_blank"
+              <a
+                href="#"
+                class="btn-project"
+                target="_blank"
+                rel="noopener noreferrer"
                 >View Project
-                <i class="fa-solid fa-arrow-up-right-from-square"></i
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square"
+                  aria-hidden="true"
+                ></i
               ></a>
             </div>
           </div>
@@ -512,10 +653,7 @@ createChat({
           <!-- المشروع الثاني: صفحة هبوط -->
           <div class="project-card glass-card" data-reveal>
             <div class="project-preview">
-              <i
-                class="fa-solid fa-file-lines"
-                style="font-size: 3rem; color: var(--primary)"
-              ></i>
+            <img src="img/land.png" alt="">
             </div>
             <div class="project-info">
               <div class="project-tags">
@@ -527,20 +665,24 @@ createChat({
                 increase in conversion rate.
               </p>
               <!-- 🔴 غير الرابط # برابط المشروع الحقيقي -->
-              <a href="#" class="btn-project" target="_blank"
+              <a
+                href="#"
+                class="btn-project"
+                target="_blank"
+                rel="noopener noreferrer"
                 >View Project
-                <i class="fa-solid fa-arrow-up-right-from-square"></i
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square"
+                  aria-hidden="true"
+                ></i
               ></a>
             </div>
           </div>
 
-          <!-- المشروع الثالث: أتمتة n8n -->
+          <!-- المشروع الثالث: أتمتة n8n — تم حذف > الزيادة -->
           <div class="project-card glass-card" data-reveal>
             <div class="project-preview">
-              <i
-                class="fa-solid fa-diagram-project"
-                style="font-size: 3rem; color: var(--primary)"
-              ></i>
+              <img src="img/n8n.png" alt="Automation">
             </div>
             <div class="project-info">
               <div class="project-tags">
@@ -552,9 +694,16 @@ createChat({
                 CRM to reduce response time and manual work.
               </p>
               <!-- 🔴 غير الرابط # برابط المشروع الحقيقي -->
-              <a href="#" class="btn-project" target="_blank"
+              <a
+                href="#"
+                class="btn-project"
+                target="_blank"
+                rel="noopener noreferrer"
                 >View Project
-                <i class="fa-solid fa-arrow-up-right-from-square"></i
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square"
+                  aria-hidden="true"
+                ></i
               ></a>
             </div>
           </div>
@@ -567,7 +716,11 @@ createChat({
          هذا القسم يعرض الأرقام والإحصائيات الحقيقية
          الأرقام تتحرك تلقائياً عند التمرير عليها
     ============================================================ -->
-    <section class="results section-pad" id="results">
+    <section
+      class="results section-pad"
+      id="results"
+      aria-label="Results and Statistics"
+    >
       <div class="section-header" data-reveal>
         <span class="section-label">Real Results</span>
         <h2 class="section-title">
@@ -575,75 +728,77 @@ createChat({
         </h2>
       </div>
       <!-- صف الأرقام المتحرك والإحصائيات الأساسية -->
+      <!-- تم تغليف الصفين داخل .stats-track لإصلاح حركة البانوراما -->
       <div class="stats-row-container" data-reveal>
-        <!-- الصف الأول من الأرقام الذي يظهر ويتحرك تلقائياً -->
-        <div class="stats-row">
-          <div class="stat-item">
-            <div class="stat-number" data-target="5" data-suffix="+">0</div>
-            <div class="stat-label">Projects Completed</div>
+        <div class="stats-track" aria-hidden="true">
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-number" data-target="5" data-suffix="+">0</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="300" data-suffix="%">0</div>
+              <div class="stat-label">Systems Built &amp; Improved</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="5" data-suffix="+">0</div>
+              <div class="stat-label">Leads Processed Through Systems</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="48" data-suffix="h">0</div>
+              <div class="stat-label">Average Delivery Speed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="5" data-suffix="+">0</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="300" data-suffix="%">0</div>
+              <div class="stat-label">Systems Built &amp; Improved</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="5" data-suffix="+">0</div>
+              <div class="stat-label">Leads Processed Through Systems</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="48" data-suffix="h">0</div>
+              <div class="stat-label">Average Delivery Speed</div>
+            </div>
           </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="300" data-suffix="%">0</div>
-            <div class="stat-label">Systems Built & Improved</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="5" data-suffix="+">0</div>
-            <div class="stat-label">Leads Processed Through Systems</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="48" data-suffix="h">0</div>
-            <div class="stat-label">Average Delivery Speed</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="5" data-suffix="+">0</div>
-            <div class="stat-label">Projects Completed</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="300" data-suffix="%">0</div>
-            <div class="stat-label">Systems Built & Improved</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="5" data-suffix="+">0</div>
-            <div class="stat-label">Leads Processed Through Systems</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="48" data-suffix="h">0</div>
-            <div class="stat-label">Average Delivery Speed</div>
-          </div>
-        </div>
-        <!-- صف مكرر لإظهار الحركة بشكل متصل مع التمرير -->
-        <div class="stats-row" aria-hidden="true">
-          <div class="stat-item">
-            <div class="stat-number" data-target="5" data-suffix="+">0</div>
-            <div class="stat-label">Projects Completed</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="300" data-suffix="%">0</div>
-            <div class="stat-label">Systems Built & Improved</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="5" data-suffix="+">0</div>
-            <div class="stat-label">Leads Processed Through Systems</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="48" data-suffix="h">0</div>
-            <div class="stat-label">Average Delivery Speed</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="5" data-suffix="+">0</div>
-            <div class="stat-label">Projects Completed</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="300" data-suffix="%">0</div>
-            <div class="stat-label">Systems Built & Improved</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="5" data-suffix="+">0</div>
-            <div class="stat-label">Leads Processed Through Systems</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number" data-target="48" data-suffix="h">0</div>
-            <div class="stat-label">Average Delivery Speed</div>
+          <!-- صف مكرر لإظهار الحركة بشكل متصل -->
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-number" data-target="5" data-suffix="+">0</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="300" data-suffix="%">0</div>
+              <div class="stat-label">Systems Built &amp; Improved</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="5" data-suffix="+">0</div>
+              <div class="stat-label">Leads Processed Through Systems</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="48" data-suffix="h">0</div>
+              <div class="stat-label">Average Delivery Speed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="5" data-suffix="+">0</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="300" data-suffix="%">0</div>
+              <div class="stat-label">Systems Built &amp; Improved</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="5" data-suffix="+">0</div>
+              <div class="stat-label">Leads Processed Through Systems</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="48" data-suffix="h">0</div>
+              <div class="stat-label">Average Delivery Speed</div>
+            </div>
           </div>
         </div>
       </div>
@@ -653,7 +808,10 @@ createChat({
           <!-- بطاقة فائدة: المزيد من العملاء المحتملين -->
           <div class="benefit-card glass-card" data-reveal>
             <div class="benefit-icon">
-              <i class="fa-solid fa-magnifying-glass-chart"></i>
+              <i
+                class="fa-solid fa-magnifying-glass-chart"
+                aria-hidden="true"
+              ></i>
             </div>
             <h3>More Leads</h3>
             <p>
@@ -663,14 +821,14 @@ createChat({
           </div>
           <div class="benefit-card glass-card" data-reveal>
             <div class="benefit-icon">
-              <i class="fa-solid fa-gauge-high"></i>
+              <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
             </div>
             <h3>Faster Work</h3>
             <p>Automation removes repetitive tasks and saves valuable time.</p>
           </div>
           <div class="benefit-card glass-card" data-reveal>
             <div class="benefit-icon">
-              <i class="fa-solid fa-hand-holding-dollar"></i>
+              <i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i>
             </div>
             <h3>Less Manual Effort</h3>
             <p>
@@ -685,11 +843,14 @@ createChat({
     <!-- ============================================================
          [CONTACT SECTION - قسم التواصل]
          هذا القسم يحتوي على نموذج التواصل مع أحمد
-         ومعلومات التواصل: واتساب، إيميل، وخطوات العمل
          
          🔴 هام: غير روابط واتساب والإيميل بروابطك الحقيقية
     ============================================================ -->
-    <section class="contact section-pad" id="contact">
+    <section
+      class="contact section-pad"
+      id="contact"
+      aria-label="Contact Ahmed Algamal"
+    >
       <!-- حاوية القسم لتثبيت العرض الداخلي وتوسيط المحتوى -->
       <div class="container">
         <!-- رأس القسم مع عنوان داعٍ للعمل -->
@@ -704,13 +865,14 @@ createChat({
           <!-- بطاقة معلومات التواصل وروابط الاتصال السريعة -->
           <div class="contact-info">
             <!-- ============================================================
-                         🔴 WhatsApp Link: غير الرابط أدناه برابط واتساب الحقيقي
-                         https://wa.me/1234567890 (استبدل 1234567890 برقم هاتفك)
+                         🔴 WhatsApp Link
                     ============================================================ -->
             <a
               href="https://wa.me/+971507761628"
               target="_blank"
+              rel="noopener noreferrer"
               class="glass-card"
+              aria-label="Chat on WhatsApp"
               style="
                 padding: 20px;
                 display: flex;
@@ -721,16 +883,18 @@ createChat({
             >
               <i
                 class="fa-brands fa-whatsapp"
+                aria-hidden="true"
                 style="color: var(--primary); font-size: 1.5rem"
               ></i>
               <div><strong>WhatsApp</strong><br />Chat instantly</div>
             </a>
             <!-- ============================================================
-                         🔴 Email: غير البريد الإلكتروني إلى بريدك الحقيقي
+                         🔴 Email - تم توحيد الإيميل في الرابط والنص
                     ============================================================ -->
             <a
-              href="mailto:ahmed.talaat11.6.2000@gmail.com"
+              href="mailto:info@ahmedalgamal.com"
               class="glass-card"
+              aria-label="Send Email"
               style="
                 padding: 20px;
                 display: flex;
@@ -741,6 +905,7 @@ createChat({
             >
               <i
                 class="fa-solid fa-envelope"
+                aria-hidden="true"
                 style="color: var(--primary); font-size: 1.5rem"
               ></i>
               <div><strong>Email</strong><br />info@ahmedalgamal.com</div>
@@ -758,28 +923,50 @@ createChat({
           </div>
 
           <!-- نموذج التواصل بالحقول لإرسال رسالة مباشرة -->
-          <form class="contact-form glass-card" id="contactForm">
+          <!-- تم إضافة name attributes وإصلاح الإرسال عبر mailto -->
+          <form class="contact-form glass-card" id="contactForm" novalidate>
             <!-- حقل ادخال اسم المرسل -->
             <div class="form-group">
-              <input type="text" placeholder="Your Name" required />
+              <label for="contactName" class="sr-only">Your Name</label>
+              <input
+                type="text"
+                id="contactName"
+                name="name"
+                placeholder="Your Name"
+                required
+                autocomplete="name"
+              />
             </div>
             <!-- حقل ادخال البريد الالكتروني للمتابع -->
             <div class="form-group">
-              <input type="email" placeholder="Email Address" required />
+              <label for="contactEmail" class="sr-only">Email Address</label>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
             </div>
             <!-- حقل اختيار الخدمة المطلوبة -->
             <div class="form-group">
-              <select>
+              <label for="contactService" class="sr-only"
+                >Choose a service</label
+              >
+              <select id="contactService" name="service">
                 <option value="">Choose a service...</option>
-                <option>Meta Ads / Lead Generation</option>
-                <option>Web Development</option>
-                <option>Automation (n8n)</option>
-                <option>Full Package (All Three)</option>
+                <option value="Meta Ads / Lead Generation">
+                  Meta Ads / Lead Generation
+                </option>
+                <option value="Web Development">Web Development</option>
+                <option value="Automation (n8n)">Automation (n8n)</option>
+                <option value="Full Package (All Three)">
+                  Full Package (All Three)
+                </option>
               </select>
             </div>
             <!-- حقل نصي لوصف المشروع أو الفكرة -->
             <div class="form-group">
+              <label for="contactMessage" class="sr-only"
+                >Tell me about your business</label
+              >
               <textarea
+                id="contactMessage"
+                name="message"
                 rows="4"
                 placeholder="Tell me about your business"
                 required
@@ -790,9 +977,10 @@ createChat({
               class="btn btn-primary"
               style="width: 100%; justify-content: center"
             >
-              Send Message <i class="fa-solid fa-paper-plane"></i>
+              Send Message
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
             </button>
-            <div class="form-success" id="formSuccess">
+            <div class="form-success" id="formSuccess" role="alert">
               ✓ Message sent! I'll reply within 24 hours.
             </div>
           </form>
@@ -802,14 +990,8 @@ createChat({
 
     <!-- ============================================================
          [FOOTER - التذييل]
-         قسم شامل يحتوي على:
-         - معلومات التواصل
-         - روابط الأقسام
-         - روابط السوشيال ميديا
-         - روابط سريعة
-         - معلومات إضافية
     ============================================================ -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <!-- حاوية الفوتر لتحديد عرض المحتوى وتوسيطه -->
       <div class="container">
         <!-- شبكة محتوى الفوتر التي تقسم الأقسام المختلفة -->
@@ -821,6 +1003,8 @@ createChat({
                 src="img/my-photo.svg"
                 alt="Ahmed AlGamal"
                 class="footer-logo-img"
+                width="40"
+                height="40"
               />
               <span class="logo-name">Ahmed AlGamal</span>
             </div>
@@ -850,7 +1034,7 @@ createChat({
           <div class="footer-section">
             <h3 class="footer-title">Services</h3>
             <ul class="footer-links">
-              <li><a href="#services">Meta Ads & Lead Gen</a></li>
+              <li><a href="#services">Meta Ads &amp; Lead Gen</a></li>
               <li><a href="#services">Web Development</a></li>
               <li><a href="#services">n8n Automation</a></li>
               <li><a href="#contact">Get a Free Consultation</a></li>
@@ -867,146 +1051,98 @@ createChat({
                 href="https://wa.me/+971507761628"
                 class="contact-btn"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat on WhatsApp"
               >
-                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                 <span>WhatsApp</span>
               </a>
               <a
-                href="mailto:ahmed.talaat11.6.2000@gmail.com"
+                href="mailto:info@ahmedalgamal.com"
                 class="contact-btn"
+                aria-label="Send Email"
               >
-                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                 <span>Email</span>
               </a>
               <a href="#contact" class="contact-btn">
-                <i class="fa-solid fa-paper-plane"></i>
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
                 <span>Contact Form</span>
               </a>
             </div>
 
             <h3 class="footer-title" style="margin-top: 24px">Follow Me</h3>
             <div class="footer-socials">
-              <a href="#" class="social-icon" target="_blank" title="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
+              <a
+                href="https://www.linkedin.com/in/ahmed-al-gamal-6906ab204?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
               </a>
-              <a href="#" class="social-icon" target="_blank" title="Instagram">
-                <i class="fa-brands fa-instagram"></i>
+              <a
+                href="https://www.instagram.com/ahmeedalgamal?igsh=MTF3cnJmbjQ1cWVrNg=="
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Instagram"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
               </a>
-              <a href="#" class="social-icon" target="_blank" title="Twitter">
-                <i class="fa-brands fa-twitter"></i>
+  
+              <a
+                href="https://github.com/Ahmedtalaat2"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
               </a>
-              <a href="#" class="social-icon" target="_blank" title="GitHub">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="#" class="social-icon" target="_blank" title="YouTube">
-                <i class="fa-brands fa-youtube"></i>
-              </a>
+              
             </div>
           </div>
         </div>
 
-        <!-- الفاصل البصري الذي يفصل بين محتوى الفوتر وأسفل الفوتر -->
+        <!-- الفاصل البصري -->
         <div class="footer-divider"></div>
 
         <!-- التوقيع والحقوق -->
         <div class="footer-bottom">
-          <!-- نص حقوق الملكية والملاحظات الصغيرة في أسفل الفوتر -->
           <div class="footer-credits">
             <p>
               © 2025 Ahmed Algamal. All rights reserved - Built with
-              <span class="heart">❤️</span> and powered by code.
+              <span class="heart" aria-hidden="true">❤️</span> and powered by
+              code.
             </p>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- ============================================================
-         [CHATBOT SECTION - قسم الشات بوت]
-         
-         هذا الشات بوت يعمل حالياً محلياً (Local) بدون اتصال خارجي.
-         الردود مبرمجة مسبقاً في دالة getResponse()
-         
-         🔴 هام جداً: طريقة ربط الشات بوت بـ n8n (لجعله ذكياً):
-         -----------------------------------------------------------------
-         
-         الخطوات:
-         
-         1️⃣ في n8n: قم بإنشاء Webhook workflow جديد
-            - أضف Webhook node (GET/POST)
-            - انشر (activate) الـ workflow
-            - انسخ الرابط (مثال: https://your-n8n-domain.com/webhook/chat)
-         
-         2️⃣ في هذا الملف: ابحث عن دالة sendMessage() في الـ JavaScript (أسفل الصفحة)
-         
-         3️⃣ استبدل دالة getResponse() الحالية بإرسال طلب إلى n8n:
-         
-            async function getResponseFromN8N(message) {
-                try {
-                    const response = await fetch('https://your-n8n-domain.com/webhook/chat', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ 
-                            message: message,
-                            userId: 'website_visitor',
-                            timestamp: new Date().toISOString()
-                        })
-                    });
-                    const data = await response.json();
-                    return data.reply || data.message || getFallbackResponse(message);
-                } catch(error) {
-                    console.error('n8n error:', error);
-                    return getFallbackResponse(message);
-                }
-            }
-         
-         4️⃣ في دالة sendMessage()، استدعِ getResponseFromN8N(msg) بدلاً من getResponse(msg)
-         
-         💡 ملاحظة: الكود الحالي يعمل محلياً 100% بدون الحاجة لـ n8n
-         الردود الحالية: 
-         - كلمة "ads" → رد عن الإعلانات
-         - كلمة "web" → رد عن تطوير الويب
-         - كلمة "automation" → رد عن الأتمتة
-         - كلمة "price" → رد عن الأسعار
-         - أي كلمة أخرى → رد عام
-    ============================================================ -->
-    
-        </div>
-      </div>
-      <div class="quick-replies" id="quickReplies">
-        <button class="quick-btn" data-msg="Tell me about ads">Ads 📢</button>
-        <button class="quick-btn" data-msg="Tell me about web development">
-          Web Dev 💻
-        </button>
-        <button class="quick-btn" data-msg="Tell me about automation">
-          Automation 🤖
-        </button>
-        <button class="quick-btn" data-msg="How much do your services cost?">
-          Pricing 💰
-        </button>
-      </div>
-      <div class="chatbot-input-area">
-        <input type="text" id="chatInput" placeholder="Type a message..." />
-        <button id="chatSendBtn">
-          <i class="fa-solid fa-paper-plane"></i>
-        </button>
-      </div>
-    </div>
+    <!-- Screen reader only utility class -->
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+    </style>
 
     <script>
       // ============================================================
       // [JAVASCRIPT - كل كود التفاعلات والحركات]
-      // هذا القسم يحتوي على:
-      // 1. المؤشر المخصص مع الفقاعات
-      // 2. تأثيرات الناف بار عند التمرير
-      // 3. قائمة الهواتف
-      // 4. التمرير السلس
-      // 5. ظهور العناصر عند التمرير (Scroll Reveal)
-      // 6. تحريك الأرقام (Counters)
-      // 7. الجسيمات المتحركة
-      // 8. الشات بوت (يعمل محلياً)
-      // 9. نموذج التواصل
-      // 10. تأثير الـ Parallax
       // ============================================================
 
       (function () {
@@ -1032,7 +1168,7 @@ createChat({
             cursorDot.style.top = mouseY + "px";
           }
 
-          // إنشاء فقاعات عند حركة الماوس (تأثير بصري جميل)
+          // إنشاء فقاعات عند حركة الماوس
           const distance = Math.hypot(mouseX - lastX, mouseY - lastY);
           if (distance > 5) {
             createBubble(mouseX, mouseY);
@@ -1054,7 +1190,11 @@ createChat({
         // [2. NAVBAR SCROLL - تغيير شكل الناف بار عند التمرير]
         // --------------------------------------------------------
         const navbar = document.getElementById("navbar");
-        const scrollIndicator = document.querySelector(".scroll-indicator");
+        const scrollIndicator = document.getElementById("scrollIndicator");
+
+        // إظهار scroll indicator عند تحميل الصفحة
+        if (scrollIndicator) scrollIndicator.classList.add("show");
+
         window.addEventListener("scroll", () => {
           if (window.scrollY > 50) navbar.classList.add("scrolled");
           else navbar.classList.remove("scrolled");
@@ -1076,8 +1216,9 @@ createChat({
         const navLinks = document.getElementById("navLinks");
         if (hamburger) {
           hamburger.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("open");
             hamburger.classList.toggle("active");
-            navLinks.classList.toggle("open");
+            hamburger.setAttribute("aria-expanded", isOpen);
           });
         }
 
@@ -1086,13 +1227,18 @@ createChat({
         // --------------------------------------------------------
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
           anchor.addEventListener("click", function (e) {
-            const target = document.querySelector(this.getAttribute("href"));
+            const href = this.getAttribute("href");
+            if (href === "#") return;
+            const target = document.querySelector(href);
             if (target) {
               e.preventDefault();
               target.scrollIntoView({ behavior: "smooth", block: "start" });
               if (navLinks.classList.contains("open")) {
                 navLinks.classList.remove("open");
-                if (hamburger) hamburger.classList.remove("active");
+                if (hamburger) {
+                  hamburger.classList.remove("active");
+                  hamburger.setAttribute("aria-expanded", "false");
+                }
               }
             }
           });
@@ -1117,8 +1263,17 @@ createChat({
 
         // --------------------------------------------------------
         // [6. COUNTER ANIMATION - تحريك الأرقام التلقائي]
+        // تم إصلاح: يتجاهل العناصر داخل aria-hidden="true"
         // --------------------------------------------------------
-        const counters = document.querySelectorAll(".stat-number");
+        const counters = document.querySelectorAll(
+          ".stat-number:not([aria-hidden] .stat-number)",
+        );
+
+        // استهداف أول ظهور فقط (الصف الأول من stats-track)
+        const firstRowCounters = document.querySelectorAll(
+          ".stats-track .stats-row:first-child .stat-number",
+        );
+
         const counterObserver = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
@@ -1147,7 +1302,7 @@ createChat({
           },
           { threshold: 0.5 },
         );
-        counters.forEach((counter) => counterObserver.observe(counter));
+        firstRowCounters.forEach((counter) => counterObserver.observe(counter));
 
         // --------------------------------------------------------
         // [7. PARTICLES - الجسيمات المتحركة في الخلفية]
@@ -1169,104 +1324,83 @@ createChat({
         generateParticles();
 
         // --------------------------------------------------------
-        // [8. CHATBOT - الشات بوت (يعمل محلياً بدون سيرفر)]
+        // [8. CHATBOT - تم نقل الـ n8n widget داخل body]
         // --------------------------------------------------------
-     //   const chatbotToggle = document.getElementById("chatbotToggle");
-      //  const chatbotWindow = document.getElementById("chatbotWindow");
-     //   const chatbotCloseBtn = document.getElementById("chatbotCloseBtn");
-      //  const chatbotMessages = document.getElementById("chatbotMessages");
-     //   const chatInput = document.getElementById("chatInput");
-    //    const chatSendBtn = document.getElementById("chatSendBtn");
-//
-      //  let chatOpen = false;
+// --------------------------------------------------------
+// --------------------------------------------------------
+// [9. CONTACT FORM - إرسال البيانات إلى Google Sheets]
+// --------------------------------------------------------
+// --------------------------------------------------------
+const contactForm = document.getElementById("contactForm");
+const formSuccess = document.getElementById("formSuccess");
 
-      //  function toggleChatbot() {
-     //     chatOpen = !chatOpen;
-     //     chatbotWindow.classList.toggle("open", chatOpen);
-     //   }
+if (contactForm) {
+  const submitBtn = contactForm.querySelector("button[type='submit']");
 
-       // if (chatbotToggle)
-      //    chatbotToggle.addEventListener("click", toggleChatbot);
-      //  if (chatbotCloseBtn)
-       //   chatbotCloseBtn.addEventListener("click", toggleChatbot);
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-     //   function addMessage(text, sender) {
-      //    const messageDiv = document.createElement("div");
-       //   messageDiv.className = `message ${sender}-message`;
-       //   messageDiv.innerHTML = `<div class="message-bubble">${text}</div>`;
-       //   chatbotMessages.appendChild(messageDiv);
-      //    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-    //    }
+    const name = contactForm.querySelector('input[name="name"]').value.trim();
+    const phone = contactForm.querySelector('input[name="phone"]').value.trim();
+    const service = contactForm.querySelector('select[name="service"]').value;
+    const message = contactForm.querySelector('textarea[name="message"]').value.trim();
 
-      //  function showTypingIndicator() {
-      // //   const typingDiv = document.createElement("div");
-       //   typingDiv.className = "message bot-message typing-indicator";
-        //  typingDiv.id = "typingIndicator";
-        //  typingDiv.innerHTML = `<div class="message-bubble"><span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></div>`;
-       //   chatbotMessages.appendChild(typingDiv);
-     //     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-      //    return typingDiv;
-     /  // }
+    if (!name || !phone) {
+      alert("من فضلك املى الاسم ورقم التليفون ❗");
+      return;
+    }
 
-        // ==========================================
-        // الربط المباشر مع n8n الذكي
-        // ==========================================
+    // 🟡 حالة جاري الإرسال
+    submitBtn.innerText = "جاري الإرسال...";
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = "0.7";
 
-        // 🔴 ضع الرابط اللي نسخته من n8n هنا بين علامتي التنصيص 🔴
-        //const N8N_WEBHOOK_URL =
-        //  "https://n8n.srv1623551.hstgr.cloud/webhook/e1f85740-44bb-4e2c-8d7e-aef5ed7021df";
+    const data = {
+      name: name,
+      phone: phone,
+      service: service || "Not specified",
+      message: message
+    };
 
-        // 1. إنشاء رقم جلسة فريد عشان الذاكرة تفرق بين العملاء
-      //  function getSessionId() {
-        //  let sessionId = localStorage.getItem("chat_session");
-        //  if (!sessionId) {
-        //    sessionId = "session_" + Math.random().toString(36).substr(2, 9);
-        //    localStorage.setItem("chat_session", sessionId);
-       //   }
-//return sessionId;
-       // }
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbzovz-6HvRa2AmrKsnk56DTGkcHVupZxWf7DNTpdB-zVpxnC8ho67HG_I2_NVt-HQjTWg/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
 
-        // 2. إرسال الرسالة إلى n8n واستقبال الرد
-       
-        // 3. التحكم في زر الإرسال
-       // function handleSend() {
-   //       const msg = chatInput.value.trim();
-//          if (!msg) return;
+      // 🟢 تم الإرسال
+      submitBtn.innerText = "تم الإرسال ✔️";
 
-      //    addMessage(msg, "user"); // عرض رسالة العميل على الشاشة
-      //    chatInput.value = ""; // تفريغ مربع النص
+      if (formSuccess) formSuccess.classList.add("show");
+      contactForm.reset();
 
-      //    sendMessageToN8N(msg); // إرسالها لـ n8n
-     //   }
+      setTimeout(() => {
+        // رجوع الزرار لطبيعته
+        submitBtn.innerText = "Send Message";
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = "1";
 
-       // if (chatSendBtn) chatSendBtn.addEventListener("click", handleSend);
-      //  if (chatInput)
-        //  chatInput.addEventListener("keypress", (e) => {
-        //    if (e.key === "Enter") handleSend();
-       ///   });
+        if (formSuccess) formSuccess.classList.remove("show");
+      }, 3000);
 
-       // // 4. تشغيل أزرار الردود السريعة (Quick Replies) مع الذكاء الاصطناعي
-      //  document.querySelectorAll(".quick-btn").forEach((btn) => {
-       //   btn.addEventListener("click", () => {
-         //   const msg = btn.getAttribute("data-msg");
-        //    addMessage(msg, "user");
-       //     sendMessageToN8N(msg);
-        //  });
-      //  });
+    } catch (error) {
+      console.error(error);
 
-        // --------------------------------------------------------
-        // [9. CONTACT FORM - نموذج التواصل]
-        // --------------------------------------------------------
-        const contactForm = document.getElementById("contactForm");
-        const formSuccess = document.getElementById("formSuccess");
-        if (contactForm) {
-          contactForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            formSuccess.classList.add("show");
-            contactForm.reset();
-            setTimeout(() => formSuccess.classList.remove("show"), 5000);
-          });
-        }
+      // ❌ خطأ
+      submitBtn.innerText = "حصل خطأ ❌";
+      
+      setTimeout(() => {
+        submitBtn.innerText = "Send Message";
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = "1";
+      }, 3000);
+    }
+  });
+}
 
         // --------------------------------------------------------
         // [10. PARALLAX EFFECT - تأثير تحرك العناصر مع الماوس]
@@ -1277,7 +1411,8 @@ createChat({
           const diamonds = document.querySelectorAll(".geo-diamond, .geo-ring");
           diamonds.forEach((el, i) => {
             const speed = 20 + i * 5;
-            el.style.transform = `translate(${x * speed}px, ${y * speed}px) rotate(45deg)`;
+            if (el)
+              el.style.transform = `translate(${x * speed}px, ${y * speed}px) rotate(45deg)`;
           });
           const profile = document.querySelector(".profile-img-container");
           if (profile) {
@@ -1293,7 +1428,7 @@ createChat({
         }, 100);
 
         console.log(
-          "%c⚡ Ahmed Algamal Portfolio — Fully Loaded with Bubble Cursor!",
+          "%c⚡ Ahmed Algamal Portfolio — Fully Loaded!",
           "color: #FF2D2D; font-size: 14px; font-weight: bold;",
         );
       })();
