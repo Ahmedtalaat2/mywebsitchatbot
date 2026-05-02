@@ -273,132 +273,135 @@
 
     <!-- ============================================================
          [HERO SECTION - القسم الرئيسي]
-         هذا القسم هو أول ما يراه الزائر - يحتوي على:
-         - العنوان الرئيسي
-         - وصف الخدمات
-         - أزرار الحث على الإجراء
-         - أيقونات السوشيال ميديا
-         - الصورة الشخصية والأشكال الهندسية المتحركة
     ============================================================ -->
     <section class="hero" id="hero" aria-label="Hero Section">
-      <!-- خلفية الهيرو الشبكية المتحركة -->
+      <!-- خلفيات ديناميكية جذابة -->
+      <div class="hero-bg-blobs" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+      </div>
       <div class="hero-grid" aria-hidden="true"></div>
-      <!-- عنصر تأثير الجسيمات المتحركة فوق الهيرو -->
       <div class="particles" id="particles" aria-hidden="true"></div>
-      <!-- الحاوية الرئيسية لمحتوى الهيرو: نص وصورة داخل صف واحد -->
+
+      <!-- الحاوية الرئيسية -->
       <div class="hero-container">
-        <!-- الجزء الأيمن: المحتوى النصي -->
+        <!-- الجزء الأيسر: المحتوى النصي -->
         <div class="hero-content">
-          <!-- شارة الحالة أو العرض القصير فوق العنوان -->
-          <div class="hero-badge">
+          <div class="hero-badge glass-card" data-reveal>
             <span class="badge-dot" aria-hidden="true"></span>
-            Building real systems for real business growth
+            <span class="badge-text">Available For New Projects</span>
           </div>
-          <h1 class="hero-headline">
+
+          <h1 class="hero-headline" data-reveal data-delay="100">
             I Build Systems<br />
             That <span class="text-gradient">Actually Work</span><br />
             In Real Business.
           </h1>
-          <p class="hero-sub">
+
+          <p class="hero-sub" data-reveal data-delay="150">
             Web Development + Automation + Ads.<br />
             <strong>Simple systems. Clear logic. Real results.</strong>
           </p>
 
-          <!-- مجموعة العلامات السريعة التي توضح الخدمات الرئيسية -->
-          <div class="hero-tags">
-            <span class="tag"
+          <div class="hero-tags" data-reveal data-delay="200">
+            <span class="tag glass-tag"
               ><i class="fa-brands fa-meta" aria-hidden="true"></i> Meta
               Ads</span
             >
-            <span class="tag"
+            <span class="tag glass-tag"
               ><i class="fa-solid fa-code" aria-hidden="true"></i> Web Dev</span
             >
-            <span class="tag"
+            <span class="tag glass-tag"
               ><i class="fa-solid fa-robot" aria-hidden="true"></i> n8n</span
             >
           </div>
 
-          <!-- أزرار الحث على الإجراء للوصول إلى نموذج التواصل أو المشاريع -->
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary"
-              >Explore My Work
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
-            ></a>
-            <a href="#projects" class="btn btn-ghost"
-              >See How I Think <i class="fa-solid fa-eye" aria-hidden="true"></i
-            ></a>
+          <div class="hero-buttons" data-reveal data-delay="250">
+            <a href="#contact" class="btn btn-primary btn-glow">
+              Explore My Work
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#projects" class="btn btn-glass">
+              See How I Think <i class="fa-solid fa-eye" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- الجزء الأيمن: الصورة والأشكال الهندسية -->
+        <div
+          class="hero-visual"
+          aria-hidden="true"
+          data-reveal
+          data-delay="350"
+        >
+          <div class="visual-wrapper">
+            <!-- أشكال هندسية إضافية لملء الفراغ وتزيين الخلفية -->
+            <div class="geo-diamond" aria-hidden="true"></div>
+            <div class="visual-dots-grid" aria-hidden="true"></div>
+
+            <!-- الحلقات المتحركة -->
+            <div class="geo-ring geo-ring-1"></div>
+            <div class="geo-ring geo-ring-2"></div>
+            <div class="geo-ring geo-ring-3"></div>
+
+            <!-- الصورة الشخصية -->
+            <div class="profile-img-container">
+              <div class="profile-glow"></div>
+              <img
+                src="img/my-photo.svg"
+                alt="Ahmed AlGamal"
+                class="profile-image"
+              />
+            </div>
+
+            <!-- عنصر نود (Node) يطفو لإعطاء طابع الأتمتة -->
+            <div class="floating-badge badge-node glass-card" aria-hidden="true">
+              <span>🤖 Set Once. Run Forever.</span>
+            </div>
+
+            <!-- عنصر إعلانات يطفو من تحت -->
+            <div class="floating-badge badge-ads glass-card" aria-hidden="true">
+              <span>📈 Clicks &rarr; Cash</span>
+            </div>
           </div>
 
-          <!-- روابط وسائل التواصل الاجتماعي السريعة التي تقع أسفل محتوى الهيرو -->
-          <div class="hero-socials">
+          <div class="hero-socials" data-reveal data-delay="300">
             <a
-              href="https://www.linkedin.com/in/ahmed-al-gamal-6906ab204?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-              class="social-link"
+              href="https://www.linkedin.com/in/ahmed-al-gamal-6906ab204"
+              class="social-link glass-icon"
               target="_blank"
-              rel="noopener noreferrer"
               aria-label="LinkedIn"
               ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
             ></a>
             <a
-              href="https://www.instagram.com/ahmeedalgamal?igsh=MTF3cnJmbjQ1cWVrNg=="
-              class="social-link"
+              href="https://www.instagram.com/ahmeedalgamal"
+              class="social-link glass-icon"
               target="_blank"
-              rel="noopener noreferrer"
               aria-label="Instagram"
               ><i class="fa-brands fa-instagram" aria-hidden="true"></i
             ></a>
             <a
               href="https://wa.me/+971507761628"
-              class="social-link"
+              class="social-link glass-icon"
               target="_blank"
-              rel="noopener noreferrer"
               aria-label="WhatsApp"
               ><i class="fa-brands fa-whatsapp" aria-hidden="true"></i
             ></a>
             <a
               href="https://github.com/Ahmedtalaat2"
-              class="social-link"
+              class="social-link glass-icon"
               target="_blank"
-              rel="noopener noreferrer"
               aria-label="GitHub"
               ><i class="fa-brands fa-github" aria-hidden="true"></i
             ></a>
           </div>
         </div>
-
-        <!-- الجزء الأيسر: الصورة والأشكال الهندسية -->
-        <div class="hero-visual" aria-hidden="true">
-          <div class="geo-diamond"></div>
-          <div class="geo-ring geo-ring-1"></div>
-          <div class="geo-ring geo-ring-2"></div>
-          <div class="geo-ring geo-ring-3"></div>
-
-          <!-- الصورة الشخصية (استبدل SVG بصورة حقيقية) -->
-          <div class="profile-img-container">
-            <img
-              src="img/my-photo.svg"
-              alt="Ahmed AlGamal - Web Developer & Digital Marketing Specialist"
-              class="profile-image"
-              width="220"
-              height="220"
-            />
-            <div class="profile-glow"></div>
-          </div>
-
-          <!-- بطاقات إحصائية عائمة -
-          <div class="stat-card stat-card-1">
-            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
-            <div><strong>300%</strong><span>ROI Avg.</span></div>
-          </div>
-          <div class="stat-card stat-card-2">
-            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
-            <div><strong>48h</strong><span>Delivery</span></div>
-          </div>
-        </div>
-      </div>-->
+      </div>
 
       <!-- مؤشر التمرير لأسفل -->
-   
+      <div class="scroll-indicator show" aria-hidden="true">
+        <div class="scroll-line"></div>
+      </div>
     </section>
 
     <!-- ============================================================
@@ -623,7 +626,7 @@
           <!-- المشروع الأول: حاسبة ذكية -->
           <div class="project-card glass-card" data-reveal>
             <div class="project-preview">
-             <img src="img/dash.png" alt="">
+              <img src="img/dash.png" alt="" />
             </div>
             <div class="project-info">
               <!-- معلومات المشروع: الوسوم والعنوان والوصف -->
@@ -653,7 +656,7 @@
           <!-- المشروع الثاني: صفحة هبوط -->
           <div class="project-card glass-card" data-reveal>
             <div class="project-preview">
-            <img src="img/land.png" alt="">
+              <img src="img/land.png" alt="" />
             </div>
             <div class="project-info">
               <div class="project-tags">
@@ -682,7 +685,7 @@
           <!-- المشروع الثالث: أتمتة n8n — تم حذف > الزيادة -->
           <div class="project-card glass-card" data-reveal>
             <div class="project-preview">
-              <img src="img/n8n.png" alt="Automation">
+              <img src="img/n8n.png" alt="Automation" />
             </div>
             <div class="project-info">
               <div class="project-tags">
@@ -940,7 +943,12 @@
             <!-- حقل ادخال البريد الالكتروني للمتابع -->
             <div class="form-group">
               <label for="contactEmail" class="sr-only">Email Address</label>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required
+              />
             </div>
             <!-- حقل اختيار الخدمة المطلوبة -->
             <div class="form-group">
@@ -1093,7 +1101,7 @@
               >
                 <i class="fa-brands fa-instagram" aria-hidden="true"></i>
               </a>
-  
+
               <a
                 href="https://github.com/Ahmedtalaat2"
                 class="social-icon"
@@ -1104,7 +1112,6 @@
               >
                 <i class="fa-brands fa-github" aria-hidden="true"></i>
               </a>
-              
             </div>
           </div>
         </div>
@@ -1265,44 +1272,55 @@
         // [6. COUNTER ANIMATION - تحريك الأرقام التلقائي]
         // تم إصلاح: يتجاهل العناصر داخل aria-hidden="true"
         // --------------------------------------------------------
-        const counters = document.querySelectorAll(
-          ".stat-number:not([aria-hidden] .stat-number)",
-        );
+        // --------------------------------------------------------
+        // [6. COUNTER ANIMATION - تحريك الأرقام التلقائي (محدث ومطور)]
+        // --------------------------------------------------------
+        const statsContainer = document.querySelector(".stats-row-container");
+        const allStatNumbers = document.querySelectorAll(".stat-number");
+        let hasCounted = false;
 
-        // استهداف أول ظهور فقط (الصف الأول من stats-track)
-        const firstRowCounters = document.querySelectorAll(
-          ".stats-track .stats-row:first-child .stat-number",
-        );
+        const animateCounters = () => {
+          allStatNumbers.forEach((counter) => {
+            const target = parseInt(counter.getAttribute("data-target") || 0);
+            const suffix = counter.getAttribute("data-suffix") || "";
+            const duration = 2500; // وقت الحركة بالملي ثانية
+            const startTime = performance.now();
 
-        const counterObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (
-                entry.isIntersecting &&
-                !entry.target.classList.contains("counted")
-              ) {
-                entry.target.classList.add("counted");
-                const target = parseInt(
-                  entry.target.getAttribute("data-target"),
-                );
-                const suffix = entry.target.getAttribute("data-suffix") || "";
-                let current = 0;
-                const increment = target / 50;
-                const timer = setInterval(() => {
-                  current += increment;
-                  if (current >= target) {
-                    entry.target.textContent = target + suffix;
-                    clearInterval(timer);
-                  } else {
-                    entry.target.textContent = Math.floor(current) + suffix;
-                  }
-                }, 30);
+            // دالة حركة ناعمة: سريعة بالبداية ثم تتباطأ (Ease Out Quart)
+            const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
+
+            const updateCounter = (currentTime) => {
+              const elapsedTime = currentTime - startTime;
+              const progress = Math.min(elapsedTime / duration, 1);
+              const easedProgress = easeOutQuart(progress);
+              
+              const currentValue = Math.floor(easedProgress * target);
+              counter.textContent = currentValue + suffix;
+
+              if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+              } else {
+                counter.textContent = target + suffix;
               }
-            });
-          },
-          { threshold: 0.5 },
-        );
-        firstRowCounters.forEach((counter) => counterObserver.observe(counter));
+            };
+
+            requestAnimationFrame(updateCounter);
+          });
+        };
+
+        if (statsContainer) {
+          const statsObserver = new IntersectionObserver(
+            (entries) => {
+              if (entries[0].isIntersecting && !hasCounted) {
+                hasCounted = true;
+                animateCounters();
+                statsObserver.disconnect(); // إيقاف المراقبة بعد الحركة مرة واحدة
+              }
+            },
+            { threshold: 0.3 } // يبدأ الحركة عندما يظهر 30% من القسم
+          );
+          statsObserver.observe(statsContainer);
+        }
 
         // --------------------------------------------------------
         // [7. PARTICLES - الجسيمات المتحركة في الخلفية]
@@ -1326,81 +1344,91 @@
         // --------------------------------------------------------
         // [8. CHATBOT - تم نقل الـ n8n widget داخل body]
         // --------------------------------------------------------
-// --------------------------------------------------------
-// --------------------------------------------------------
-// [9. CONTACT FORM - إرسال البيانات إلى Google Sheets]
-// --------------------------------------------------------
-// --------------------------------------------------------
-const contactForm = document.getElementById("contactForm");
-const formSuccess = document.getElementById("formSuccess");
+        // --------------------------------------------------------
+        // --------------------------------------------------------
+        // [9. CONTACT FORM - إرسال البيانات إلى Google Sheets]
+        // --------------------------------------------------------
+        // --------------------------------------------------------
+        const contactForm = document.getElementById("contactForm");
+        const formSuccess = document.getElementById("formSuccess");
 
-if (contactForm) {
-  const submitBtn = contactForm.querySelector("button[type='submit']");
+        if (contactForm) {
+          const submitBtn = contactForm.querySelector("button[type='submit']");
 
-  contactForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
+          contactForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
 
-    const name = contactForm.querySelector('input[name="name"]').value.trim();
-    const phone = contactForm.querySelector('input[name="phone"]').value.trim();
-    const service = contactForm.querySelector('select[name="service"]').value;
-    const message = contactForm.querySelector('textarea[name="message"]').value.trim();
+            const name = contactForm
+              .querySelector('input[name="name"]')
+              .value.trim();
+            const phone = contactForm
+              .querySelector('input[name="phone"]')
+              .value.trim();
+            const service = contactForm.querySelector(
+              'select[name="service"]',
+            ).value;
+            const message = contactForm
+              .querySelector('textarea[name="message"]')
+              .value.trim();
 
-    if (!name || !phone) {
-      alert("من فضلك املى الاسم ورقم التليفون ❗");
-      return;
-    }
+            if (!name || !phone) {
+              alert("من فضلك املى الاسم ورقم التليفون ❗");
+              return;
+            }
 
-    // 🟡 حالة جاري الإرسال
-    submitBtn.innerText = "جاري الإرسال...";
-    submitBtn.disabled = true;
-    submitBtn.style.opacity = "0.7";
+            // 🟡 حالة جاري الإرسال
+            submitBtn.innerText = "جاري الإرسال...";
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = "0.7";
 
-    const data = {
-      name: name,
-      phone: phone,
-      service: service || "Not specified",
-      message: message
-    };
+            const data = {
+              name: name,
+              phone: phone,
+              service: service || "Not specified",
+              message: message,
+            };
 
-    try {
-      await fetch("https://script.google.com/macros/s/AKfycbzovz-6HvRa2AmrKsnk56DTGkcHVupZxWf7DNTpdB-zVpxnC8ho67HG_I2_NVt-HQjTWg/exec", {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      });
+            try {
+              await fetch(
+                "https://script.google.com/macros/s/AKfycbzovz-6HvRa2AmrKsnk56DTGkcHVupZxWf7DNTpdB-zVpxnC8ho67HG_I2_NVt-HQjTWg/exec",
+                {
+                  method: "POST",
+                  mode: "no-cors",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(data),
+                },
+              );
 
-      // 🟢 تم الإرسال
-      submitBtn.innerText = "تم الإرسال ✔️";
+              // 🟢 تم الإرسال
+              submitBtn.innerText = "تم الإرسال ✔️";
 
-      if (formSuccess) formSuccess.classList.add("show");
-      contactForm.reset();
+              if (formSuccess) formSuccess.classList.add("show");
+              contactForm.reset();
 
-      setTimeout(() => {
-        // رجوع الزرار لطبيعته
-        submitBtn.innerText = "Send Message";
-        submitBtn.disabled = false;
-        submitBtn.style.opacity = "1";
+              setTimeout(() => {
+                // رجوع الزرار لطبيعته
+                submitBtn.innerText = "Send Message";
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = "1";
 
-        if (formSuccess) formSuccess.classList.remove("show");
-      }, 3000);
+                if (formSuccess) formSuccess.classList.remove("show");
+              }, 3000);
+            } catch (error) {
+              console.error(error);
 
-    } catch (error) {
-      console.error(error);
+              // ❌ خطأ
+              submitBtn.innerText = "حصل خطأ ❌";
 
-      // ❌ خطأ
-      submitBtn.innerText = "حصل خطأ ❌";
-      
-      setTimeout(() => {
-        submitBtn.innerText = "Send Message";
-        submitBtn.disabled = false;
-        submitBtn.style.opacity = "1";
-      }, 3000);
-    }
-  });
-}
+              setTimeout(() => {
+                submitBtn.innerText = "Send Message";
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = "1";
+              }, 3000);
+            }
+          });
+        }
 
         // --------------------------------------------------------
         // [10. PARALLAX EFFECT - تأثير تحرك العناصر مع الماوس]
