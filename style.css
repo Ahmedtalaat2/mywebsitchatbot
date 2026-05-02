@@ -862,8 +862,8 @@ body {
 }
 
 .profile-img-container {
-  width: 260px;
-  height: 260px;
+  width: auto8;
+  height: auto;
   position: relative;
   border-radius: 30px;
   overflow: hidden;
@@ -968,6 +968,12 @@ body {
     justify-content: center;
   }
 
+  .hero-buttons {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+
+  }
+
   .stat-card-1 {
     right: -10px;
   }
@@ -1004,6 +1010,28 @@ body {
 
   .stat-info strong {
     font-size: 1rem;
+  }
+
+  .glass-card {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+
+  /* كارت الأوتوميشن */
+  .badge-node {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 1.1rem;
+  }
+
+  /* كارت الإعلانات */
+  .badge-ads {
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    margin-top: 0;
+    margin: 2.2rem;
   }
 }
 
