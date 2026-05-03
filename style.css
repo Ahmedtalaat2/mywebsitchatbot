@@ -861,10 +861,7 @@ body {
   }
 }
 
-.project-info {
 
-  margin-top: 2.5rem;
-}
 
 .profile-img-container {
   width: 280px;
@@ -1089,6 +1086,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .about-card-icon,
@@ -1169,6 +1167,7 @@ body {
   width: 100%;
   justify-content: flex-start;
   margin-top: auto;
+  transform: translateY(10px);
 }
 
 /* ===== قسم المشاريع ===== */
@@ -1185,6 +1184,9 @@ body {
 .project-card {
   overflow: hidden;
   padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-preview {
@@ -1196,7 +1198,10 @@ body {
 }
 
 .project-info {
-  padding: 24px;
+  padding: 20px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .project-tags {
@@ -1220,7 +1225,7 @@ body {
   gap: 8px;
   color: var(--primary);
   text-decoration: none;
-  margin-top: 12px;
+  margin-top: auto;
 }
 
 /* ===== قسم النتائج والإحصائيات ===== */
