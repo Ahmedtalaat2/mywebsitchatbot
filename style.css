@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    [STYLE.CSS - كل تنسيقات الموقع]
    
    التعديلات المضافة:
@@ -81,7 +81,7 @@ img {
 
 .project-preview img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -311,11 +311,8 @@ body {
   display: flex;
   align-items: center;
   transition: all var(--transition);
-}
-
-.navbar.scrolled {
-  background: rgba(11, 15, 26, 0.9);
-  backdrop-filter: blur(20px);
+  background: rgba(11, 15, 26, 0.4);
+  backdrop-filter: blur(10px);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
@@ -476,6 +473,14 @@ body {
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
+}
+
+.hero-bg-blobs::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(60px);
+  z-index: 1;
 }
 
 .blob {
@@ -862,8 +867,8 @@ body {
 }
 
 .profile-img-container {
-  width: auto8;
-  height: auto;
+  width: 280px;
+  height: 280px;
   position: relative;
   border-radius: 30px;
   overflow: hidden;
@@ -969,9 +974,12 @@ body {
   }
 
   .hero-buttons {
-    font-size: 0.9rem;
-    padding: 5px 10px;
+    justify-content: center;
+  }
 
+  .hero-buttons .btn {
+    font-size: 0.9rem;
+    padding: 12px 20px;
   }
 
   .stat-card-1 {
@@ -1033,6 +1041,20 @@ body {
     margin-top: 0;
     margin: 2.2rem;
   }
+
+  .hero-buttons {
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    flex: 1;
+    padding: 12px 8px;
+    font-size: 0.8rem;
+    justify-content: center;
+    white-space: nowrap;
+  }
 }
 
 /* ===== قسم من أنا About ===== */
@@ -1057,10 +1079,16 @@ body {
 }
 
 .about-card,
-.service-card,
 .benefit-card {
   padding: 36px 28px;
   text-align: center;
+}
+
+.service-card {
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-card-icon,
@@ -1135,9 +1163,12 @@ body {
 .service-cta {
   color: var(--primary);
   text-decoration: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: auto;
 }
 
 /* ===== قسم المشاريع ===== */
@@ -1153,6 +1184,7 @@ body {
 
 .project-card {
   overflow: hidden;
+  padding: 0 !important;
 }
 
 .project-preview {
@@ -1933,9 +1965,16 @@ body {
     font-size: 15px;
   }
 
+  .hero-container {
+    width: 100%;
+    padding: 0 5%;
+    gap: 30px;
+  }
+
   .hero-headline {
-    font-size: 2.2rem !important;
+    font-size: 2.4rem !important;
     margin-bottom: 15px;
+    line-height: 1.2;
   }
 
   .section-title {
@@ -1943,7 +1982,16 @@ body {
   }
 
   .hero-sub {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    max-width: 100%;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  /* إخفاء الفواصل الإجبارية للسماح للنص بأخذ كامل العرض */
+  .hero-headline br,
+  .hero-sub br {
+    display: none;
   }
 
   /* تصغير كروت الهيرو حول الصورة */
@@ -1960,5 +2008,20 @@ body {
   .badge-ads {
     right: -10px !important;
     bottom: -10px !important;
+  }
+
+  /* تصغير مسافات نموذج التواصل */
+  .contact-form {
+    padding: 20px !important;
+  }
+
+  .form-group {
+    margin-bottom: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 14px !important;
   }
 }
