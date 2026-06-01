@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    [STYLE.CSS - كل تنسيقات الموقع]
    
    التعديلات المضافة:
@@ -111,9 +111,11 @@ body {
   position: fixed;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle,
-      rgba(255, 45, 45, 0.08) 0%,
-      transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 45, 45, 0.08) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
@@ -234,7 +236,6 @@ body {
 }
 
 @keyframes gradientShift {
-
   0%,
   100% {
     background-position: 0% 50%;
@@ -815,7 +816,10 @@ body {
   position: absolute;
   width: 120px;
   height: 120px;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 2px, transparent 2px);
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.15) 2px,
+    transparent 2px
+  );
   background-size: 15px 15px;
   bottom: -30px;
   right: -30px;
@@ -861,8 +865,6 @@ body {
   }
 }
 
-
-
 .profile-img-container {
   width: 280px;
   height: 280px;
@@ -887,7 +889,12 @@ body {
 .profile-glow {
   position: absolute;
   inset: -50%;
-  background: conic-gradient(from 0deg, transparent, var(--primary), transparent 30%);
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    var(--primary),
+    transparent 30%
+  );
   animation: spinGlow 4s linear infinite;
 }
 
@@ -1121,9 +1128,11 @@ body {
 
 /* ✅ إصلاح: إضافة position: absolute كانت ناقصة */
 .featured-card {
-  background: linear-gradient(135deg,
-      rgba(255, 45, 45, 0.08),
-      rgba(255, 45, 45, 0.02));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 45, 45, 0.08),
+    rgba(255, 45, 45, 0.02)
+  );
   border-color: rgba(255, 45, 45, 0.3);
   position: relative;
 }
@@ -1323,7 +1332,6 @@ body {
 
 /* ===== تجاوب عام للشاشات الصغيرة ===== */
 @media (max-width: 768px) {
-
   .about-grid,
   .services-grid,
   .benefits-grid,
@@ -1334,7 +1342,6 @@ body {
 
 /* تجاوب الشاشات المتوسطة (تابلت) */
 @media (max-width: 1024px) and (min-width: 769px) {
-
   .about-grid,
   .services-grid,
   .benefits-grid,
@@ -1610,10 +1617,12 @@ body {
 
 .footer-divider {
   height: 1px;
-  background: linear-gradient(90deg,
-      transparent,
-      rgba(255, 45, 45, 0.3),
-      transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 45, 45, 0.3),
+    transparent
+  );
   margin-bottom: 32px;
 }
 
@@ -1644,7 +1653,6 @@ body {
 }
 
 @keyframes heartbeat {
-
   0%,
   100% {
     transform: scale(1);
@@ -1922,7 +1930,6 @@ body {
    [?? ??????? ???????? ????? ??? - ????? ????? ?????? ????????]
    ============================================================ */
 @media (max-width: 768px) {
-
   /* ??? ????? ?? ??? ??? ??? ?????? (Full-screen) ?????? ???????? */
   .chat-window-wrapper {
     max-width: calc(100vw - 40px) !important;
