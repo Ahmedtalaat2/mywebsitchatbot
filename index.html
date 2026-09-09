@@ -1,167 +1,688 @@
 <!doctype html>
 <html lang="en">
-  <!-- ============================================================
-     [HEADER - رأس الصفحة]
-     يحتوي على إعدادات الموقع الأساسية: الترميز، العرض، العنوان، الوصف
-     وأيضاً روابط الخطوط والأيقونات
-     ============================================================ -->
-
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ahmed Algamal — I Build Systems That Bring You Clients</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ahmed AlGamal — Performance Marketing & AI Automation</title>
     <meta
+      content="Ahmed AlGamal — Performance Marketing, Lead Generation & AI Automation for Real Estate, Clinics, and Restaurants."
       name="description"
-      content="Ahmed Algamal — Ads, Web Development & Automation. Simple. Fast. Results."
     />
 
-    <!-- ============================================================
-         [SEO - محسنات محركات البحث]
-    ============================================================ -->
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Ahmed Algamal" />
-    <meta
-      name="keywords"
-      content="Ahmed Algamal, Web Development, Meta Ads, n8n Automation, Lead Generation, Dubai, مطور ويب, إعلانات ميتا"
+    <!-- الخطوط تُستورد من ملف CSS -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <!-- مكتبة الأيقونات -->
+    <link href="img/link-img.jpg" rel="icon" sizes="48x48" type="image/png" />
+    <!-- ربط ملف التنسيق CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <link rel="canonical" href="https://ahmedalgamal.com/" />
+    <!-- ربط ملف التنسيق الخارجي -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
 
-    <!-- Open Graph (Facebook / LinkedIn) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ahmedalgamal.com/" />
-    <meta
-      property="og:title"
-      content="Ahmed Algamal — I Build Systems That Bring You Clients"
-    />
-    <meta
-      property="og:description"
-      content="Ahmed Algamal — Ads, Web Development & Automation. Simple. Fast. Results."
-    />
-    <meta
-      property="og:image"
-      content="https://ahmedalgamal.com/img/og-image.jpg"
-    />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Ahmed Algamal" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Ahmed Algamal — I Build Systems That Bring You Clients"
-    />
-    <meta
-      name="twitter:description"
-      content="Ads, Web Development & Automation. Simple. Fast. Results."
-    />
-    <meta
-      name="twitter:image"
-      content="https://ahmedalgamal.com/img/og-image.jpg"
-    />
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ahmed Algamal",
-        "url": "https://ahmedalgamal.com",
-        "image": "https://ahmedalgamal.com/img/my-photo.svg",
-        "jobTitle": "Web Developer & Digital Marketing Specialist",
-        "description": "Building systems that combine Web Development, Meta Ads, and n8n Automation to help businesses grow.",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Ahmed Algamal"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Dubai",
-          "addressCountry": "AE"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+971507761628",
-          "contactType": "customer support",
-          "email": "info@ahmedalgamal.com",
-          "availableLanguage": ["English", "Arabic"]
-        },
-        "knowsAbout": [
-          "Web Development",
-          "Meta Ads",
-          "Lead Generation",
-          "n8n Automation",
-          "CRM Automation"
-        ]
-      }
-    </script>
-
-    <!-- ============================================================
-         [GOOGLE ANALYTICS - رموز التتبع والإحصائيات]
-    ============================================================ -->
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-LE5YGN61P1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-LE5YGN61P1");
-    </script>
-
-    <!-- ============================================================
-         [META PIXEL - Facebook Pixel]
-         🔴 استبدل PIXEL_ID برقمك الحقيقي لتفعيل البكسل
-         ============================================================ -->
     <!--
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'PIXEL_ID');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=PIXEL_ID&ev=PageView&noscript=1" /></noscript>
-    -->
+-->
+    <nav class="navbar" id="navbar">
+      <!-- حاوية عناصر الشريط العلوي: شعار الموقع والروابط وزر القائمة للهواتف -->
+      <!-- تعليق: الحاوية الداخلية للـ Navbar، وتجمع الشعار والروابط وزر القائمة. -->
+      <div class="nav-container">
+        <!-- Logo / الشعار -->
+        <a class="nav-logo" href="#hero">
+          <img alt="Ahmed AlGamal" class="nav-logo-img" src="img/logo.jpg" />
+          <span class="logo-name"> Ahmed AlGamal </span>
+        </a>
 
-    <!-- Google Fonts - تم إضافة Plus Jakarta Sans (الخط المستخدم في الكود) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+        <!-- قائمة روابط التنقل الرئيسية التي توجه المستخدم إلى أقسام الصفحة -->
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a class="nav-link" href="#about"> About </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#services"> Services </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#projects"> Work </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#results"> Results </a>
+          </li>
+          <li>
+            <a
+              href="https://blog.ahmedalgamal.tech"
+              target="_blank"
+              class="nav-link"
+              >Blogger</a>
+          </li>
+          <!-- 🔴 استبدل هذا الرابط بالرابط الحقيقي لمدونة بلوجر -->
+          <li>
+            <a class="nav-link nav-cta" href="#contact"> Let's Talk </a>
+          </li>
+        </ul>
+        <!-- زر القائمة للهواتف: يفتح ويغلق القائمة على الشاشات الصغيرة -->
+        <button class="hamburger" id="hamburger">
+          <span> </span>
+          <span> </span>
+          <span> </span>
+        </button>
+      </div>
+    </nav>
 
-    <!-- Font Awesome Icons - مكتبة الأيقونات -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <!-- تعليق: قسم Hero الرئيسي، وهو أول جزء يراه الزائر ويحتوي على الرسالة الأساسية والأزرار والصورة.
+-->
+    <section class="hero" id="hero">
+      <!-- خلفية الهيرو الشبكية المتحركة -->
+      <div class="hero-grid"></div>
+      <!-- عنصر تأثير الجسيمات المتحركة فوق الهيرو -->
+      <div class="particles" id="particles"></div>
+      <!-- الحاوية الرئيسية لمحتوى الهيرو: نص وصورة داخل صف واحد -->
+      <!-- تعليق: الحاوية الرئيسية لمحتوى Hero، وتقسم النص والعناصر البصرية. -->
+      <div class="hero-container">
+        <!-- الجزء الأيمن: المحتوى النصي -->
+        <!-- تعليق: المحتوى النصي داخل Hero، ويضم العنوان والوصف والأزرار وروابط التواصل. -->
+        <div class="hero-content">
+          <!-- شارة الحالة أو العرض القصير فوق العنوان -->
+          <div class="hero-badge">Performance Marketing + AI Automation</div>
+          <h1 class="hero-headline">
+            Get More Leads.
+            <br />
+            <span class="highlight-text"> Close More Deals. </span>
+          </h1>
+          <p class="hero-sub">
+            Ads, funnels, and automation built to grow your business.
+          </p>
+          <!-- مجموعة العلامات السريعة التي توضح الخدمات الرئيسية -->
+          <div class="hero-tags">
+            <span class="tag">
+              <i class="fa-brands fa-meta"> </i>
+              Meta Ads
+            </span>
+            <span class="tag">
+              <i class="fa-solid fa-code"> </i>
+              Landing Pages
+            </span>
+            <span class="tag">
+              <i class="fa-solid fa-robot"> </i>
+              AI Automation
+            </span>
+          </div>
+          <!-- أزرار الحث على الإجراء للوصول إلى نموذج التواصل أو المشاريع -->
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#contact">
+              Get a Free Strategy Call
+            </a>
+            <a class="btn btn-ghost" href="#projects"> View My Work </a>
+          </div>
+          <!-- روابط وسائل التواصل الاجتماعي السريعة التي تقع أسفل محتوى الهيرو -->
+          <div class="hero-socials">
+            <a class="social-link" href="https://www.linkedin.com/in/ahmed-al-gamal-6906ab204" target="_blank">
+              <i class="fa-brands fa-linkedin-in"> </i>
+            </a>
+            <a class="social-link" href="https://www.instagram.com/ahmedalgamal.ae/" target="_blank">
+              <i class="fa-brands fa-instagram"> </i>
+            </a>
+            <a
+              class="social-link"
+              href="https://wa.me/+971507761628"
+              target="_blank"
+            >
+              <i class="fa-brands fa-whatsapp"> </i>
+            </a>
+            <a class="social-link" href="https://github.com/Ahmedtalaat2" target="_blank">
+              <i class="fa-brands fa-github"> </i>
+            </a>
+          </div>
+        </div>
+        <!-- الجزء الأيسر: الصورة والأشكال الهندسية -->
+        <!-- تعليق: الجزء البصري من Hero، ويضم الصورة الشخصية والأشكال الهندسية والإحصائيات العائمة. -->
+        <div class="hero-visual">
+          <div class="geo-diamond"></div>
+          <div class="geo-ring geo-ring-1"></div>
+          <div class="geo-ring geo-ring-2"></div>
+          <div class="geo-ring geo-ring-3"></div>
+          <!-- الصورة الشخصية (استبدل SVG بصورة حقيقية) -->
+          <div class="profile-img-container">
+            <img alt="Ahmed AlGamal" class="profile-image" src="img/hero.jpg" />
+            <div class="profile-glow"></div>
+          </div>
+          <!-- بطاقات إحصائية عائمة -->
+          <div class="stat-card stat-card-1">
+            <i class="fa-solid fa-chart-line"> </i>
+            <div>
+              <strong> Lead Gen </strong>
+              <span> Focused </span>
+            </div>
+          </div>
+          <div class="stat-card stat-card-2">
+            <i class="fa-solid fa-bolt"> </i>
+            <div>
+              <strong> AI </strong>
+              <span> Automation </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- مؤشر التمرير لأسفل -->
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span> Scroll </span>
+      </div>
+    </section>
 
+    <!-- تعليق: قسم About، ويعرض نبذة عن أحمد وطريقة العمل وأسباب الثقة. -->
+    <section class="about section-pad" id="about">
+      <!-- حاوية القسم لتحديد العرض المركزي والهوامش الداخلية -->
+      <div class="container">
+        <!-- رأس القسم: العنوان الرئيسي والوصف الموجود في الأعلى -->
+        <div class="section-header" data-reveal="">
+          <span class="section-label"> About Me </span>
+          <h2 class="section-title">I Build - I Test - I Optimize.</h2>
+        </div>
+        <!-- شبكة البطاقات التي تعرض نقاط القوة أو الأقسام الفرعية عن الشخص -->
+        <!-- تعليق: شبكة بطاقات قسم About التي تعرض المعلومات الرئيسية. -->
+        <div class="about-grid">
+          <!-- بطاقة معلومات عنك كخبير أو شخص -->
+          <div class="about-card glass-card" data-reveal="">
+            <!-- أيقونة تعريفية داخل البطاقة -->
+            <div class="about-card-icon">
+              <i class="fa-solid fa-user-astronaut"> </i>
+            </div>
+            <h3>The Person</h3>
+            <p>I help businesses get more leads and customers online.</p>
+          </div>
+          <!-- بطاقة توضح ما هي الخدمات أو التخصصات التي تقدمها -->
+          <!-- البطاقة الثانية: ماذا يفعل هذا الشخص أو ما هي خدماته -->
+          <div class="about-card glass-card" data-reveal="">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-fire"> </i>
+            </div>
+            <h3>What I Do</h3>
+            <p>I combine Ads, Landing Pages, and AI Automation.</p>
+          </div>
+          <!-- بطاقة تبين سبب الثقة أو المصداقية في خدماتك -->
+          <!-- البطاقة الثالثة: سبب الثقة والاعتمادية -->
+          <div class="about-card glass-card" data-reveal="">
+            <div class="about-card-icon">
+              <i class="fa-solid fa-shield-halved"> </i>
+            </div>
+            <h3>How I Work</h3>
+            <p>Simple strategy. Clear data. Better results.</p>
+          </div>
+        </div>
+        <!-- بطاقة السيرة أو القصة التي تشرح الخلفية والأسلوب الشخصي -->
+        <!-- بطاقة القصة أو السيرة تعطي تفسيراً شخصياً وخلفية عن العمل -->
+        <div class="about-story glass-card" data-reveal="">
+          <i class="fa-solid fa-quote-left"> </i>
+          <p>
+            I focus on one goal:
+            <em> helping businesses grow. </em>
+            I build simple systems that attract leads, convert visitors, and
+            automate follow-up.
+          </p>
+          <div>— Ahmed Algamal</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- تعليق: قسم Services، ويعرض الخدمات الأساسية المقدمة للعميل. -->
+    <section class="services section-pad" id="services">
+      <!-- حاوية القسم لضبط عرض خدماتك داخل صفحة الهبوط -->
+      <div class="container">
+        <!-- رأس القسم مع العنوان الفرعي والباراجراف التعريفي -->
+        <div class="section-header" data-reveal="">
+          <span class="section-label"> What I Offer </span>
+          <h2 class="section-title">Simple Tools - One Goal: Growth.</h2>
+        </div>
+        <!-- شبكة خدمات تعرض ثلاثة عروض أساسية بشكل بطاقات -->
+        <!-- شبكة بطاقات الخدمات الثلاثة التي تعرض كل عرض بشكل منفصل -->
+        <!-- تعليق: شبكة بطاقات الخدمات الثلاثة. -->
+        <div class="services-grid">
+          <!-- الخدمة الأولى: إعلانات ميتا -->
+          <div class="service-card glass-card" data-reveal="">
+            <!-- أيقونة وتمهيد للخدمة الأولى -->
+            <div class="service-icon">
+              <i class="fa-brands fa-meta"> </i>
+            </div>
+            <h3 class="service-title">Meta Ads & Lead Gen</h3>
+            <p class="service-desc">Turn attention into leads.</p>
+            <ul class="service-features">
+              <li>
+                <i class="fa-solid fa-check"> </i>
+                Facebook & Instagram Ads
+              </li>
+              <li>
+                <i class="fa-solid fa-check"> </i>
+                Lead Generation Funnels
+              </li>
+            </ul>
+            <a class="service-cta" href="#contact">
+              Get More Leads
+              <i class="fa-solid fa-arrow-right"> </i>
+            </a>
+          </div>
+          <!-- الخدمة الثانية: تطوير الويب (مميزة) -->
+          <!-- البطاقة المميزة لخدمة تطوير الويب الأكثر شيوعاً -->
+          <div class="service-card glass-card featured-card" data-reveal="">
+            <div class="featured-badge"><p>Featured</p></div>
+            <!-- أيقونة الخدمة المميزة في البطاقة الثانية -->
+            <div class="service-icon">
+              <i class="fa-solid fa-laptop-code"> </i>
+            </div>
+            <h3 class="service-title">Landing Pages</h3>
+            <p class="service-desc">Turn clicks into leads.</p>
+            <ul class="service-features">
+              <li>
+                <i class="fa-solid fa-check"> </i>
+                Fast Landing Pages
+              </li>
+              <li>
+                <i class="fa-solid fa-check"> </i>
+                Conversion-Focused Design
+              </li>
+            </ul>
+            <a class="service-cta" href="#contact">
+              Build My Landing Page
+              <i class="fa-solid fa-arrow-right"> </i>
+            </a>
+          </div>
+          <!-- الخدمة الثالثة: الأتمتة -->
+          <!-- البطاقة الثالثة: خدمة الأتمتة باستخدام n8n -->
+          <!-- البطاقة الثالثة: خدمة الأتمتة باستخدام n8n -->
+          <div class="service-card glass-card" data-reveal="">
+            <div class="service-icon">
+              <i class="fa-solid fa-robot"> </i>
+            </div>
+            <h3 class="service-title">AI Automation</h3>
+            <p class="service-desc">Follow up without the busy work.</p>
+            <ul class="service-features">
+              <li>
+                <i class="fa-solid fa-check"> </i>
+                n8n Workflows
+              </li>
+              <li>
+                <i class="fa-solid fa-check"> </i>
+                AI + WhatsApp + CRM
+              </li>
+            </ul>
+            <a class="service-cta" href="#contact">
+              Automate My Leads
+              <i class="fa-solid fa-arrow-right"> </i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- تعليق: قسم Projects، ويعرض نماذج المشاريع والأعمال السابقة. -->
+    <section class="projects section-pad" id="projects">
+      <!-- حاوية القسم التي تحدد المساحة المخصصة لمعرض المشاريع -->
+      <div class="container">
+        <!-- رأس القسم لعرض عنوان المشاريع -->
+        <div class="section-header" data-reveal="">
+          <span class="section-label"> Selected Work </span>
+          <h2 class="section-title">Built to Get Results.</h2>
+        </div>
+        <!-- شبكة بطاقات المشاريع في العرض -->
+        <!-- تعليق: شبكة بطاقات المشاريع المعروضة في الموقع. -->
+        <div class="projects-grid">
+          <!-- المشروع الأول: حاسبة ذكية -->
+          <div class="project-card glass-card" data-reveal="">
+            <div class="project-preview">
+              <img src="img/dash.jpg" alt="">
+            </div>
+            <div class="project-info">
+              <!-- معلومات المشروع: الوسوم والعنوان والوصف -->
+              <div class="project-tags">
+                <span> Web App </span>
+                <span> JavaScript </span>
+              </div>
+              <h3>Smart Calculator</h3>
+              <p>A clean tool built for a real business workflow.</p>
+              <!-- 🔴 غير الرابط # برابط المشروع الحقيقي -->
+              <a class="btn-project" href="#" target="_blank">
+                View Project
+                <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+              </a>
+            </div>
+          </div>
+          <!-- المشروع الثاني: صفحة هبوط -->
+          <div class="project-card glass-card" data-reveal="">
+            <div class="project-preview">
+            <img src="img/land.jpg" alt="">
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span> Landing Page </span>
+                <span> Conversion </span>
+              </div>
+              <h3>Lead Generation Landing Page</h3>
+              <p>A focused page built to turn clicks into leads.</p>
+              <!-- 🔴 غير الرابط # برابط المشروع الحقيقي -->
+              <a class="btn-project" href="#" target="_blank">
+                View Project
+                <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+              </a>
+            </div>
+          </div>
+          <!-- المشروع الثالث: أتمتة n8n -->
+          <div class="project-card glass-card" data-reveal="">
+            <div class="project-preview">
+            <img src="img/n8n.jpg" alt="">
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span> n8n </span>
+                <span> Automation </span>
+              </div>
+              <h3>AI Lead Automation</h3>
+              <p>
+                A workflow that captures, qualifies, and follows up with leads.
+              </p>
+              <!-- 🔴 غير الرابط # برابط المشروع الحقيقي -->
+              <a class="btn-project" href="#" target="_blank">
+                View Project
+                <i class="fa-solid fa-arrow-up-right-from-square"> </i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- تعليق: قسم Results، ويعرض النتائج والإحصائيات والأرقام الرئيسية. -->
+    <section class="results section-pad" id="results">
+      <div class="container">
+        <div class="section-header" data-reveal="">
+          <span class="section-label"> Why It Works </span>
+          <h2 class="section-title">More Than Ads.</h2>
+        </div>
+        <!-- شبكة المزايا الإضافية التي توضّح فوائد النتائج -->
+        <!-- تعليق: شبكة بطاقات المزايا والفوائد الناتجة عن الخدمات. -->
+        <div class="benefits-grid">
+          <!-- بطاقة فائدة: المزيد من العملاء المحتملين -->
+          <div class="benefit-card glass-card" data-reveal="">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-magnifying-glass-chart"> </i>
+            </div>
+            <h3>More Leads</h3>
+            <p>Bring the right traffic to your business.</p>
+          </div>
+          <div class="benefit-card glass-card" data-reveal="">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-gauge-high"> </i>
+            </div>
+            <h3>Faster Follow-Up</h3>
+            <p>Respond to leads faster with automation.</p>
+          </div>
+          <div class="benefit-card glass-card" data-reveal="">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-hand-holding-dollar"> </i>
+            </div>
+            <h3>Less Manual Work</h3>
+            <p>Let smart systems handle repetitive tasks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- تعليق: قسم Contact، ويحتوي على وسائل التواصل ونموذج إرسال الرسالة. -->
+    <section class="contact section-pad" id="contact">
+      <!-- حاوية القسم لتثبيت العرض الداخلي وتوسيط المحتوى -->
+      <div class="container">
+        <!-- رأس القسم مع عنوان داعٍ للعمل -->
+        <div class="section-header" data-reveal="">
+          <span class="section-label"> Let's Talk </span>
+          <h2 class="section-title">Ready to Get More Customers?</h2>
+        </div>
+        <!-- تقسيم القناة: معلومات التواصل على اليسار والنموذج على اليمين -->
+        <!-- تعليق: الحاوية التي تقسم قسم التواصل إلى معلومات الاتصال ونموذج التواصل. -->
+        <div class="contact-wrap">
+          <!-- بطاقة معلومات التواصل وروابط الاتصال السريعة -->
+          <div class="contact-info">
+            <a
+              class="glass-card"
+              href="https://wa.me/+971507761628"
+              target="_blank"
+            >
+              <i class="fa-brands fa-whatsapp"> </i>
+              <div>
+                <strong> WhatsApp </strong>
+                <br />
+                Chat with me
+              </div>
+            </a>
+
+            <a class="glass-card" href="mailto:ahmed.talaat11.6.2000@gmail.com">
+              <i class="fa-solid fa-envelope"> </i>
+              <div>
+                <strong> Email </strong>
+                <br />
+                Send me a message
+              </div>
+            </a>
+            <div class="glass-card">
+              <!-- صندوق يوضح خطوات العمل التالية بعد التواصل -->
+              <h3>What Happens Next?</h3>
+              <ol>
+                <li>📝 You send your details</li>
+                <li>📞 We have a quick call</li>
+                <li>⚙️ I build the right system</li>
+                <li>🚀 You grow your business</li>
+              </ol>
+            </div>
+          </div>
+          <!-- نموذج التواصل بالحقول لإرسال رسالة مباشرة -->
+          <form class="contact-form glass-card" id="contactForm">
+            <!-- حقل ادخال اسم المرسل -->
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Phone Number"
+                autocomplete="tel"
+                required
+              />
+            </div>
+            <!-- حقل ادخال البريد الالكتروني للمتابع -->
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <!-- حقل اختيار الخدمة المطلوبة -->
+            <div class="form-group">
+              <select id="service" name="service" required>
+                <option value="">Choose a service...</option>
+                <option value="Meta Ads / Lead Generation">
+                  Meta Ads / Lead Generation
+                </option>
+                <option value="Web Development">Web Development</option>
+                <option value="Automation">Automation</option>
+                <option value="Graphic Design">Graphic Design</option>
+              </select>
+            </div>
+            <!-- حقل نصي لوصف المشروع أو الفكرة -->
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell me about your business"
+                required
+              ></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Request a Free Strategy Call
+              <i class="fa-solid fa-paper-plane"> </i>
+            </button>
+            <div class="form-success" id="formSuccess">
+              &checkmark; Message sent! I'll reply within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- تعليق: Footer، ويحتوي على معلومات الموقع والروابط والمعلومات السفلية. -->
+    <footer class="footer">
+      <!-- حاوية الفوتر لتحديد عرض المحتوى وتوسيطه -->
+      <div class="container">
+        <!-- شبكة محتوى الفوتر التي تقسم الأقسام المختلفة -->
+        <!-- تعليق: المحتوى الرئيسي داخل الـ Footer. -->
+        <div class="footer-content">
+          <!-- الجزء الأول: معلومات الموقع -->
+          <div class="footer-section">
+            <div class="footer-logo">
+              <img
+                alt="Ahmed AlGamal"
+                class="footer-logo-img"
+                src="img/logo.jpg"
+              />
+              <span class="logo-bracket"> </span>
+              <span class="logo-name"> Ahmed AlGamal </span>
+              <span class="logo-bracket"> </span>
+            </div>
+            <p>Performance Marketing + AI Automation</p>
+            <p class="footer-desc">
+              Google Ads, Meta Ads, Lead Generation, and AI Automation.
+              <br />
+              Let's grow your business together.
+            </p>
+            <!-- الجزء الخامس: السوشيال ميديا -->
+            <div class="footer-section">
+              <h3 class="footer-title">Follow Me</h3>
+              <div class="footer-socials">
+                <a
+                  class="social-icon"
+                  href="https://www.linkedin.com/in/ahmed-al-gamal-6906ab204/"
+                  target="_blank"
+                  title="LinkedIn"
+                >
+                  <i class="fa-brands fa-linkedin-in"> </i>
+                </a>
+                <a
+                  class="social-icon"
+                  href="https://www.instagram.com/ahmedalgamal.ae/"
+                  target="_blank"
+                  title="Instagram"
+                >
+                  <i class="fa-brands fa-instagram"> </i>
+                </a>
+               
+                <a class="social-icon" href="https://github.com/Ahmedtalaat2" target="_blank" title="GitHub">
+                  <i class="fa-brands fa-github"> </i>
+                </a>
+               
+              </div>
+            </div>
+          </div>
+          <!-- الجزء الثاني: روابط الأقسام -->
+          <div class="footer-section">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#hero"> Home </a>
+              </li>
+              <li>
+                <a href="#about"> About </a>
+              </li>
+              <li>
+                <a href="#services"> Services </a>
+              </li>
+              <li>
+                <a href="#projects"> Work </a>
+              </li>
+              <li>
+                <a href="#results"> Results </a>
+              </li>
+              <li>
+                <a href="#contact"> Contact </a>
+              </li>
+            </ul>
+          </div>
+          <!-- الجزء الثالث: خدماتنا -->
+          <div class="footer-section">
+            <h3 class="footer-title">Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#services"> Google Ads & Lead Gen </a>
+              </li>
+              <li>
+                <a href="#services"> Landing Pages </a>
+              </li>
+              <li>
+                <a href="#services"> AI Automation </a>
+              </li>
+              <li>
+                <a href="#contact"> Free Strategy Call </a>
+              </li>
+              <li>
+                <a href="#contact"> Custom Growth System </a>
+              </li>
+            </ul>
+          </div>
+          <!-- الجزء الرابع: معلومات التواصل -->
+          <div class="footer-section">
+            <h3 class="footer-title">Get In Touch</h3>
+            <!-- روابط التواصل السريعة داخل الفوتر -->
+            <div class="footer-contact">
+              <a
+                class="contact"
+                href="https://wa.me/+971507761628"
+                target="_blank"
+              >
+                <i class="fa-brands fa-whatsapp"> </i>
+                <span> WhatsApp </span>
+              </a>
+              <a class="contact" href="mailto:ahmed.talaat11.6.2000@gmail.com">
+                <i class="fa-solid fa-envelope"> </i>
+                <span> Email </span>
+              </a>
+              <a class="contact" href="#contact">
+                <i class="fa-solid fa-paper-plane"> </i>
+                <span> Contact Form </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- الفاصل البصري الذي يفصل بين محتوى الفوتر وأسفل الفوتر -->
+        <div class="footer-divider"></div>
+        <!-- التوقيع والحقوق -->
+        <!-- تعليق: الجزء السفلي من الـ Footer. -->
+        <div class="footer-bottom">
+          <!-- نص حقوق الملكية والملاحظات الصغيرة في أسفل الفوتر -->
+          <div class="footer-credits">
+            <p>&copy; 2026 Ahmed AlGamal. All rights reserved.</p>
+            <p>
+              Performance Marketing &bull; Lead Generation &bull; AI Automation
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <link
       href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <!-- ============================================================
-         [n8n CHAT WIDGET - تم نقله داخل body لصحة HTML]
-         كان موضوعاً بين </head> و<body> وده خطأ
-    ============================================================ -->
     <script type="module">
       import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
 
@@ -169,1008 +690,44 @@
         webhookUrl:
           "https://n8n.ahmedalgamal.tech/webhook/72029706-a7a8-40dd-9522-858556bd7506/chat",
 
-        // 1. إضافة التحكم في النصوص وحذف الـ Subtitle من الهيدر
+        mode: "window",
+
+        showWelcomeScreen: false,
+
+        initialMessages: ["👋 Hi! How can I help you today?"],
+
         i18n: {
           en: {
-            title: "Let's grow your business ", // اسم الهيدر الجديد
-            subtitle: "", // حذف السطر الثاني تماماً
-            inputPlaceholder: "اكتب رسالتك هنا...",
-            footer: "Website by Ahmed El-Gamal",
+            title: "Ahmed's AI Assistant",
+            subtitle: "Ask me anything about my services.",
+            footer: "",
+            getStarted: "New Conversation",
+            inputPlaceholder: "Type a message...",
           },
         },
-
-        // الـ Theme بتاعك زي ما هو مظبوط وفنان
-        theme: {
-          primaryColor: "#ff2d2d",
-          backgroundColor: "#0b0f1a",
-          textColor: "#ffffff",
-          borderRadius: "20px",
-
-          chatWindow: {
-            backgroundColor: "#0b0f1a",
-          },
-
-          header: {
-            backgroundColor: "#111827",
-            textColor: "#ffffff",
-          },
-
-          botMessage: {
-            backgroundColor: "rgba(255,255,255,0.08)",
-            textColor: "#ffffff",
-          },
-
-          userMessage: {
-            backgroundColor: "#ff2d2d",
-            textColor: "#ffffff",
-          },
-
-          input: {
-            backgroundColor: "rgba(255,255,255,0.05)",
-            textColor: "#ffffff",
-            placeholderColor: "rgba(255,255,255,0.5)",
-          },
-        },
-
-        initialMessages: ["Hi, I'm Ahmed. Let’s get you real customers. 🔥"],
       });
     </script>
-    <!-- ============================================================
-         [CURSOR ELEMENTS - عناصر المؤشر المخصص]
-         هذه العناصر تتحكم في شكل المؤشر وتأثير الفقاعات خلفه
-    ============================================================ -->
-    <div class="cursor-glow" id="cursorGlow"></div>
-    <div class="cursor-dot" id="cursorDot"></div>
-
-    <!-- ============================================================
-         [NAVBAR - شريط التنقل]
-         هذا القسم يحتوي على قائمة الروابط الرئيسية للموقع والشعار
-         الأزرار تعمل على التنقل السلس بين أقسام الموقع
-    ============================================================ -->
-    <nav
-      class="navbar"
-      id="navbar"
-      role="navigation"
-      aria-label="Main navigation"
-    >
-      <!-- حاوية عناصر الشريط العلوي: شعار الموقع والروابط وزر القائمة للهواتف -->
-      <div class="nav-container">
-        <!-- Logo / الشعار -->
-        <a href="#hero" class="nav-logo" aria-label="Ahmed AlGamal - Home">
-          <img
-            src="img/my-photo.svg"
-            alt="Ahmed AlGamal"
-            class="nav-logo-img"
-            width="40"
-            height="40"
-          />
-          <span class="logo-bracket"></span>
-          <span class="logo-name">Ahmed AlGamal</span>
-          <span class="logo-accent"></span>
-          <span class="logo-bracket"></span>
-        </a>
-        <!-- ============================================================
-                 [NAVIGATION LINKS - روابط القائمة]
-                 🔴 هذه الروابط داخل الموقع، لا تحتاج تغيير
-            ============================================================ -->
-        <!-- قائمة روابط التنقل الرئيسية التي توجه المستخدم إلى أقسام الصفحة -->
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#results" class="nav-link">Results</a></li>
-          <li>
-            <a
-              href="https://blog.ahmedalgamal.tech"
-              target="_blank"
-              class="nav-link"
-              >Blogger</a
-            >
-            <!-- 🔴 استبدل هذا الرابط بالرابط الحقيقي لمدونة بلوجر -->
-          </li>
-          <li><a href="#contact" class="nav-link nav-cta">Let's Talk</a></li>
-        </ul>
-        <!-- زر القائمة للهواتف: يفتح ويغلق القائمة على الشاشات الصغيرة -->
-        <button
-          class="hamburger"
-          id="hamburger"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-
-    <!-- ============================================================
-         [HERO SECTION - القسم الرئيسي]
-    ============================================================ -->
-    <section class="hero" id="hero" aria-label="Hero Section">
-      <!-- خلفيات ديناميكية جذابة -->
-      <div class="hero-bg-blobs" aria-hidden="true">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-      </div>
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="particles" id="particles" aria-hidden="true"></div>
-
-      <!-- الحاوية الرئيسية -->
-      <div class="hero-container">
-        <!-- الجزء الأيسر: المحتوى النصي -->
-        <div class="hero-content">
-          <div class="hero-badge glass-card" data-reveal>
-            <span class="badge-dot" aria-hidden="true"></span>
-            <span class="badge-text">Available For New Projects</span>
-          </div>
-
-          <h1 class="hero-headline" data-reveal data-delay="100">
-            I Build Systems<br />
-            That <span class="text-gradient">Actually Work</span><br />
-            In Real Business.
-          </h1>
-
-          <p class="hero-sub" data-reveal data-delay="150">
-            Web Development + Automation + Ads.<br />
-            <strong>Simple systems. Clear logic. Real results.</strong>
-          </p>
-
-          <div class="hero-tags" data-reveal data-delay="200">
-            <span class="tag glass-tag"
-              ><i class="fa-brands fa-meta" aria-hidden="true"></i> Meta
-              Ads</span
-            >
-            <span class="tag glass-tag"
-              ><i class="fa-solid fa-code" aria-hidden="true"></i> Web Dev</span
-            >
-            <span class="tag glass-tag"
-              ><i class="fa-solid fa-robot" aria-hidden="true"></i> Ai
-              Automation</span
-            >
-          </div>
-
-          <div class="hero-buttons" data-reveal data-delay="250">
-            <a href="#contact" class="btn btn-primary btn-glow">
-              Explore My Work
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </a>
-            <a href="#projects" class="btn btn-glass">
-              See How I Think <i class="fa-solid fa-eye" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- الجزء الأيمن: الصورة والأشكال الهندسية -->
-        <div
-          class="hero-visual"
-          aria-hidden="true"
-          data-reveal
-          data-delay="350"
-        >
-          <div class="visual-wrapper">
-            <!-- أشكال هندسية إضافية لملء الفراغ وتزيين الخلفية -->
-            <div class="geo-diamond" aria-hidden="true"></div>
-            <div class="visual-dots-grid" aria-hidden="true"></div>
-
-            <!-- الحلقات المتحركة -->
-            <div class="geo-ring geo-ring-1"></div>
-            <div class="geo-ring geo-ring-2"></div>
-            <div class="geo-ring geo-ring-3"></div>
-
-            <!-- الصورة الشخصية -->
-            <div class="profile-img-container">
-              <div class="profile-glow"></div>
-              <img
-                src="img/my-photo.svg"
-                alt="Ahmed AlGamal"
-                class="profile-image"
-              />
-            </div>
-
-            <!-- عنصر نود (Node) يطفو لإعطاء طابع الأتمتة -->
-            <div
-              class="floating-badge badge-node glass-card"
-              aria-hidden="true"
-            >
-              <span>🤖 Set Once. Run Forever.</span>
-            </div>
-
-            <!-- عنصر إعلانات يطفو من تحت -->
-            <div class="floating-badge badge-ads glass-card" aria-hidden="true">
-              <span>📈 Clicks &rarr; Cash</span>
-            </div>
-          </div>
-
-          <div class="hero-socials" data-reveal data-delay="300">
-            <a
-              href="https://www.linkedin.com/in/ahmed-al-gamal-6906ab204"
-              class="social-link glass-icon"
-              target="_blank"
-              aria-label="LinkedIn"
-              ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/ahmeedalgamal"
-              class="social-link glass-icon"
-              target="_blank"
-              aria-label="Instagram"
-              ><i class="fa-brands fa-instagram" aria-hidden="true"></i
-            ></a>
-            <a
-              href="https://wa.me/+971507761628"
-              class="social-link glass-icon"
-              target="_blank"
-              aria-label="WhatsApp"
-              ><i class="fa-brands fa-whatsapp" aria-hidden="true"></i
-            ></a>
-            <a
-              href="https://github.com/Ahmedtalaat2"
-              class="social-link glass-icon"
-              target="_blank"
-              aria-label="GitHub"
-              ><i class="fa-brands fa-github" aria-hidden="true"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- مؤشر التمرير لأسفل -->
-      <div class="scroll-indicator show" aria-hidden="true">
-        <div class="scroll-line"></div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         [ABOUT SECTION - قسم من أنا]
-         هذا القسم يقدم نبذة عن الشخص والخدمات التي يقدمها
-    ============================================================ -->
-    <section
-      class="about section-pad"
-      id="about"
-      aria-label="About Ahmed Algamal"
-    >
-      <!-- حاوية القسم لتحديد العرض المركزي والهوامش الداخلية -->
-      <div class="container">
-        <!-- رأس القسم: العنوان الرئيسي والوصف الموجود في الأعلى -->
-        <div class="section-header" data-reveal>
-          <span class="section-label">About Me</span>
-          <h2 class="section-title">
-            Who Is <span class="text-gradient">Ahmed Algamal?</span>
-          </h2>
-        </div>
-        <!-- شبكة البطاقات التي تعرض نقاط القوة أو الأقسام الفرعية عن الشخص -->
-        <div class="about-grid">
-          <!-- بطاقة معلومات عنك كخبير أو شخص -->
-          <div class="about-card glass-card" data-reveal>
-            <!-- أيقونة تعريفية داخل البطاقة -->
-            <div class="about-card-icon">
-              <i class="fa-solid fa-user-astronaut" aria-hidden="true"></i>
-            </div>
-            <h3>The Person</h3>
-            <p>
-              I'm Ahmed, a developer who focuses on building simple and
-              practical systems that actually work in real business
-              environments.
-            </p>
-          </div>
-          <!-- بطاقة توضح ما هي الخدمات أو التخصصات التي تقدمها -->
-          <div class="about-card glass-card" data-reveal>
-            <div class="about-card-icon">
-              <i class="fa-solid fa-fire" aria-hidden="true"></i>
-            </div>
-            <h3>What I Do</h3>
-            <p>
-              I connect websites, ads, and automation into one clear system
-              instead of using random disconnected tools.
-            </p>
-          </div>
-          <!-- البطاقة الثالثة: سبب الثقة والاعتمادية -->
-          <div class="about-card glass-card" data-reveal>
-            <div class="about-card-icon">
-              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-            </div>
-            <h3>Why Trust Me</h3>
-            <p>
-              I focus on clarity, speed, and results — not just design or
-              theory. Everything I build is meant to be used, not just seen.
-            </p>
-          </div>
-        </div>
-        <!-- بطاقة السيرة أو القصة التي تشرح الخلفية والأسلوب الشخصي -->
-        <div
-          class="about-story glass-card"
-          data-reveal
-          style="padding: 48px; text-align: center"
-        >
-          <i
-            class="fa-solid fa-quote-left"
-            aria-hidden="true"
-            style="
-              font-size: 2rem;
-              color: var(--primary);
-              opacity: 0.5;
-              margin-bottom: 20px;
-              display: block;
-            "
-          ></i>
-          <p
-            style="max-width: 700px; margin: 0 auto; color: var(--white-muted)"
-          >
-            I started as someone who simply enjoyed building things on the
-            internet. Over time, I realized most businesses struggle with the
-            same problems: unclear systems, weak conversion, and too much manual
-            work. So instead of offering separate services, I focused on
-            building connected systems that solve all of that together. Simple.
-            Practical. Effective.
-          </p>
-          <div
-            style="
-              margin-top: 24px;
-              font-family: var(--font-display);
-              color: var(--primary);
-            "
-          >
-            — Ahmed Algamal
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         [SERVICES SECTION - قسم الخدمات]
-         هذا القسم يوضح الخدمات التي يقدمها أحمد:
-         - إعلانات ميتا (Meta Ads)
-         - تطوير الويب (Web Development)
-         - الأتمتة (Automation / n8n)
-    ============================================================ -->
-    <section class="services section-pad" id="services" aria-label="Services">
-      <!-- حاوية القسم لضبط عرض خدماتك داخل صفحة الهبوط -->
-      <div class="container">
-        <!-- رأس القسم مع العنوان الفرعي والباراجراف التعريفي -->
-        <div class="section-header" data-reveal>
-          <span class="section-label">What I Offer</span>
-          <h2 class="section-title">
-            Three Tools.<br /><span class="text-gradient"
-              >One Goal: Your Growth.</span
-            >
-          </h2>
-        </div>
-        <!-- شبكة بطاقات الخدمات الثلاثة التي تعرض كل عرض بشكل منفصل -->
-        <div class="services-grid">
-          <!-- الخدمة الأولى: إعلانات ميتا -->
-          <div class="service-card glass-card" data-reveal>
-            <!-- أيقونة وتمهيد للخدمة الأولى -->
-            <div class="service-icon">
-              <i class="fa-brands fa-meta" aria-hidden="true"></i>
-            </div>
-            <h3 class="service-title">Meta Ads &amp; Lead Gen</h3>
-            <p class="service-desc">
-              I design ad systems that attract the right audience and guide them
-              into a clear and structured flow.
-            </p>
-            <ul class="service-features">
-              <li>
-                <i class="fa-solid fa-check" aria-hidden="true"></i> Facebook
-                &amp; Instagram Ads
-              </li>
-              <li>
-                <i class="fa-solid fa-check" aria-hidden="true"></i> Lead
-                Generation Funnels
-              </li>
-            </ul>
-            <a href="#contact" class="service-cta"
-              >Learn More
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
-            ></a>
-          </div>
-
-          <!-- الخدمة الثانية: تطوير الويب (مميزة) -->
-          <div class="service-card glass-card featured-card" data-reveal>
-            <div class="featured-badge">Most Popular</div>
-            <!-- أيقونة الخدمة المميزة في البطاقة الثانية -->
-            <div class="service-icon">
-              <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
-            </div>
-            <h3 class="service-title">Web Development</h3>
-            <p class="service-desc">
-              I build clean and fast websites focused on user experience and
-              clear communication.
-            </p>
-            <ul class="service-features">
-              <li>
-                <i class="fa-solid fa-check" aria-hidden="true"></i> Landing
-                Pages that Convert
-              </li>
-              <li>
-                <i class="fa-solid fa-check" aria-hidden="true"></i> Fast &amp;
-                Mobile Ready
-              </li>
-            </ul>
-            <a href="#contact" class="service-cta"
-              >Learn More
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
-            ></a>
-          </div>
-
-          <!-- الخدمة الثالثة: الأتمتة باستخدام n8n -->
-          <div class="service-card glass-card" data-reveal>
-            <div class="service-icon">
-              <i class="fa-solid fa-robot" aria-hidden="true"></i>
-            </div>
-            <h3 class="service-title">Automation (n8n)</h3>
-            <p class="service-desc">
-              I create automation workflows that reduce manual work and keep
-              everything running consistently.
-            </p>
-            <ul class="service-features">
-              <li>
-                <i class="fa-solid fa-check" aria-hidden="true"></i> n8n
-                Workflows
-              </li>
-              <li>
-                <i class="fa-solid fa-check" aria-hidden="true"></i> CRM &amp;
-                Email Automation
-              </li>
-            </ul>
-            <a href="#contact" class="service-cta"
-              >Learn More
-              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         [PROJECTS SECTION - قسم المشاريع]
-         هذا القسم يعرض بعض المشاريع السابقة
-         
-         🔴 هام: غير الروابط (#) بروابط مشاريعك الحقيقية
-    ============================================================ -->
-    <section class="projects section-pad" id="projects" aria-label="Projects">
-      <!-- حاوية القسم التي تحدد المساحة المخصصة لمعرض المشاريع -->
-      <div class="container">
-        <!-- رأس القسم لعرض عنوان المشاريع -->
-        <div class="section-header" data-reveal>
-          <span class="section-label">My Work</span>
-          <h2 class="section-title">
-            Projects That <span class="text-gradient">Actually Worked.</span>
-          </h2>
-        </div>
-        <!-- شبكة بطاقات المشاريع في العرض -->
-        <div class="projects-grid">
-          <!-- المشروع الأول: حاسبة ذكية -->
-          <div class="project-card glass-card" data-reveal>
-            <div class="project-preview">
-              <img src="img/dash.png" alt="" />
-            </div>
-            <div class="project-info">
-              <!-- معلومات المشروع: الوسوم والعنوان والوصف -->
-              <div class="project-tags">
-                <span>Web App</span><span>JavaScript</span>
-              </div>
-              <h3>Smart Calculator App</h3>
-              <p>
-                Built a clean and responsive tool focused on usability and
-                performance rather than complexity.
-              </p>
-              <!-- 🔴 غير الرابط # برابط المشروع الحقيقي -->
-              <a
-                href="#"
-                class="btn-project"
-                target="_blank"
-                rel="noopener noreferrer"
-                >View Project
-                <i
-                  class="fa-solid fa-arrow-up-right-from-square"
-                  aria-hidden="true"
-                ></i
-              ></a>
-            </div>
-          </div>
-
-          <!-- المشروع الثاني: صفحة هبوط -->
-          <div class="project-card glass-card" data-reveal>
-            <div class="project-preview">
-              <img src="img/land.png" alt="" />
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span>Landing Page</span><span>Conversion</span>
-              </div>
-              <h3>High-Converting Landing Page</h3>
-              <p>
-                Improved structure and clarity which led to a noticeable
-                increase in conversion rate.
-              </p>
-              <!-- 🔴 غير الرابط # برابط المشروع الحقيقي -->
-              <a
-                href="#"
-                class="btn-project"
-                target="_blank"
-                rel="noopener noreferrer"
-                >View Project
-                <i
-                  class="fa-solid fa-arrow-up-right-from-square"
-                  aria-hidden="true"
-                ></i
-              ></a>
-            </div>
-          </div>
-
-          <!-- المشروع الثالث: أتمتة n8n — تم حذف > الزيادة -->
-          <div class="project-card glass-card" data-reveal>
-            <div class="project-preview">
-              <img src="img/n8n.png" alt="Automation" />
-            </div>
-            <div class="project-info">
-              <div class="project-tags">
-                <span>n8n</span><span>Automation</span>
-              </div>
-              <h3>Lead Capture Automation</h3>
-              <p>
-                Created a workflow that connects lead capture with WhatsApp and
-                CRM to reduce response time and manual work.
-              </p>
-              <!-- 🔴 غير الرابط # برابط المشروع الحقيقي -->
-              <a
-                href="#"
-                class="btn-project"
-                target="_blank"
-                rel="noopener noreferrer"
-                >View Project
-                <i
-                  class="fa-solid fa-arrow-up-right-from-square"
-                  aria-hidden="true"
-                ></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         [RESULTS SECTION - قسم النتائج والإحصائيات]
-         هذا القسم يعرض الأرقام والإحصائيات الحقيقية
-         الأرقام تتحرك تلقائياً عند التمرير عليها
-    ============================================================ -->
-    <section
-      class="results section-pad"
-      id="results"
-      aria-label="Results and Statistics"
-    >
-      <div class="section-header" data-reveal>
-        <span class="section-label">Real Results</span>
-        <h2 class="section-title">
-          Numbers Don't <span class="text-gradient">Lie.</span>
-        </h2>
-      </div>
-      <!-- صف الأرقام المتحرك والإحصائيات الأساسية -->
-      <!-- تم تغليف الصفين داخل .stats-track لإصلاح حركة البانوراما -->
-      <div class="stats-row-container" data-reveal>
-        <div class="stats-track" aria-hidden="true">
-          <div class="stats-row">
-            <div class="stat-item">
-              <div class="stat-number" data-target="5" data-suffix="+">0</div>
-              <div class="stat-label">Projects Completed</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="300" data-suffix="%">0</div>
-              <div class="stat-label">Systems Built &amp; Improved</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="5" data-suffix="+">0</div>
-              <div class="stat-label">Leads Processed Through Systems</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="48" data-suffix="h">0</div>
-              <div class="stat-label">Average Delivery Speed</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="5" data-suffix="+">0</div>
-              <div class="stat-label">Projects Completed</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="300" data-suffix="%">0</div>
-              <div class="stat-label">Systems Built &amp; Improved</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="5" data-suffix="+">0</div>
-              <div class="stat-label">Leads Processed Through Systems</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="48" data-suffix="h">0</div>
-              <div class="stat-label">Average Delivery Speed</div>
-            </div>
-          </div>
-          <!-- صف مكرر لإظهار الحركة بشكل متصل -->
-          <div class="stats-row">
-            <div class="stat-item">
-              <div class="stat-number" data-target="5" data-suffix="+">0</div>
-              <div class="stat-label">Projects Completed</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="300" data-suffix="%">0</div>
-              <div class="stat-label">Systems Built &amp; Improved</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="5" data-suffix="+">0</div>
-              <div class="stat-label">Leads Processed Through Systems</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="48" data-suffix="h">0</div>
-              <div class="stat-label">Average Delivery Speed</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="5" data-suffix="+">0</div>
-              <div class="stat-label">Projects Completed</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="300" data-suffix="%">0</div>
-              <div class="stat-label">Systems Built &amp; Improved</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="5" data-suffix="+">0</div>
-              <div class="stat-label">Leads Processed Through Systems</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-target="48" data-suffix="h">0</div>
-              <div class="stat-label">Average Delivery Speed</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <!-- شبكة المزايا الإضافية التي توضّح فوائد النتائج -->
-        <div class="benefits-grid">
-          <!-- بطاقة فائدة: المزيد من العملاء المحتملين -->
-          <div class="benefit-card glass-card" data-reveal>
-            <div class="benefit-icon">
-              <i
-                class="fa-solid fa-magnifying-glass-chart"
-                aria-hidden="true"
-              ></i>
-            </div>
-            <h3>More Leads</h3>
-            <p>
-              Better systems create better flow — which leads to better results
-              over time.
-            </p>
-          </div>
-          <div class="benefit-card glass-card" data-reveal>
-            <div class="benefit-icon">
-              <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
-            </div>
-            <h3>Faster Work</h3>
-            <p>Automation removes repetitive tasks and saves valuable time.</p>
-          </div>
-          <div class="benefit-card glass-card" data-reveal>
-            <div class="benefit-icon">
-              <i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i>
-            </div>
-            <h3>Less Manual Effort</h3>
-            <p>
-              Everything is connected, so less effort is needed to keep things
-              running.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         [CONTACT SECTION - قسم التواصل]
-         هذا القسم يحتوي على نموذج التواصل مع أحمد
-         
-         🔴 هام: غير روابط واتساب والإيميل بروابطك الحقيقية
-    ============================================================ -->
-    <section
-      class="contact section-pad"
-      id="contact"
-      aria-label="Contact Ahmed Algamal"
-    >
-      <!-- حاوية القسم لتثبيت العرض الداخلي وتوسيط المحتوى -->
-      <div class="container">
-        <!-- رأس القسم مع عنوان داعٍ للعمل -->
-        <div class="section-header" data-reveal>
-          <span class="section-label">Let's Work Together</span>
-          <h2 class="section-title">
-            Ready to <span class="text-gradient">Grow Your Business?</span>
-          </h2>
-        </div>
-        <!-- تقسيم القناة: معلومات التواصل على اليسار والنموذج على اليمين -->
-        <div class="contact-wrap">
-          <!-- بطاقة معلومات التواصل وروابط الاتصال السريعة -->
-          <div class="contact-info">
-            <!-- ============================================================
-                         🔴 WhatsApp Link
-                    ============================================================ -->
-            <a
-              href="https://wa.me/+971507761628"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="glass-card"
-              aria-label="Chat on WhatsApp"
-              style="
-                padding: 20px;
-                display: flex;
-                align-items: center;
-                gap: 16px;
-                text-decoration: none;
-              "
-            >
-              <i
-                class="fa-brands fa-whatsapp"
-                aria-hidden="true"
-                style="color: var(--primary); font-size: 1.5rem"
-              ></i>
-              <div><strong>WhatsApp</strong><br />Chat instantly</div>
-            </a>
-            <!-- ============================================================
-                         🔴 Email - تم توحيد الإيميل في الرابط والنص
-                    ============================================================ -->
-            <a
-              href="mailto:info@ahmedalgamal.com"
-              class="glass-card"
-              aria-label="Send Email"
-              style="
-                padding: 20px;
-                display: flex;
-                align-items: center;
-                gap: 16px;
-                text-decoration: none;
-              "
-            >
-              <i
-                class="fa-solid fa-envelope"
-                aria-hidden="true"
-                style="color: var(--primary); font-size: 1.5rem"
-              ></i>
-              <div><strong>Email</strong><br />info@ahmedalgamal.com</div>
-            </a>
-            <div class="glass-card" style="padding: 28px">
-              <!-- صندوق يوضح خطوات العمل التالية بعد التواصل -->
-              <h3 style="color: var(--primary)">What Happens Next?</h3>
-              <ol style="margin-top: 16px; list-style: none">
-                <li style="margin-bottom: 12px">📝 You share your idea</li>
-                <li style="margin-bottom: 12px">📞 We simplify it together</li>
-                <li style="margin-bottom: 12px">⚙️ I build the system</li>
-                <li>🚀 You start seeing results</li>
-              </ol>
-            </div>
-          </div>
-
-          <!-- نموذج التواصل بالحقول لإرسال رسالة مباشرة -->
-          <!-- تم إضافة name attributes وإصلاح الإرسال عبر mailto -->
-          <form class="contact-form glass-card" id="contactForm" novalidate>
-            <!-- حقل ادخال اسم المرسل -->
-            <div class="form-group">
-              <label for="contactName" class="sr-only">Your Name</label>
-              <input
-                type="text"
-                id="contactName"
-                name="name"
-                placeholder="Your Name"
-                required
-                autocomplete="name"
-              />
-            </div>
-            <!-- حقل ادخال البريد الالكتروني للمتابع -->
-            <div class="form-group">
-              <label for="contactEmail" class="sr-only">Email Address</label>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone Number"
-                required
-              />
-            </div>
-            <!-- حقل اختيار الخدمة المطلوبة -->
-            <div class="form-group">
-              <label for="contactService" class="sr-only"
-                >Choose a service</label
-              >
-              <select id="contactService" name="service">
-                <option value="">Choose a service...</option>
-                <option value="Meta Ads / Lead Generation">
-                  Meta Ads / Lead Generation
-                </option>
-                <option value="Web Development">Web Development</option>
-                <option value="Automation (n8n)">Automation (n8n)</option>
-                <option value="Full Package (All Three)">
-                  Full Package (All Three)
-                </option>
-              </select>
-            </div>
-            <!-- حقل نصي لوصف المشروع أو الفكرة -->
-            <div class="form-group">
-              <label for="contactMessage" class="sr-only"
-                >Tell me about your business</label
-              >
-              <textarea
-                id="contactMessage"
-                name="message"
-                rows="4"
-                placeholder="Tell me about your business"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="btn btn-primary"
-              style="width: 100%; justify-content: center"
-            >
-              Send Message
-              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-            </button>
-            <div class="form-success" id="formSuccess" role="alert">
-              ✓ Message sent! I'll reply within 24 hours.
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         [FOOTER - التذييل]
-    ============================================================ -->
-    <footer class="footer" role="contentinfo">
-      <!-- حاوية الفوتر لتحديد عرض المحتوى وتوسيطه -->
-      <div class="container">
-        <!-- شبكة محتوى الفوتر التي تقسم الأقسام المختلفة -->
-        <div class="footer-content">
-          <!-- الجزء الأول: معلومات الموقع -->
-          <div class="footer-section">
-            <div class="footer-logo">
-              <img
-                src="img/my-photo.svg"
-                alt="Ahmed AlGamal"
-                class="footer-logo-img"
-                width="40"
-                height="40"
-              />
-              <span class="logo-name">Ahmed AlGamal</span>
-            </div>
-            <p class="footer-tagline">
-              Building simple systems that make work easier.
-            </p>
-            <p class="footer-desc">
-              Focused on web development, automation, and building systems that
-              actually work.
-            </p>
-          </div>
-
-          <!-- الجزء الثاني: روابط الأقسام -->
-          <div class="footer-section">
-            <h3 class="footer-title">Quick Links</h3>
-            <ul class="footer-links">
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#about">About Me</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#results">Results</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-
-          <!-- الجزء الثالث: خدماتنا -->
-          <div class="footer-section">
-            <h3 class="footer-title">Services</h3>
-            <ul class="footer-links">
-              <li><a href="#services">Meta Ads &amp; Lead Gen</a></li>
-              <li><a href="#services">Web Development</a></li>
-              <li><a href="#services">Ai Automation</a></li>
-              <li><a href="#contact">Get a Free Consultation</a></li>
-              <li><a href="#contact">Custom Quote</a></li>
-            </ul>
-          </div>
-
-          <!-- الجزء الرابع: معلومات التواصل والسوشيال -->
-          <div class="footer-section">
-            <h3 class="footer-title">Get In Touch</h3>
-            <!-- روابط التواصل السريعة داخل الفوتر -->
-            <div class="footer-contact">
-              <a
-                href="https://wa.me/+971507761628"
-                class="contact-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Chat on WhatsApp"
-              >
-                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                <span>WhatsApp</span>
-              </a>
-              <a
-                href="mailto:info@ahmedalgamal.com"
-                class="contact-btn"
-                aria-label="Send Email"
-              >
-                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                <span>Email</span>
-              </a>
-              <a href="#contact" class="contact-btn">
-                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-                <span>Contact Form</span>
-              </a>
-            </div>
-
-            <h3 class="footer-title" style="margin-top: 24px">Follow Me</h3>
-            <div class="footer-socials">
-              <a
-                href="https://www.linkedin.com/in/ahmed-al-gamal-6906ab204?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                class="social-icon"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="LinkedIn"
-                aria-label="LinkedIn"
-              >
-                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/ahmeedalgamal?igsh=MTF3cnJmbjQ1cWVrNg=="
-                class="social-icon"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Instagram"
-                aria-label="Instagram"
-              >
-                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-              </a>
-
-              <a
-                href="https://github.com/Ahmedtalaat2"
-                class="social-icon"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="GitHub"
-                aria-label="GitHub"
-              >
-                <i class="fa-brands fa-github" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- الفاصل البصري -->
-        <div class="footer-divider"></div>
-
-        <!-- التوقيع والحقوق -->
-        <div class="footer-bottom">
-          <div class="footer-credits">
-            <p>
-              © 2025 Ahmed Algamal. All rights reserved - Built with
-              <span class="heart" aria-hidden="true">❤️</span> and powered by
-              code.
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Screen reader only utility class -->
-    <style>
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border-width: 0;
-      }
-    </style>
-
     <script>
       // ============================================================
       // [JAVASCRIPT - كل كود التفاعلات والحركات]
+      // هذا القسم يحتوي على:
+      // 1. المؤشر المخصص مع الفقاعات
+      // 2. تأثيرات الناف بار عند التمرير
+      // 3. قائمة الهواتف
+      // 4. التمرير السلس
+      // 5. ظهور العناصر عند التمرير (Scroll Reveal)
+      // 6. تحريك الأرقام (Counters)
+      // 7. الجسيمات المتحركة
+      // 8. الشات بوت (يعمل محلياً)
+      // 9. نموذج التواصل
+      // 10. تأثير الـ Parallax
       // ============================================================
 
       (function () {
         // --------------------------------------------------------
         // [1. CURSOR WITH BUBBLES - المؤشر المخصص مع الفقاعات]
         // --------------------------------------------------------
+        // تعليق JS: الحصول على عناصر المؤشر المخصص من الصفحة.
         const cursorGlow = document.getElementById("cursorGlow");
         const cursorDot = document.getElementById("cursorDot");
         let mouseX = 0,
@@ -1178,6 +735,7 @@
         let lastX = 0,
           lastY = 0;
 
+        // تعليق JS: متابعة حركة الماوس وتحريك عناصر المؤشر المخصص.
         document.addEventListener("mousemove", (e) => {
           mouseX = e.clientX;
           mouseY = e.clientY;
@@ -1190,7 +748,7 @@
             cursorDot.style.top = mouseY + "px";
           }
 
-          // إنشاء فقاعات عند حركة الماوس
+          // إنشاء فقاعات عند حركة الماوس (تأثير بصري جميل)
           const distance = Math.hypot(mouseX - lastX, mouseY - lastY);
           if (distance > 5) {
             createBubble(mouseX, mouseY);
@@ -1199,6 +757,7 @@
           lastY = mouseY;
         });
 
+        // تعليق JS: إنشاء فقاعة صغيرة خلف المؤشر أثناء الحركة.
         function createBubble(x, y) {
           const bubble = document.createElement("div");
           bubble.className = "cursor-bubble";
@@ -1211,15 +770,15 @@
         // --------------------------------------------------------
         // [2. NAVBAR SCROLL - تغيير شكل الناف بار عند التمرير]
         // --------------------------------------------------------
+        // تعليق JS: الحصول على عناصر الـ Navbar ومؤشر التمرير لمراقبة حالة الصفحة.
         const navbar = document.getElementById("navbar");
-        const scrollIndicator = document.getElementById("scrollIndicator");
-
-        // إظهار scroll indicator عند تحميل الصفحة
-        if (scrollIndicator) scrollIndicator.classList.add("show");
-
+        const scrollIndicator = document.querySelector(".scroll-indicator");
+        // تعليق JS: مراقبة التمرير وتحديث شكل الـ Navbar ومؤشر التمرير.
         window.addEventListener("scroll", () => {
-          if (window.scrollY > 50) navbar.classList.add("scrolled");
-          else navbar.classList.remove("scrolled");
+          if (navbar) {
+            if (window.scrollY > 50) navbar.classList.add("scrolled");
+            else navbar.classList.remove("scrolled");
+          }
 
           // إخفاء scroll indicator عند التمرير
           if (scrollIndicator) {
@@ -1234,33 +793,31 @@
         // --------------------------------------------------------
         // [3. MOBILE MENU - قائمة الهواتف]
         // --------------------------------------------------------
+        // تعليق JS: التحكم في قائمة الهاتف وفتحها وإغلاقها.
         const hamburger = document.getElementById("hamburger");
         const navLinks = document.getElementById("navLinks");
         if (hamburger) {
           hamburger.addEventListener("click", () => {
-            const isOpen = navLinks.classList.toggle("open");
             hamburger.classList.toggle("active");
-            hamburger.setAttribute("aria-expanded", isOpen);
+            if (navLinks) navLinks.classList.toggle("open");
           });
         }
 
         // --------------------------------------------------------
         // [4. SMOOTH SCROLL - التمرير السلس بين أقسام الموقع]
         // --------------------------------------------------------
+        // تعليق JS: تفعيل التمرير السلس للروابط الداخلية وإغلاق قائمة الهاتف عند الحاجة.
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
           anchor.addEventListener("click", function (e) {
             const href = this.getAttribute("href");
-            if (href === "#") return;
+            if (!href || href === "#") return;
             const target = document.querySelector(href);
             if (target) {
               e.preventDefault();
               target.scrollIntoView({ behavior: "smooth", block: "start" });
-              if (navLinks.classList.contains("open")) {
+              if (navLinks && navLinks.classList.contains("open")) {
                 navLinks.classList.remove("open");
-                if (hamburger) {
-                  hamburger.classList.remove("active");
-                  hamburger.setAttribute("aria-expanded", "false");
-                }
+                if (hamburger) hamburger.classList.remove("active");
               }
             }
           });
@@ -1269,6 +826,7 @@
         // --------------------------------------------------------
         // [5. SCROLL REVEAL - ظهور العناصر عند التمرير]
         // --------------------------------------------------------
+        // تعليق JS: تجهيز العناصر التي تظهر تدريجياً عند دخولها إلى الشاشة.
         const revealElements = document.querySelectorAll("[data-reveal]");
         const revealObserver = new IntersectionObserver(
           (entries) => {
@@ -1285,61 +843,43 @@
 
         // --------------------------------------------------------
         // [6. COUNTER ANIMATION - تحريك الأرقام التلقائي]
-        // تم إصلاح: يتجاهل العناصر داخل aria-hidden="true"
         // --------------------------------------------------------
-        // --------------------------------------------------------
-        // [6. COUNTER ANIMATION - تحريك الأرقام التلقائي (محدث ومطور)]
-        // --------------------------------------------------------
-        const statsContainer = document.querySelector(".stats-row-container");
-        const allStatNumbers = document.querySelectorAll(".stat-number");
-        let hasCounted = false;
-
-        const animateCounters = () => {
-          allStatNumbers.forEach((counter) => {
-            const target = parseInt(counter.getAttribute("data-target") || 0);
-            const suffix = counter.getAttribute("data-suffix") || "";
-            const duration = 2500; // وقت الحركة بالملي ثانية
-            const startTime = performance.now();
-
-            // دالة حركة ناعمة: سريعة بالبداية ثم تتباطأ (Ease Out Quart)
-            const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
-
-            const updateCounter = (currentTime) => {
-              const elapsedTime = currentTime - startTime;
-              const progress = Math.min(elapsedTime / duration, 1);
-              const easedProgress = easeOutQuart(progress);
-
-              const currentValue = Math.floor(easedProgress * target);
-              counter.textContent = currentValue + suffix;
-
-              if (progress < 1) {
-                requestAnimationFrame(updateCounter);
-              } else {
-                counter.textContent = target + suffix;
+        // تعليق JS: تجهيز عدادات الإحصائيات لتبدأ الحركة عند ظهورها.
+        const counters = document.querySelectorAll(".stat-number");
+        const counterObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (
+                entry.isIntersecting &&
+                !entry.target.classList.contains("counted")
+              ) {
+                entry.target.classList.add("counted");
+                const target = parseInt(
+                  entry.target.getAttribute("data-target"),
+                );
+                const suffix = entry.target.getAttribute("data-suffix") || "";
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                  current += increment;
+                  if (current >= target) {
+                    entry.target.textContent = target + suffix;
+                    clearInterval(timer);
+                  } else {
+                    entry.target.textContent = Math.floor(current) + suffix;
+                  }
+                }, 30);
               }
-            };
-
-            requestAnimationFrame(updateCounter);
-          });
-        };
-
-        if (statsContainer) {
-          const statsObserver = new IntersectionObserver(
-            (entries) => {
-              if (entries[0].isIntersecting && !hasCounted) {
-                hasCounted = true;
-                animateCounters();
-                statsObserver.disconnect(); // إيقاف المراقبة بعد الحركة مرة واحدة
-              }
-            },
-            { threshold: 0.3 }, // يبدأ الحركة عندما يظهر 30% من القسم
-          );
-          statsObserver.observe(statsContainer);
-        }
+            });
+          },
+          { threshold: 0.5 },
+        );
+        counters.forEach((counter) => counterObserver.observe(counter));
 
         // --------------------------------------------------------
         // [7. PARTICLES - الجسيمات المتحركة في الخلفية]
         // --------------------------------------------------------
+        // تعليق JS: إنشاء الجسيمات المتحركة داخل خلفية Hero.
         function generateParticles() {
           const container = document.getElementById("particles");
           if (!container) return;
@@ -1356,106 +896,372 @@
         }
         generateParticles();
 
-        // --------------------------------------------------------
-        // [8. CHATBOT - تم نقل الـ n8n widget داخل body]
-        // --------------------------------------------------------
-        // --------------------------------------------------------
-        // --------------------------------------------------------
-        // [9. CONTACT FORM - إرسال البيانات إلى Google Sheets]
-        // --------------------------------------------------------
-        // --------------------------------------------------------
+        // ============================================================
+        // 09. CONTACT FORM - نموذج التواصل
+        // ------------------------------------------------------------
+        // إرسال بيانات الفورم إلى Google Sheets
+        // مع التحقق من رقم الهاتف والإيميل قبل الإرسال
+        // ============================================================
+
+        // ============================================================
+        // 09.1 GOOGLE APPS SCRIPT URL
+        // ------------------------------------------------------------
+        // ضع هنا رابط Web App الخاص بـ Google Apps Script
+        // ============================================================
+
+        const GOOGLE_SCRIPT_URL =
+          "https://script.google.com/macros/s/AKfycbwSMNbsk8fhWGg9ass6cj6Tg9NYDYflYeV5WyQAVw3ISWnuIPFeiYzlX-wpmJiBDW7bxg/exec";
+
+        // ============================================================
+        // 09.2 GET FORM ELEMENTS
+        // ------------------------------------------------------------
+        // الحصول على عناصر الفورم
+        // ============================================================
+
         const contactForm = document.getElementById("contactForm");
+
         const formSuccess = document.getElementById("formSuccess");
 
-        if (contactForm) {
-          const submitBtn = contactForm.querySelector("button[type='submit']");
+        // ============================================================
+        // 09.3 GET INPUT ELEMENTS
+        // ------------------------------------------------------------
+        // الحصول على الحقول
+        // ============================================================
 
-          contactForm.addEventListener("submit", async (e) => {
+        const nameInput = document.getElementById("name");
+
+        const phoneInput = document.getElementById("phone");
+
+        const emailInput = document.getElementById("email");
+
+        const serviceInput = document.getElementById("service");
+
+        const messageInput = document.getElementById("message");
+
+        // ============================================================
+        // 09.4 PHONE CLEANER
+        // ------------------------------------------------------------
+        // تنظيف رقم الهاتف قبل التحقق والإرسال
+        // ============================================================
+
+        function cleanUAEPhone(phone) {
+          // تحويل القيمة إلى نص
+          phone = String(phone || "");
+
+          // إزالة المسافات والشرطات والأقواس وعلامة +
+          phone = phone.replace(/\D/g, "");
+
+          // إذا بدأ الرقم بـ 00971
+          // نحذف 00
+          if (phone.startsWith("00971")) {
+            phone = phone.substring(2);
+          }
+
+          // إذا بدأ بـ 0
+          // نحذف الصفر المحلي
+          if (phone.startsWith("0")) {
+            phone = phone.substring(1);
+          }
+
+          // إذا لم يبدأ بـ 971
+          // نضيف كود الإمارات
+          if (!phone.startsWith("971")) {
+            phone = "971" + phone;
+          }
+
+          // التحقق من رقم موبايل إماراتي
+          const uaePhoneRegex = /^9715\d{8}$/;
+
+          // إذا الرقم غير صحيح
+          if (!uaePhoneRegex.test(phone)) {
+            return null;
+          }
+
+          // الرقم النهائي النظيف
+          return phone;
+        }
+
+        // ============================================================
+        // 09.5 EMAIL VALIDATION
+        // ------------------------------------------------------------
+        // التحقق من صيغة البريد الإلكتروني
+        // ============================================================
+
+        function isValidEmail(email) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+          return emailRegex.test(String(email || "").trim());
+        }
+
+        // ============================================================
+        // 09.6 SHOW FORM ERROR
+        // ------------------------------------------------------------
+        // عرض رسالة خطأ للمستخدم
+        // ============================================================
+
+        function showFormError(message) {
+          // إذا كان هناك رسالة نجاح ظاهرة
+          if (formSuccess) {
+            formSuccess.classList.remove("show");
+          }
+
+          // البحث عن رسالة الخطأ
+          let formError = document.getElementById("formError");
+
+          // إذا لم تكن موجودة
+          if (!formError) {
+            formError = document.createElement("div");
+
+            formError.id = "formError";
+
+            formError.style.marginTop = "12px";
+
+            formError.style.padding = "12px 15px";
+
+            formError.style.borderRadius = "12px";
+
+            formError.style.fontSize = "0.85rem";
+
+            formError.style.fontFamily = '"Syne", sans-serif';
+
+            formError.style.color = "#2d3956";
+
+            formError.style.background = "rgba(45, 57, 86, 0.06)";
+
+            contactForm.appendChild(formError);
+          }
+
+          // وضع رسالة الخطأ
+          formError.textContent = message;
+
+          // إظهار الرسالة
+          formError.style.display = "block";
+        }
+
+        // ============================================================
+        // 09.7 HIDE FORM ERROR
+        // ------------------------------------------------------------
+        // إخفاء رسالة الخطأ
+        // ============================================================
+
+        function hideFormError() {
+          const formError = document.getElementById("formError");
+
+          if (formError) {
+            formError.style.display = "none";
+          }
+        }
+
+        // ============================================================
+        // 09.8 FORM SUBMIT
+        // ------------------------------------------------------------
+        // تنفيذ عملية الإرسال
+        // ============================================================
+
+        if (contactForm) {
+          contactForm.addEventListener("submit", async function (e) {
+            // منع Reload للصفحة
             e.preventDefault();
 
-            const name = contactForm
-              .querySelector('input[name="name"]')
-              .value.trim();
-            const phone = contactForm
-              .querySelector('input[name="phone"]')
-              .value.trim();
-            const service = contactForm.querySelector(
-              'select[name="service"]',
-            ).value;
-            const message = contactForm
-              .querySelector('textarea[name="message"]')
-              .value.trim();
+            // إخفاء أي Error قديم
+            hideFormError();
 
-            if (!name || !phone) {
-              alert("من فضلك املى الاسم ورقم التليفون ❗");
+            // ==================================================
+            // 1. GET VALUES
+            // ==================================================
+
+            const name = nameInput.value.trim();
+
+            const phone = phoneInput.value.trim();
+
+            const email = emailInput.value.trim();
+
+            const service = serviceInput.value.trim();
+
+            const message = messageInput.value.trim();
+
+            // ==================================================
+            // 2. VALIDATE NAME
+            // ==================================================
+
+            if (!name) {
+              showFormError("Please enter your name.");
+
+              nameInput.focus();
+
               return;
             }
 
-            // 🟡 حالة جاري الإرسال
-            submitBtn.innerText = "جاري الإرسال...";
-            submitBtn.disabled = true;
-            submitBtn.style.opacity = "0.7";
+            // ==================================================
+            // 3. CLEAN PHONE
+            // ==================================================
 
-            const data = {
+            const cleanPhone = cleanUAEPhone(phone);
+
+            // ==================================================
+            // 4. VALIDATE PHONE
+            // ==================================================
+
+            if (!cleanPhone) {
+              showFormError(
+                "Please enter a valid UAE mobile number, e.g. 0507761628.",
+              );
+
+              phoneInput.focus();
+
+              return;
+            }
+
+            // ==================================================
+            // 5. VALIDATE EMAIL
+            // ==================================================
+
+            if (!isValidEmail(email)) {
+              showFormError("Please enter a valid email address.");
+
+              emailInput.focus();
+
+              return;
+            }
+
+            // ==================================================
+            // 6. VALIDATE SERVICE
+            // ==================================================
+
+            if (!service) {
+              showFormError("Please choose a service.");
+
+              serviceInput.focus();
+
+              return;
+            }
+
+            // ==================================================
+            // 7. VALIDATE MESSAGE
+            // ==================================================
+
+            if (!message) {
+              showFormError("Please tell me a little about your business.");
+
+              messageInput.focus();
+
+              return;
+            }
+
+            // ==================================================
+            // 8. PREPARE DATA
+            // --------------------------------------------------
+            // الرقم هنا أصبح:
+            // 971507761628
+            // ==================================================
+
+            const formData = {
               name: name,
-              phone: phone,
-              service: service || "Not specified",
+
+              phone: cleanPhone,
+
+              email: email,
+
+              service: service,
+
               message: message,
             };
 
+            // ==================================================
+            // 9. DISABLE SUBMIT BUTTON
+            // --------------------------------------------------
+            // منع الضغط أكثر من مرة
+            // ==================================================
+
+            const submitButton = contactForm.querySelector(
+              'button[type="submit"]',
+            );
+
+            const originalButtonText = submitButton
+              ? submitButton.innerHTML
+              : "";
+
+            if (submitButton) {
+              submitButton.disabled = true;
+
+              submitButton.innerHTML = "Sending...";
+            }
+
+            // ==================================================
+            // 10. SEND TO GOOGLE SHEETS
+            // ==================================================
+
             try {
-              await fetch(
-                "https://script.google.com/macros/s/AKfycbzovz-6HvRa2AmrKsnk56DTGkcHVupZxWf7DNTpdB-zVpxnC8ho67HG_I2_NVt-HQjTWg/exec",
-                {
-                  method: "POST",
-                  mode: "no-cors",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify(data),
+              await fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+
+                mode: "no-cors",
+
+                headers: {
+                  "Content-Type": "text/plain;charset=utf-8",
                 },
-              );
 
-              // 🟢 تم الإرسال
-              submitBtn.innerText = "تم الإرسال ✔️";
+                body: JSON.stringify(formData),
+              });
 
-              if (formSuccess) formSuccess.classList.add("show");
+              // ==================================================
+              // 11. SUCCESS
+              // ==================================================
+
+              if (formSuccess) {
+                formSuccess.classList.add("show");
+              }
+
+              // ==================================================
+              // 12. RESET FORM
+              // ==================================================
+
               contactForm.reset();
 
-              setTimeout(() => {
-                // رجوع الزرار لطبيعته
-                submitBtn.innerText = "Send Message";
-                submitBtn.disabled = false;
-                submitBtn.style.opacity = "1";
+              // ==================================================
+              // 13. HIDE SUCCESS MESSAGE
+              // --------------------------------------------------
+              // بعد 5 ثواني
+              // ==================================================
 
-                if (formSuccess) formSuccess.classList.remove("show");
-              }, 3000);
+              setTimeout(function () {
+                if (formSuccess) {
+                  formSuccess.classList.remove("show");
+                }
+              }, 5000);
             } catch (error) {
-              console.error(error);
+              // ==================================================
+              // 14. ERROR
+              // ==================================================
 
-              // ❌ خطأ
-              submitBtn.innerText = "حصل خطأ ❌";
+              showFormError("Something went wrong. Please try again.");
 
-              setTimeout(() => {
-                submitBtn.innerText = "Send Message";
-                submitBtn.disabled = false;
-                submitBtn.style.opacity = "1";
-              }, 3000);
+              console.error("Google Sheets Error:", error);
+            } finally {
+              // ==================================================
+              // 15. ENABLE BUTTON AGAIN
+              // ==================================================
+
+              if (submitButton) {
+                submitButton.disabled = false;
+
+                submitButton.innerHTML = originalButtonText;
+              }
             }
           });
         }
-
         // --------------------------------------------------------
         // [10. PARALLAX EFFECT - تأثير تحرك العناصر مع الماوس]
         // --------------------------------------------------------
+        // تعليق JS: متابعة حركة الماوس وتحريك عناصر المؤشر المخصص.
         document.addEventListener("mousemove", (e) => {
           const x = e.clientX / window.innerWidth;
           const y = e.clientY / window.innerHeight;
           const diamonds = document.querySelectorAll(".geo-diamond, .geo-ring");
           diamonds.forEach((el, i) => {
             const speed = 20 + i * 5;
-            if (el)
-              el.style.transform = `translate(${x * speed}px, ${y * speed}px) rotate(45deg)`;
+            el.style.setProperty("--px", `${x * speed}px`);
+            el.style.setProperty("--py", `${y * speed}px`);
           });
           const profile = document.querySelector(".profile-img-container");
           if (profile) {
@@ -1471,7 +1277,7 @@
         }, 100);
 
         console.log(
-          "%c⚡ Ahmed Algamal Portfolio — Fully Loaded!",
+          "%c⚡ Ahmed Algamal Portfolio — Fully Loaded with Bubble Cursor!",
           "color: #FF2D2D; font-size: 14px; font-weight: bold;",
         );
       })();
