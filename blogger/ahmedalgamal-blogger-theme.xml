@@ -223,7 +223,7 @@ main{position:relative;z-index:1}
     </b:if>
 
     <div class='wrap section'>
-      <b:section class='main' id='main-posts' maxwidgets='1' showaddelement='false'>
+      <b:section class='main' id='main-posts' showaddelement='true'>
         <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
           <b:includable id='main' var='this'>
             <b:if cond='data:view.isError'>
