@@ -19,5 +19,5 @@ window.SITE_CONFIG = {
   // Tracking. Paste your IDs to turn them on. Leave empty to keep them off.
   ga4Id: "G-Z2DTKN1YK0", // Google Analytics 4, e.g. "G-XXXXXXXXXX"
   metaPixelId: "28310308291982045", // Meta Pixel, e.g. "123456789012345"
-  clarityId: ""     // Microsoft Clarity (heatmaps, recordings), e.g. "abcd1234ef"
+  clarityId: "z34lnhtty8" // Microsoft Clarity (heatmaps, recordings), e.g. "abcd1234ef"
 };
