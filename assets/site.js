@@ -187,6 +187,42 @@
     }
   }
 
+  /* ---------- 4d. Pointer screens on every page ---------- */
+  (function () {
+    var layer = document.createElement("div");
+    layer.className = "bg-screens"; layer.setAttribute("aria-hidden", "true");
+    var grid = document.createElement("div"); grid.className = "bs-grid";
+    var T = [
+      '<div class="bb"></div><div class="bb me"></div><div class="bb"></div><div class="bb me"></div>',
+      '<div class="row"><b></b><u></u></div><div class="row"><b></b><u class="w"></u></div><div class="row"><b></b><u></u></div><div class="row"><b></b><u class="c"></u></div><div class="row"><b></b><u class="w"></u></div>',
+      '<i class="g s"></i><i></i><i class="w"></i><div class="bars"><span style="height:40%"></span><span style="height:65%"></span><span style="height:50%"></span><span style="height:85%"></span><span style="height:70%"></span><span style="height:95%"></span></div>',
+      '<i class="g w"></i><i></i><i></i><i class="w"></i><i class="r g"></i><i class="s"></i>'
+    ];
+    var n = Math.ceil((window.innerWidth + 120) / 262) * Math.ceil((window.innerHeight + 240) / 192) + 8;
+    var html = ""; for (var k = 0; k < n; k++) html += '<div class="bs">' + T[(k * 7 + Math.floor(k / 5)) % T.length] + "</div>";
+    grid.innerHTML = html; layer.appendChild(grid); document.body.insertBefore(layer, document.body.firstChild);
+    var x = -999, y = -999, ticking = false, hideT = null;
+    var paint = function () {
+      ticking = false;
+      layer.style.setProperty("--mx", x + "px"); layer.style.setProperty("--my", y + "px");
+      grid.style.setProperty("--sy", (-(window.scrollY % 192) * 0.35) + "px");
+    };
+    var queue = function () { if (!ticking) { ticking = true; requestAnimationFrame(paint); } };
+    var show = function (cx, cy, touch) {
+      x = cx; y = cy; layer.classList.add("on"); queue();
+      var h = document.querySelector(".hero-live");
+      if (h) { var r = h.getBoundingClientRect(); document.body.classList.toggle("in-hero", cy >= r.top && cy <= r.bottom); }
+      clearTimeout(hideT);
+      if (touch) hideT = setTimeout(function () { layer.classList.remove("on"); }, 1400);
+    };
+    window.addEventListener("pointermove", function (e) { show(e.clientX, e.clientY, e.pointerType !== "mouse"); }, { passive: true });
+    window.addEventListener("pointerdown", function (e) { show(e.clientX, e.clientY, e.pointerType !== "mouse"); }, { passive: true });
+    window.addEventListener("touchmove", function (e) { var t = e.touches[0]; if (t) show(t.clientX, t.clientY, true); }, { passive: true });
+    document.addEventListener("pointerleave", function () { layer.classList.remove("on"); });
+    document.documentElement.addEventListener("mouseleave", function () { layer.classList.remove("on"); });
+    window.addEventListener("scroll", queue, { passive: true });
+  })();
+
   /* ---------- 4c. Card glow that follows the pointer ---------- */
   $$(".hcard").forEach(function (c) {
     c.addEventListener("pointermove", function (e) {
