@@ -314,7 +314,7 @@ main{position:relative;z-index:1}
         <div>
           <h4>Contact</h4>
           <ul>
-            <li><a data-place='blog-footer' data-wa='1' href='https://wa.me/971507761628' rel='noopener' target='_blank'>WhatsApp +971 50 776 1628</a></li>
+            <li><a data-place='blog-footer' data-wa='1' href='https://wa.me/971507761628' rel='noopener' target='_blank'>WhatsApp</a></li>
             <li><a href='https://ahmedalgamal.tech/contact.html'>Contact form</a></li>
             <li><a href='https://www.linkedin.com/in/ahmed-al-gamal-6906ab204/' rel='noopener' target='_blank'>LinkedIn</a></li>
             <li><a href='https://www.instagram.com/ahmedalgamal.ae/' rel='noopener' target='_blank'>Instagram</a></li>
