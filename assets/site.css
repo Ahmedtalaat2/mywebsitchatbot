@@ -78,10 +78,10 @@ button,input,select,textarea{font:inherit}
 
 /* ---------- Pointer screens: plain page, faint UI screens revealed around the pointer ---------- */
 main{position:relative;z-index:1}
-.bg-screens{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:0;transition:opacity .45s ease;
-  -webkit-mask-image:radial-gradient(circle var(--r,230px) at var(--mx,-999px) var(--my,-999px),#000 0%,rgba(0,0,0,.45) 55%,transparent 100%);
-  mask-image:radial-gradient(circle var(--r,230px) at var(--mx,-999px) var(--my,-999px),#000 0%,rgba(0,0,0,.45) 55%,transparent 100%)}
-.bg-screens.on{opacity:.72}
+.bg-screens{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:0;filter:blur(5px);transition:opacity .45s ease;
+  -webkit-mask-image:radial-gradient(circle var(--r,140px) at var(--mx,-999px) var(--my,-999px),#000 0%,rgba(0,0,0,.45) 55%,transparent 100%);
+  mask-image:radial-gradient(circle var(--r,140px) at var(--mx,-999px) var(--my,-999px),#000 0%,rgba(0,0,0,.45) 55%,transparent 100%)}
+.bg-screens.on{opacity:.32}
 body.in-hero .bg-screens{opacity:0}
 .bg-screens .bs-grid{position:absolute;inset:-60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px;padding:22px;
   transform:translateY(var(--sy,0px));will-change:transform}
