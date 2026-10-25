@@ -104,6 +104,50 @@
   }
   $$("[data-open-chat]").forEach(function (b) { b.addEventListener("click", function (e) { e.preventDefault(); openChat(); }); });
 
+  /* ---------- 4b. Live hero screen (home) ---------- */
+  var live = $("#liveScreen");
+  if (live) {
+    var feeds = { chat: $('[data-feed="chat"]', live), leads: $('[data-feed="leads"]', live), act: $('[data-feed="act"]', live) };
+    var DATA = {
+      chat: [["in", "Is the 2BR in JVC still available?"], ["out", "Yes! What's your budget?"], ["in", "مرحبا، عندكم كود FB-2041؟"], ["out", "متوفر 640 متر، 38 درهم للمتر"],
+             ["in", "Do you deliver to Abu Dhabi?"], ["out", "Yes, tomorrow. Want the order link?"], ["in", "Can I see a villa this weekend?"], ["out", "Saturday 10:00 AM works?"]],
+      leads: [["Omar", "Marina, AED 1.4M", "hot"], ["Elena", "JVC, AED 900K", "warm"], ["Raj", "Business Bay", "hot"], ["Lina", "Dubai Hills", "cold"],
+              ["Khalid", "FB-2041, 120 m", "hot"], ["Sara", "Downtown, AED 2.1M", "hot"], ["Maria", "Online order", "warm"]],
+      act: ["Viewing booked, Sat 11:00 AM", "Telegram alert sent to agent", "Lead scored Hot", "Follow-up set for 24 h", "LPO received, waiting approval", "Reminder sent", "Order link sent"]
+    };
+    var idx = { chat: 0, leads: 0, act: 0 }, MAX = 7;
+    var make = function (k) {
+      var d = DATA[k][idx[k]++ % DATA[k].length], el = document.createElement("div");
+      if (k === "chat") { el.className = "lsi " + d[0]; el.textContent = d[1]; if (/[\u0600-\u06FF]/.test(d[1])) el.dir = "rtl"; }
+      else if (k === "leads") { el.className = "lsi row"; el.innerHTML = "<span>" + esc(d[0]) + " <small style=\"color:var(--muted)\">" + esc(d[1]) + '</small></span><span class="pill ' + d[2] + '">' + d[2].charAt(0).toUpperCase() + d[2].slice(1) + "</span>"; }
+      else { el.className = "lsi act"; el.textContent = d; }
+      var f = feeds[k]; f.appendChild(el); while (f.children.length > MAX) f.removeChild(f.firstChild);
+    };
+    ["chat", "leads", "act"].forEach(function (k) { for (var i = 0; i < 4; i++) make(k); });
+    var TOAST = ["New lead from Meta Ads, replied in 6 seconds", "Viewing booked for Saturday 11:00 AM", "Hot lead sent to an agent on Telegram", "Trader asked for FB-2041, stock sent in 4 seconds", "Quiet lead followed up after 24 hours"];
+    var toastText = $("#liveToastText"), t = 0, tick = 0, order = ["chat", "chat", "leads", "act"], timer = null;
+    var step = function () {
+      make(order[tick++ % order.length]);
+      if (tick % 3 === 0 && toastText) {
+        toastText.style.opacity = 0;
+        setTimeout(function () { toastText.textContent = TOAST[++t % TOAST.length]; toastText.style.opacity = 1; }, 300);
+      }
+    };
+    var run = function (on) { if (on && !timer && !reduce) timer = setInterval(step, 1300); if (!on && timer) { clearInterval(timer); timer = null; } };
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (en) { run(en[0].isIntersecting && !document.hidden); }).observe(live.parentNode);
+    else run(true);
+    document.addEventListener("visibilitychange", function () { run(!document.hidden); });
+    // Gentle tilt that follows the pointer on desktop
+    var heroEl = live.parentNode;
+    if (!reduce && window.matchMedia("(pointer: fine)").matches) {
+      heroEl.addEventListener("pointermove", function (e) {
+        var r = heroEl.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5;
+        live.style.setProperty("--ry", (x * 6).toFixed(2) + "deg");
+      });
+      heroEl.addEventListener("pointerleave", function () { live.style.setProperty("--ry", "0deg"); });
+    }
+  }
+
   /* ---------- 5. Chat simulations ---------- */
   var SETS = {
     home: [
