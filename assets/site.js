@@ -68,9 +68,9 @@
   }
   if (CFG.chatWebhook) {
     var css = document.createElement("link");
-    css.rel = "stylesheet"; css.href = "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css";
+    css.rel = "stylesheet"; css.href = "https://cdn.jsdelivr.net/npm/@n8n/chat@1.42.0/dist/style.css";
     document.head.insertBefore(css, document.head.querySelector('link[href*="site.css"]'));
-    import("https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js").then(function (mod) {
+    import("https://cdn.jsdelivr.net/npm/@n8n/chat@1.42.0/dist/chat.bundle.es.js").then(function (mod) {
       mod.createChat({
         webhookUrl: CFG.chatWebhook,
         mode: "window",
@@ -189,6 +189,7 @@
     var tabs = $(".sim-tabs", root), chat = $(".chat", root), status = $(".status", root), botName = $(".bot-name", root);
     var dl = $(".rec dl", root), badge = $(".rec .badge", root);
     var run = 0, minute = 0, started = false;
+    if (set.length < 2) tabs.classList.add("single");
     tabs.innerHTML = set.map(function (s, i) {
       return '<button type="button" role="tab" aria-selected="' + (i === 0) + '" data-k="' + s.key + '">' + esc(s.label) + "</button>";
     }).join("");
