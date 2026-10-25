@@ -121,19 +121,26 @@
       if (k === "chat") { el.className = "lsi " + d[0]; el.textContent = d[1]; if (/[\u0600-\u06FF]/.test(d[1])) el.dir = "rtl"; }
       else if (k === "leads") { el.className = "lsi row"; el.innerHTML = "<span>" + esc(d[0]) + " <small style=\"color:var(--muted)\">" + esc(d[1]) + '</small></span><span class="pill ' + d[2] + '">' + d[2].charAt(0).toUpperCase() + d[2].slice(1) + "</span>"; }
       else { el.className = "lsi act"; el.textContent = d; }
-      var f = feeds[k]; f.appendChild(el); while (f.children.length > MAX) f.removeChild(f.firstChild);
+      var f = feeds[k];
+      if (k === "chat") { f.appendChild(el); while (f.children.length > MAX) f.removeChild(f.firstChild); }
+      else { f.insertBefore(el, f.firstChild); while (f.children.length > MAX) f.removeChild(f.lastChild); }
     };
     ["chat", "leads", "act"].forEach(function (k) { for (var i = 0; i < 4; i++) make(k); });
-    var TOAST = ["New lead from Meta Ads, replied in 6 seconds", "Viewing booked for Saturday 11:00 AM", "Hot lead sent to an agent on Telegram", "Trader asked for FB-2041, stock sent in 4 seconds", "Quiet lead followed up after 24 hours"];
+    var TOAST = [["New lead from Meta Ads, replied in 6 seconds", "Lead replied in 6 seconds"], ["Viewing booked for Saturday 11:00 AM", "Viewing booked, Sat 11 AM"],
+      ["Hot lead sent to an agent on Telegram", "Hot lead sent to agent"], ["Trader asked for FB-2041, stock sent in 4 seconds", "Stock price sent in 4 sec"],
+      ["Quiet lead followed up after 24 hours", "Quiet lead followed up"]];
+    var small = function () { return window.innerWidth < 720; };
+    var toastSay = function (i) { return TOAST[i % TOAST.length][small() ? 1 : 0]; };
     var toastText = $("#liveToastText"), t = 0, tick = 0, order = ["chat", "chat", "leads", "act"], timer = null;
     var step = function () {
       make(order[tick++ % order.length]);
       if (tick % 3 === 0 && toastText) {
         toastText.style.opacity = 0;
-        setTimeout(function () { toastText.textContent = TOAST[++t % TOAST.length]; toastText.style.opacity = 1; }, 300);
+        setTimeout(function () { toastText.textContent = toastSay(++t); toastText.style.opacity = 1; }, 300);
       }
     };
-    var run = function (on) { if (on && !timer && !reduce) timer = setInterval(step, 1300); if (!on && timer) { clearInterval(timer); timer = null; } };
+    if (toastText) toastText.textContent = toastSay(0);
+    var run = function (on) { if (on && !timer && !reduce) timer = setInterval(step, small() ? 1000 : 1300); if (!on && timer) { clearInterval(timer); timer = null; } };
     if ("IntersectionObserver" in window) new IntersectionObserver(function (en) { run(en[0].isIntersecting && !document.hidden); }).observe(live.parentNode);
     else run(true);
     document.addEventListener("visibilitychange", function () { run(!document.hidden); });
