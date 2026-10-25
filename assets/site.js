@@ -151,9 +151,24 @@
         var r = heroEl.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5;
         live.style.setProperty("--ry", (x * 6).toFixed(2) + "deg");
       });
-      heroEl.addEventListener("pointerleave", function () { live.style.setProperty("--ry", "0deg"); });
+      heroEl.addEventListener("pointerleave", function () { live.style.setProperty("--ry", "0deg"); heroEl.classList.remove("pointer"); });
+      heroEl.addEventListener("pointermove", function (e) {
+        var r = heroEl.getBoundingClientRect();
+        heroEl.style.setProperty("--mx", (e.clientX - r.left) + "px");
+        heroEl.style.setProperty("--my", (e.clientY - r.top) + "px");
+        heroEl.classList.add("pointer");
+      });
     }
   }
+
+  /* ---------- 4c. Card glow that follows the pointer ---------- */
+  $$(".hcard").forEach(function (c) {
+    c.addEventListener("pointermove", function (e) {
+      var r = c.getBoundingClientRect();
+      c.style.setProperty("--cx", (e.clientX - r.left) + "px");
+      c.style.setProperty("--cy", (e.clientY - r.top) + "px");
+    });
+  });
 
   /* ---------- 5. Chat simulations ---------- */
   var SETS = {

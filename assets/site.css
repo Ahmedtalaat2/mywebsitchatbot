@@ -14,6 +14,8 @@
   --wrap:1160px;
   color-scheme:dark;
 }
+@view-transition{navigation:auto}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.28s}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth;overflow-x:clip}
@@ -101,6 +103,22 @@ button,input,select,textarea{font:inherit}
   radial-gradient(ellipse 50% 56% at 50% 46%,rgba(32,39,52,.7) 0%,rgba(32,39,52,.45) 60%,rgba(32,39,52,.15) 100%),
   linear-gradient(to bottom,rgba(32,39,52,.15) 0%,rgba(32,39,52,0) 45%,var(--bg) 100%)}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){ .live-screen{filter:blur(4px)} }
+.hero-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:100%;max-width:780px;margin:0 0 28px}
+.hcard{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:16px 16px 18px;text-align:left;text-decoration:none;color:var(--text-2);
+  border-radius:18px;background:rgba(28,34,50,.74);border:1px solid var(--line-strong);overflow:hidden;isolation:isolate;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:transform .25s ease,border-color .25s ease,background .25s ease}
+.hcard::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .25s ease;
+  background:radial-gradient(220px circle at var(--cx,50%) var(--cy,50%),rgba(183,216,148,.22),transparent 65%)}
+.hcard:hover,.hcard:focus-visible{transform:translateY(-4px);border-color:rgba(183,216,148,.6);background:rgba(28,34,50,.86)}
+.hcard:hover::before,.hcard:focus-visible::before{opacity:1}
+.hc-ico{width:36px;height:36px;border-radius:11px;background:var(--accent);color:var(--bg-dark);display:grid;place-items:center;flex:none}
+.hcard strong{color:var(--text);font-family:var(--display);font-size:1.12rem;line-height:1.15}
+.hc-desc{font-size:.86rem;line-height:1.45}
+.hero-spot{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;transition:opacity .3s ease;
+  background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),rgba(183,216,148,.10),transparent 70%)}
+.hero-live.pointer .hero-spot{opacity:1}
+.hero-live.pointer .hero-veil{-webkit-mask-image:radial-gradient(circle 150px at var(--mx,-999px) var(--my,-999px),rgba(0,0,0,.3) 0%,rgba(0,0,0,.3) 40%,#000 100%);
+  mask-image:radial-gradient(circle 150px at var(--mx,-999px) var(--my,-999px),rgba(0,0,0,.3) 0%,rgba(0,0,0,.3) 40%,#000 100%)}
 .hero-svcs{list-style:none;margin:0 0 30px;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .hero-svcs li{display:flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(38,47,66,.75);border:1px solid rgba(183,216,148,.35);color:var(--text);font-size:.9rem;font-weight:500}
 .hero-svcs li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
@@ -535,6 +553,12 @@ button.msg.sys:hover{color:var(--accent);border-color:var(--accent)}
     background:radial-gradient(ellipse 80% 55% at 50% 42%,rgba(32,39,52,.68) 0%,rgba(32,39,52,.42) 70%,rgba(32,39,52,.25) 100%),linear-gradient(to bottom,rgba(32,39,52,0) 70%,var(--bg) 100%)}
   .hero-center .lede{font-size:1rem;margin:14px auto 18px}
   .hero-svcs{gap:6px;margin-bottom:4px}
+  .hero-cards{gap:8px;margin-bottom:4px}
+  .hcard{padding:11px 9px 12px;gap:6px;border-radius:14px}
+  .hc-ico{width:28px;height:28px;border-radius:9px}
+  .hc-ico svg{width:15px;height:15px}
+  .hcard strong{font-size:.86rem}
+  .hc-desc{font-size:.72rem;line-height:1.35}
   .hero-svcs li{font-size:.78rem;padding:5px 10px;gap:6px}
   .hero-center .who{font-size:.92rem;margin-bottom:12px}
   .live-toast{font-size:.8rem;margin-top:18px;padding:7px 14px 7px 8px;gap:8px}
