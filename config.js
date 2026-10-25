@@ -17,6 +17,7 @@ window.SITE_CONFIG = {
   postsToShow: 3,
 
   // Tracking. Paste your IDs to turn them on. Leave empty to keep them off.
-  ga4Id: "",        // e.g. "G-XXXXXXXXXX"
-  metaPixelId: ""   // e.g. "123456789012345"
+  ga4Id: "",        // Google Analytics 4, e.g. "G-XXXXXXXXXX"
+  metaPixelId: "",  // Meta Pixel, e.g. "123456789012345"
+  clarityId: ""     // Microsoft Clarity (heatmaps, recordings), e.g. "abcd1234ef"
 };

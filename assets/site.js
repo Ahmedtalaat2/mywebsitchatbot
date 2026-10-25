@@ -32,9 +32,33 @@
     !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
     window.fbq("init", CFG.metaPixelId); window.fbq("track", "PageView");
   }
+  if (CFG.clarityId) {
+    (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); }; t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, "clarity", "script", CFG.clarityId);
+  }
+  // Remember where the visitor came from (ads, social), for this visit only
+  (function () {
+    var q = new URLSearchParams(location.search), keys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "fbclid", "gclid"], got = {};
+    keys.forEach(function (k) { if (q.get(k)) got[k] = q.get(k).slice(0, 80); });
+    if (Object.keys(got).length) store.set("visitSource", JSON.stringify(got));
+    if (!store.get("landing")) store.set("landing", location.pathname);
+  })();
+  function visitSource() {
+    var src = {}; try { src = JSON.parse(store.get("visitSource") || "{}"); } catch (e) {}
+    var parts = [];
+    if (src.utm_source) parts.push("source: " + src.utm_source);
+    if (src.utm_medium) parts.push("medium: " + src.utm_medium);
+    if (src.utm_campaign) parts.push("campaign: " + src.utm_campaign);
+    if (src.utm_content) parts.push("ad: " + src.utm_content);
+    if (!src.utm_source && src.fbclid) parts.push("source: Meta ad click");
+    if (!src.utm_source && src.gclid) parts.push("source: Google ad click");
+    if (!parts.length && document.referrer && document.referrer.indexOf(location.host) === -1) parts.push("referrer: " + document.referrer.slice(0, 80));
+    parts.push("landing page: " + (store.get("landing") || location.pathname));
+    return parts.join(", ");
+  }
   function track(name, params) {
     params = params || {};
     try { if (window.gtag) window.gtag("event", name, params); } catch (e) {}
+    try { if (window.clarity) window.clarity("event", name); } catch (e) {}
     try {
       if (window.fbq) {
         if (name === "whatsapp_click" || name === "generate_lead") window.fbq("track", name === "generate_lead" ? "Lead" : "Contact", params);
@@ -499,7 +523,7 @@
       btn.disabled = true; btn.textContent = "Sending…";
       fetch(CFG.formEndpoint, {
         method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify({ name: name, phone: phone, email: email, service: service, message: message })
+        body: JSON.stringify({ name: name, phone: phone, email: email, service: service, message: message + "\n\n[" + visitSource() + "]" })
       }).then(function () {
         show("ok", "Thanks, " + name + ". Your request is in. I'll reply on WhatsApp within 24 hours.");
         form.reset(); track("generate_lead", { service: service });
