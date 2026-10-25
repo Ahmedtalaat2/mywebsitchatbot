@@ -138,10 +138,10 @@ main{position:relative;z-index:1}
 .wa-float{position:fixed;left:calc(20px + env(safe-area-inset-left,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);z-index:60}
 
 /* Pointer screens (same as site) */
-.bg-screens{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:0;transition:opacity .45s ease;
-  -webkit-mask-image:radial-gradient(circle var(--r,230px) at var(--mx,-999px) var(--my,-999px),#000 0%,rgba(0,0,0,.45) 55%,transparent 100%);
-  mask-image:radial-gradient(circle var(--r,230px) at var(--mx,-999px) var(--my,-999px),#000 0%,rgba(0,0,0,.45) 55%,transparent 100%)}
-.bg-screens.on{opacity:.72}
+.bg-screens{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:0;filter:blur(5px);transition:opacity .45s ease;
+  -webkit-mask-image:radial-gradient(circle var(--r,140px) at var(--mx,-999px) var(--my,-999px),#000 0%,rgba(0,0,0,.45) 55%,transparent 100%);
+  mask-image:radial-gradient(circle var(--r,140px) at var(--mx,-999px) var(--my,-999px),#000 0%,rgba(0,0,0,.45) 55%,transparent 100%)}
+.bg-screens.on{opacity:.32}
 .bg-screens .bs-grid{position:absolute;inset:-60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px;padding:22px;transform:translateY(var(--sy,0px))}
 .bs{height:170px;border-radius:16px;background:rgba(38,47,66,.9);border:1px solid rgba(183,216,148,.22);padding:12px;display:flex;flex-direction:column;gap:7px;overflow:hidden}
 .bs i{display:block;height:9px;border-radius:5px;background:rgba(201,209,222,.18)}
@@ -223,7 +223,7 @@ main{position:relative;z-index:1}
     </b:if>
 
     <div class='wrap section'>
-      <b:section class='main' id='main-posts' maxwidgets='1' showaddelement='false'>
+      <b:section class='main' id='main-posts' showaddelement='true'>
         <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
           <b:includable id='main' var='this'>
             <b:if cond='data:view.isError'>
