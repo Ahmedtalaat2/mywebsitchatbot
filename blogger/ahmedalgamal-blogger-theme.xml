@@ -346,6 +346,14 @@ main{position:relative;z-index:1}
         try { if (window.fbq) fbq("track", "Contact"); } catch (e) {}
       });
     });
+    // WhatsApp links inside articles: keep their own message, only track the click
+    $$(".post-body a[href*='wa.me/971']").forEach(function (a) {
+      a.target = "_blank"; a.rel = "noopener";
+      a.addEventListener("click", function () {
+        try { if (window.gtag) gtag("event", "whatsapp_click", { page: location.pathname, place: "blog-article" }); } catch (e) {}
+        try { if (window.fbq) fbq("track", "Contact"); } catch (e) {}
+      });
+    });
     // Pointer screens
     var layer = document.createElement("div"); layer.className = "bg-screens"; layer.setAttribute("aria-hidden", "true");
     var grid = document.createElement("div"); grid.className = "bs-grid";

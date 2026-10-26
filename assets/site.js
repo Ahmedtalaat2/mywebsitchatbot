@@ -85,6 +85,11 @@
     a.target = "_blank"; a.rel = "noopener";
     a.addEventListener("click", function () { track("whatsapp_click", { page: location.pathname, place: a.getAttribute("data-place") || "button" }); });
   });
+  // Tool buttons (calculators, builder) set their own message, so they skip data-wa; track their clicks here
+  ["lkWa", "fcWa", "builderWa"].forEach(function (id) {
+    var b = document.getElementById(id);
+    if (b) b.addEventListener("click", function () { track("whatsapp_click", { page: location.pathname, place: b.getAttribute("data-place") || id }); });
+  });
   var yr = $("#year"); if (yr) yr.textContent = new Date().getFullYear();
 
   /* ---------- 4. AI chatbot (your n8n webhook) ---------- */
