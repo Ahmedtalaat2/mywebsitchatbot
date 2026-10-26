@@ -71,7 +71,9 @@ main{position:relative;z-index:1}
 .menu-btn{display:none;margin-left:auto;background:var(--bg-light);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 12px;cursor:pointer;font:inherit}
 
 /* Blog header */
-.blog-hero{padding:56px 0 40px;border-bottom:1px solid var(--line)}
+.blog-hero{padding:28px 0 24px;border-bottom:1px solid var(--line)}
+.blog-hero .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.blog-hero + .section{padding-top:28px}
 .blog-hero .crumb{font-size:.88rem;color:var(--muted);margin:0 0 12px}
 .blog-hero .crumb a{color:var(--muted);text-decoration:none}
 .blog-hero h1{font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.08;font-weight:800}
@@ -171,7 +173,8 @@ main{position:relative;z-index:1}
   body{font-size:16px}
   .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
   .post-list,.foot-grid{grid-template-columns:1fr}
-  .blog-hero{padding:36px 0 28px}
+  .blog-hero{padding:22px 0 20px}
+  .blog-hero + .section{padding-top:20px}
   .section{padding-block:36px}
   .single-head{padding:32px 0 22px}
   .wa-float{width:50px;height:50px;left:calc(14px + env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px))}
@@ -215,8 +218,12 @@ main{position:relative;z-index:1}
           <b:elseif cond='data:view.isSearch'/>
             <h1>Search: <data:view.search.query/></h1>
           <b:else/>
-            <h1>Blog</h1>
-            <p>Notes on real estate ads, WhatsApp AI and lead follow-up in the UAE.</p>
+            <h1>Turn more of your leads into deals</h1>
+            <p>Practical guides for Dubai real estate brokers and UAE businesses: how to reply to every lead fast, use WhatsApp AI, and stop wasting ad budget. Read the articles below, or let me set it up for you.</p>
+            <div class='cta-row'>
+              <a class='btn btn-wa btn-sm' data-place='blog-hero' data-wa='1' href='https://wa.me/971507761628' rel='noopener' target='_blank'>WhatsApp me</a>
+              <a class='btn btn-ghost btn-sm' href='https://ahmedalgamal.tech/real-estate.html'>See my services</a>
+            </div>
           </b:if>
         </div>
       </section>
