@@ -1,0 +1,8 @@
+{
+  "name": "ahmedalgamal-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ahmedalgamal.tech: static pages plus a small admin (blog, projects, CRM). No dependencies.",
+  "scripts": { "start": "node server/server.js", "test": "node server/test.js" },
+  "engines": { "node": ">=20" }
+}
