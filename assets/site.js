@@ -564,6 +564,10 @@
       if (!message) { show("err", "Please tell me a little about your business."); $("#message").focus(); return; }
       var btn = form.querySelector('button[type="submit"]'), label = btn.textContent;
       btn.disabled = true; btn.textContent = "Sending…";
+      fetch("/api/lead", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: name, phone: phone, email: email, service: service, message: message, source: visitSource(), website: ($("#hpWebsite") || {}).value || "" })
+      }).catch(function () {});
       fetch(CFG.formEndpoint, {
         method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify({ name: name, phone: phone, email: email, service: service, message: message + "\n\n[" + visitSource() + "]" })
@@ -580,6 +584,7 @@
   var posts = $("#posts");
   if (posts) {
     var base = (CFG.bloggerUrl || "").replace(/\/+$/, "");
+    var loadBlogger = function () {
     var empty = function (html) { posts.innerHTML = '<div class="empty">' + html + "</div>"; };
     if (!base) { empty("Articles are on the way."); }
     else {
@@ -607,5 +612,17 @@
       document.body.appendChild(s);
       setTimeout(function () { if (!done) s.onerror(); }, 8000);
     }
+    };
+    // Own blog first (/api/posts). If it is not there, fall back to the Blogger feed.
+    fetch("/api/posts?limit=" + (CFG.postsToShow || 3)).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (list) {
+      if (!list.length) throw 0;
+      posts.innerHTML = list.map(function (a) {
+        var date = new Date(a.date).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+        var img = a.image ? (/^https?:/i.test(a.image) ? a.image : "/" + a.image.replace(/^\/+/, "")) : "";
+        return '<a class="post" href="/blog/' + esc(a.slug) + '">' +
+          (img ? '<img src="' + esc(img) + '" alt="" loading="lazy">' : "") +
+          '<div class="post-body"' + (a.lang === "ar" ? ' dir="rtl"' : "") + "><time>" + date + "</time><h3>" + esc(a.title) + "</h3><p>" + esc(a.description) + "</p></div></a>";
+      }).join("");
+    }).catch(loadBlogger);
   }
 })();

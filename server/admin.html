@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin | Ahmed Al Gamal</title>
+<style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1c2232;--mut:#6b7280;--line:#e3e6ec;--acc:#0e7c66;--accink:#fff;--bad:#c0392b}
+@media(prefers-color-scheme:dark){:root{--bg:#12151d;--card:#1c2232;--ink:#eef0f5;--mut:#9aa3b5;--line:#2c3447;--acc:#27b58f;--accink:#06231b;--bad:#ff7b6b}}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;background:var(--bg);color:var(--ink)}
+header{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;flex-wrap:wrap}
+header h1{font-size:1rem;margin:0 8px 0 0}
+nav{display:flex;gap:4px;flex:1;flex-wrap:wrap}
+nav button{background:none;border:0;padding:8px 12px;border-radius:8px;cursor:pointer;color:var(--mut);font:inherit;font-weight:600}
+nav button.on{background:var(--acc);color:var(--accink)}
+main{max-width:1100px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.btn{background:var(--acc);color:var(--accink);border:0;border-radius:8px;padding:9px 14px;font:inherit;font-weight:600;cursor:pointer}
+.btn.g{background:none;color:var(--ink);border:1px solid var(--line)}.btn.d{background:none;color:var(--bad);border:1px solid var(--bad)}
+.btn:disabled{opacity:.5}
+input,select,textarea{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+textarea{min-height:90px;resize:vertical}label{display:block;font-size:.82rem;color:var(--mut);margin:12px 0 4px}
+.bar{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;align-items:center}.bar input,.bar select{width:auto;flex:1;min-width:140px}
+table{width:100%;border-collapse:collapse}th,td{text-align:start;padding:10px;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:.78rem;color:var(--mut);text-transform:uppercase}
+tr.click{cursor:pointer}tr.click:hover{background:var(--bg)}
+.pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:.78rem;font-weight:600;background:var(--line)}
+.s-new{background:#fde68a;color:#5b4300}.s-contacted{background:#bfdbfe;color:#10346b}.s-qualified{background:#ddd6fe;color:#3b1a7a}.s-won{background:#bbf7d0;color:#0a4a22}.s-lost{background:#e5e7eb;color:#444}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin-bottom:12px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer}.stat b{font-size:1.4rem;display:block}.stat span{color:var(--mut);font-size:.8rem}
+dialog{border:1px solid var(--line);border-radius:14px;padding:20px;width:min(720px,94vw);max-height:92vh;background:var(--card);color:var(--ink)}
+dialog::backdrop{background:#0008}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:600px){.row{grid-template-columns:1fr}th.h{display:none}td.h{display:none}}
+.acts{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}.acts .sp{flex:1}
+.err{color:var(--bad);margin-top:8px;min-height:1.2em}.mut{color:var(--mut)}
+.login{max-width:340px;margin:12vh auto}
+.chk{display:flex;gap:8px;align-items:center;margin-top:14px}.chk input{width:auto}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<dialog id="dlg"></dialog>
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)};
+var esc=function(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
+var S={tab:"leads",leads:[],articles:[],projects:[],q:"",st:""};
+var STAT=["new","contacted","qualified","won","lost"];
+
+function api(method,url,body){
+  return fetch(url,{method:method,headers:body?{"Content-Type":"application/json"}:{},body:body?JSON.stringify(body):undefined,credentials:"same-origin"})
+   .then(function(r){return r.json().catch(function(){return{}}).then(function(j){if(r.status===401&&url.indexOf("login")<0){login();throw new Error("auth")}if(!r.ok)throw new Error(j.error||"Error");return j})});
+}
+function login(msg){
+  $("#app").innerHTML='<div class="card login"><h2 style="margin-top:0">Admin login</h2><label>Password</label><input id="pw" type="password" autocomplete="current-password" autofocus><div class="err" id="le">'+esc(msg||"")+'</div><div class="acts"><button class="btn" id="lb">Log in</button></div></div>';
+  var go=function(){api("POST","/api/admin/login",{password:$("#pw").value}).then(boot).catch(function(e){$("#le").textContent=e.message})};
+  $("#lb").onclick=go;$("#pw").onkeydown=function(e){if(e.key==="Enter")go()};
+}
+function boot(){
+  Promise.all(["leads","articles","projects"].map(function(k){return api("GET","/api/admin/"+k).then(function(d){S[k]=d})})).then(render).catch(function(e){if(e.message!=="auth")$("#app").textContent=e.message});
+}
+function render(){
+  var h='<header><h1>Admin</h1><nav>'+["leads","articles","projects"].map(function(t){return '<button data-t="'+t+'" class="'+(S.tab===t?"on":"")+'">'+({leads:"Leads (CRM)",articles:"Articles",projects:"Projects"})[t]+'</button>'}).join("")+'</nav><a class="mut" href="/" target="_blank">Site</a><button class="btn g" id="out">Log out</button></header><main id="m"></main>';
+  $("#app").innerHTML=h;
+  document.querySelectorAll("nav button").forEach(function(b){b.onclick=function(){S.tab=b.dataset.t;render()}});
+  $("#out").onclick=function(){api("POST","/api/admin/logout",{}).then(function(){login()})};
+  ({leads:viewLeads,articles:viewArticles,projects:viewProjects})[S.tab]();
+}
+var fd=function(d){return d?String(d).slice(0,10):""};
+
+/* ---- leads ---- */
+function viewLeads(){
+  var cnt={};STAT.forEach(function(s){cnt[s]=0});S.leads.forEach(function(l){cnt[l.status]=(cnt[l.status]||0)+1});
+  var today=new Date().toISOString().slice(0,10);
+  var due=S.leads.filter(function(l){return l.followUp&&l.followUp<=today&&l.status!=="won"&&l.status!=="lost"}).length;
+  var q=S.q.toLowerCase();
+  var rows=S.leads.filter(function(l){return (!S.st||l.status===S.st)&&(!q||[l.name,l.phone,l.email,l.company,l.service,l.message,l.notes].join(" ").toLowerCase().indexOf(q)>-1)});
+  $("#m").innerHTML='<div class="stats">'+STAT.map(function(s){return '<div class="stat" data-s="'+s+'"><b>'+cnt[s]+'</b><span>'+s+'</span></div>'}).join("")+'<div class="stat" data-s=""><b>'+due+'</b><span>follow-up due</span></div></div>'+
+   '<div class="bar"><input id="q" placeholder="Search name, phone, notes..." value="'+esc(S.q)+'"><select id="st"><option value="">All statuses</option>'+STAT.map(function(s){return '<option'+(S.st===s?" selected":"")+'>'+s+'</option>'}).join("")+'</select><button class="btn" id="add">+ Add lead</button><a class="btn g" href="/api/admin/leads.csv" style="text-decoration:none">Export CSV</a></div>'+
+   '<div class="card" style="padding:0;overflow:auto"><table><thead><tr><th>Date</th><th>Name</th><th class="h">Service</th><th>Status</th><th class="h">Follow-up</th></tr></thead><tbody>'+
+   (rows.length?rows.map(function(l){return '<tr class="click" data-id="'+l.id+'"><td>'+fd(l.created)+'</td><td><b>'+esc(l.name||"(no name)")+'</b><br><span class="mut">'+esc(l.phone||l.email)+'</span></td><td class="h">'+esc(l.service)+'</td><td><span class="pill s-'+l.status+'">'+l.status+'</span></td><td class="h">'+esc(l.followUp)+'</td></tr>'}).join(""):'<tr><td colspan="5" class="mut">No leads yet.</td></tr>')+'</tbody></table></div>';
+  $("#q").oninput=function(){S.q=this.value;var p=this.selectionStart;viewLeads();var i=$("#q");i.focus();i.setSelectionRange(p,p)};
+  $("#st").onchange=function(){S.st=this.value;viewLeads()};
+  document.querySelectorAll(".stat").forEach(function(e){e.onclick=function(){S.st=e.dataset.s;viewLeads()}});
+  $("#add").onclick=function(){leadForm({status:"new"})};
+  document.querySelectorAll("tr.click").forEach(function(r){r.onclick=function(){leadForm(S.leads.find(function(l){return l.id===r.dataset.id}))}});
+}
+function leadForm(l){
+  var wa=l.phone?'https://wa.me/'+String(l.phone).replace(/\D/g,""):"";
+  modal('<h2 style="margin-top:0">'+(l.id?"Lead":"New lead")+'</h2><div class="row"><div><label>Name</label><input id="f_name" value="'+esc(l.name)+'"></div><div><label>Phone</label><input id="f_phone" value="'+esc(l.phone)+'"></div><div><label>Email</label><input id="f_email" value="'+esc(l.email)+'"></div><div><label>Company</label><input id="f_company" value="'+esc(l.company)+'"></div><div><label>Service</label><input id="f_service" value="'+esc(l.service)+'"></div><div><label>Source</label><input id="f_source" value="'+esc(l.source)+'"></div><div><label>Status</label><select id="f_status">'+STAT.map(function(s){return '<option'+(l.status===s?" selected":"")+'>'+s+'</option>'}).join("")+'</select></div><div><label>Follow-up date</label><input id="f_followUp" type="date" value="'+esc(l.followUp)+'"></div></div><label>Message</label><textarea id="f_message">'+esc(l.message)+'</textarea><label>My notes</label><textarea id="f_notes">'+esc(l.notes)+'</textarea>'+(l.created?'<p class="mut">Added '+fd(l.created)+'</p>':"")+
+   '<div class="err" id="fe"></div><div class="acts"><button class="btn" id="sv">Save</button><button class="btn g" id="cl">Close</button>'+(wa?'<a class="btn g" style="text-decoration:none" target="_blank" rel="noopener" href="'+wa+'">WhatsApp</a>':"")+'<span class="sp"></span>'+(l.id?'<button class="btn d" id="dl">Delete</button>':"")+'</div>');
+  saveBtn("leads",l,["name","phone","email","company","service","source","status","followUp","message","notes"]);
+}
+
+/* ---- articles ---- */
+function viewArticles(){
+  $("#m").innerHTML='<div class="bar"><button class="btn" id="add">+ New article</button><span class="mut">Public page: /blog</span></div><div class="card" style="padding:0;overflow:auto"><table><thead><tr><th>Date</th><th>Title</th><th>Lang</th><th>Status</th></tr></thead><tbody>'+
+   (S.articles.length?S.articles.map(function(a){return '<tr class="click" data-id="'+a.id+'"><td>'+fd(a.date)+'</td><td'+(a.lang==="ar"?' dir="rtl"':"")+'><b>'+esc(a.title)+'</b><br><span class="mut">/blog/'+esc(a.slug)+'</span></td><td>'+a.lang+'</td><td><span class="pill">'+(a.published?"Published":"Draft")+'</span></td></tr>'}).join(""):'<tr><td colspan="4" class="mut">No articles.</td></tr>')+'</tbody></table></div>';
+  $("#add").onclick=function(){articleForm({lang:"en",format:"md",published:false,date:new Date().toISOString().slice(0,10)})};
+  document.querySelectorAll("tr.click").forEach(function(r){r.onclick=function(){articleForm(S.articles.find(function(a){return a.id===r.dataset.id}))}});
+}
+function articleForm(a){
+  modal('<h2 style="margin-top:0">'+(a.id?"Edit article":"New article")+'</h2><label>Title</label><input id="f_title" value="'+esc(a.title)+'"><div class="row"><div><label>Slug (URL)</label><input id="f_slug" value="'+esc(a.slug)+'" placeholder="auto from title"></div><div><label>Date</label><input id="f_date" type="date" value="'+esc(fd(a.date))+'"></div><div><label>Language</label><select id="f_lang"><option value="en"'+(a.lang==="en"?" selected":"")+'>English</option><option value="ar"'+(a.lang==="ar"?" selected":"")+'>Arabic</option></select></div><div><label>Body format</label><select id="f_format"><option value="md"'+(a.format==="md"?" selected":"")+'>Simple text (Markdown)</option><option value="html"'+(a.format==="html"?" selected":"")+'>HTML</option></select></div></div><label>Short description (for Google, 150 chars)</label><textarea id="f_description" style="min-height:60px">'+esc(a.description)+'</textarea><label>Cover image URL</label><div style="display:flex;gap:8px"><input id="f_image" value="'+esc(a.image)+'"><button class="btn g" id="up" type="button">Upload</button><input id="upf" type="file" accept="image/*" hidden></div><label>Body</label><textarea id="f_body" style="min-height:320px" dir="auto">'+esc(a.body)+'</textarea><p class="mut" style="margin:4px 0 0">Markdown: ## heading, **bold**, [link](url), ![alt](image-url), - list.</p><div class="chk"><input id="f_published" type="checkbox"'+(a.published?" checked":"")+'><label style="margin:0;color:var(--ink)" for="f_published">Published (visible on the site)</label></div><div class="err" id="fe"></div><div class="acts"><button class="btn" id="sv">Save</button><button class="btn g" id="cl">Close</button>'+(a.id&&a.published?'<a class="btn g" style="text-decoration:none" target="_blank" href="/blog/'+esc(a.slug)+'">View</a>':"")+'<span class="sp"></span>'+(a.id?'<button class="btn d" id="dl">Delete</button>':"")+'</div>');
+  $("#up").onclick=function(){$("#upf").click()};
+  $("#upf").onchange=function(){var f=this.files[0];if(!f)return;var r=new FileReader();r.onload=function(){api("POST","/api/admin/upload",{name:f.name,data:r.result}).then(function(j){$("#f_image").value=j.url;$("#fe").textContent="Uploaded. Press Save."}).catch(function(e){$("#fe").textContent=e.message})};r.readAsDataURL(f)};
+  saveBtn("articles",a,["title","slug","date","lang","format","description","image","body","published"]);
+}
+
+/* ---- projects ---- */
+function viewProjects(){
+  $("#m").innerHTML='<div class="bar"><button class="btn" id="add">+ New project</button><span class="mut">Shown at the end of the Work page</span></div><div class="card" style="padding:0;overflow:auto"><table><thead><tr><th>Order</th><th>Title</th><th>Status</th><th>Visible</th></tr></thead><tbody>'+
+   (S.projects.length?S.projects.map(function(p){return '<tr class="click" data-id="'+p.id+'"><td>'+p.order+'</td><td><b>'+esc(p.title)+'</b><br><span class="mut">'+esc((p.tags||[]).join(", "))+'</span></td><td>'+esc(p.status)+'</td><td>'+(p.published?"Yes":"Hidden")+'</td></tr>'}).join(""):'<tr><td colspan="4" class="mut">No projects added here yet. The 6 projects already on the Work page stay as they are.</td></tr>')+'</tbody></table></div>';
+  $("#add").onclick=function(){projectForm({status:"live",published:true,order:S.projects.length+1,tags:[]})};
+  document.querySelectorAll("tr.click").forEach(function(r){r.onclick=function(){projectForm(S.projects.find(function(p){return p.id===r.dataset.id}))}});
+}
+function projectForm(p){
+  modal('<h2 style="margin-top:0">'+(p.id?"Edit project":"New project")+'</h2><label>Title</label><input id="f_title" value="'+esc(p.title)+'"><label>Description</label><textarea id="f_description">'+esc(p.description)+'</textarea><div class="row"><div><label>Tags (comma separated)</label><input id="f_tags" value="'+esc((p.tags||[]).join(", "))+'"></div><div><label>Status</label><select id="f_status">'+[["live","Live"],["current","Current"],["dev","In development"],["done","Completed"]].map(function(s){return '<option value="'+s[0]+'"'+(p.status===s[0]?" selected":"")+'>'+s[1]+'</option>'}).join("")+'</select></div><div><label>Link URL (optional)</label><input id="f_url" value="'+esc(p.url)+'" placeholder="https://..."></div><div><label>Button text</label><input id="f_urlLabel" value="'+esc(p.urlLabel)+'" placeholder="Open the project"></div><div><label>Order (1 = first)</label><input id="f_order" type="number" value="'+esc(p.order)+'"></div></div><div class="chk"><input id="f_published" type="checkbox"'+(p.published?" checked":"")+'><label style="margin:0;color:var(--ink)" for="f_published">Visible on the site</label></div><div class="err" id="fe"></div><div class="acts"><button class="btn" id="sv">Save</button><button class="btn g" id="cl">Close</button><span class="sp"></span>'+(p.id?'<button class="btn d" id="dl">Delete</button>':"")+'</div>');
+  saveBtn("projects",p,["title","description","tags","status","url","urlLabel","order","published"]);
+}
+
+/* ---- shared ---- */
+function modal(html){var d=$("#dlg");d.innerHTML=html;if(!d.open)d.showModal();$("#cl").onclick=function(){d.close()}}
+function saveBtn(coll,item,fields){
+  $("#sv").onclick=function(){
+    var b={};fields.forEach(function(f){var e=$("#f_"+f);b[f]=e.type==="checkbox"?e.checked:e.value});
+    this.disabled=true;var btn=this;
+    api(item.id?"PUT":"POST","/api/admin/"+coll+(item.id?"/"+item.id:""),b).then(function(row){
+      var arr=S[coll],i=arr.findIndex(function(x){return x.id===row.id});if(i>-1)arr[i]=row;else arr.unshift(row);
+      $("#dlg").close();render();
+    }).catch(function(e){$("#fe").textContent=e.message;btn.disabled=false});
+  };
+  var dl=$("#dl");if(dl)dl.onclick=function(){if(!confirm("Delete this for good?"))return;api("DELETE","/api/admin/"+coll+"/"+item.id).then(function(){S[coll]=S[coll].filter(function(x){return x.id!==item.id});$("#dlg").close();render()}).catch(function(e){$("#fe").textContent=e.message})};
+}
+api("GET","/api/admin/me").then(boot).catch(function(){login()});
+})();
+</script>
+</body>
+</html>
